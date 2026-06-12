@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700;800&amp;display=swap');
+    .a { font-family: 'Urbanist', sans-serif; font-weight: 800; fill: #e7e9ec; }
+    .s { font-family: 'Urbanist', sans-serif; font-weight: 300; fill: #e7e9ec; }
+    .b { font-family: 'Urbanist', sans-serif; font-weight: 800; fill: #b6bac0; }
+  </style>
+  <rect width="100%" height="100%" fill="#0a0b0d"/>
+  <text x="50%" y="58%" text-anchor="middle" dominant-baseline="middle" font-size="220" letter-spacing="-10">
+    <tspan class="a">fast</tspan><tspan class="s" dx="6">/</tspan><tspan class="b" dx="6">launch</tspan>
+  </text>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    
+    
+  </defs>
+  <rect width="100%" height="100%" rx="225.28" fill="#f6f5f1"></rect>
+  
+  <text x="50%" y="58%" text-anchor="middle" dominant-baseline="middle" font-size="563.2" letter-spacing="-20.48">
+    <tspan class="a">f</tspan><tspan class="s" dx="4">/</tspan><tspan class="b" dx="4">l</tspan>
+  </text>
+</svg>

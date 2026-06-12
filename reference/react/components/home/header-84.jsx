@@ -1,0 +1,39 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import React from "react";
+
+export function Header84() {
+  return (
+    <section className="px-[5%] py-12 md:py-16 lg:py-20 scheme-1">
+      <div className="container">
+        <Card className="grid auto-cols-fr grid-cols-1 lg:grid-cols-2">
+          <div className="flex flex-col justify-center p-8 md:p-12">
+            <h1 className="mb-5 text-h1 font-bold md:mb-6">
+              Build fast. Deploy everywhere. Scale without limits.
+            </h1>
+            <p className="text-medium">
+              We deliver intelligent solutions that work immediately. From
+              machine learning models to serverless infrastructure, everything
+              is ready to plug in and perform.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+              <Button title="Start now">Start now</Button>
+              <Button title="Learn more" variant="secondary">
+                Learn more
+              </Button>
+            </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <img
+              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              className="w-full rounded-r-card object-cover"
+              alt="Relume placeholder image"
+            />
+          </div>
+        </Card>
+      </div>
+    </section>
+  );
+}

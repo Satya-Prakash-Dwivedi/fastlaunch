@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 777 320" width="777" height="320">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap');</style>
+  <rect width="100%" height="100%" fill="rgb(235, 232, 223)"/>
+  <foreignObject x="0" y="0" width="777" height="320">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="width:777px;height:320px;display:grid;place-items:center;font-family:Inter,system-ui,sans-serif;color:#0b0c0e;">
+      <div style="display:flex; align-items:center; gap:6px; font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 96px; letter-spacing: -0.05em; line-height: 1;" data-om-id="c1d3f6cd:260">
+        <span style="color: oklch(64% 0.19 32); font-weight: 400;" data-om-id="c1d3f6cd:261">[</span>
+        <span data-om-id="c1d3f6cd:262">FastLaunch</span>
+        <span style="color: oklch(64% 0.19 32); font-weight: 400;" data-om-id="c1d3f6cd:263">]</span>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

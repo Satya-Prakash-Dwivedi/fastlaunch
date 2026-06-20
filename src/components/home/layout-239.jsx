@@ -6,7 +6,7 @@ import { ChevronRight } from "relume-icons";
 
 export function Layout239() {
   return (
-    <section id="portfolio" className="px-[5%] py-16 md:py-24 lg:py-28 scheme-1">
+    <section id="portfolio" className="px-[5%] pt-16 md:pt-24 lg:pt-28 pb-8 md:pb-12 scheme-1">
       <div className="container">
         <div className="flex flex-col items-center">
           <div className="mb-12 text-center md:mb-18 lg:mb-20">

@@ -73,7 +73,9 @@ export function Navbar3() {
                 Services
               </a>
               <a
-                href="#portfolio"
+                href="#/portfolio-page"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
                 Portfolio
@@ -93,8 +95,8 @@ export function Navbar3() {
             </div>
 
             {/* Contact Button inside Mobile Drawer (hidden on desktop) */}
-            <Button className="mt-8 w-full lg:hidden" title="Contact" size="sm">
-              Contact
+            <Button asChild className="mt-8 w-full lg:hidden" title="Contact" size="sm">
+              <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">Contact</a>
             </Button>
           </motion.div>
 
@@ -117,11 +119,12 @@ export function Navbar3() {
         <div className="flex items-center justify-end gap-x-4 h-full">
           {/* Contact button (visible on tablet/desktop, hidden on small screens) */}
           <Button
+            asChild
             title="Contact"
             size="sm"
             className="hidden md:flex px-5 py-2 text-sm font-semibold transition-all hover:scale-[1.02]"
           >
-            Contact
+            <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">Contact</a>
           </Button>
 
           {/* Hamburger Menu Toggle on Mobile with gorgeous micro-animations */}

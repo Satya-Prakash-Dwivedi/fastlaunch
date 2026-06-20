@@ -137,8 +137,8 @@ export function Faq4() {
             Reach out and we'll walk you through exactly how we work.
           </p>
           <div className="mt-6 md:mt-8">
-            <Button title="Contact" variant="secondary">
-              Contact
+            <Button asChild title="Contact" variant="secondary">
+              <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">Contact</a>
             </Button>
           </div>
         </div>

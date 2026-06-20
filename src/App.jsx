@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Navbar3 } from './components/navbar-03';
 import { Header84 } from './components/home/header-84';
 import { Layout373 } from './components/home/layout-373';
+import { FigmaPrototype } from './components/home/figma-prototype';
 import { Layout239 } from './components/home/layout-239';
+import { DigitalTransformation } from './components/home/digital-transformation';
 import { PlaygroundTeaser } from './components/home/playground-teaser';
 import { PlaygroundPage } from './components/playground/playground-page';
+import { PortfolioPage } from './components/portfolio/portfolio-page';
 import { Testimonial17 } from './components/home/testimonial-17';
 import { Stats54 } from './components/home/stats-54';
 import { Cta31 } from './components/home/cta-31';
@@ -24,9 +27,10 @@ function App() {
   }, []);
 
   const isPlaygroundPage = route.startsWith('#/playground');
+  const isPortfolioPage = route.startsWith('#/portfolio-page');
 
   useEffect(() => {
-    if (isPlaygroundPage) {
+    if (isPlaygroundPage || isPortfolioPage) {
       window.scrollTo(0, 0);
     } else {
       const hash = window.location.hash;
@@ -40,10 +44,14 @@ function App() {
         }, 100);
       }
     }
-  }, [route, isPlaygroundPage]);
+  }, [route, isPlaygroundPage, isPortfolioPage]);
 
   if (isPlaygroundPage) {
     return <PlaygroundPage />;
+  }
+
+  if (isPortfolioPage) {
+    return <PortfolioPage />;
   }
 
   return (
@@ -52,7 +60,9 @@ function App() {
       <main className="flex-grow">
         <Header84 />
         <Layout373 />
+        <FigmaPrototype />
         <Layout239 />
+        <DigitalTransformation />
         <PlaygroundTeaser />
         <Testimonial17 />
         <Stats54 />

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { BrandLogo } from "./brand-logo";
 
 const ConditionalRender = ({ condition, children }) => {
@@ -24,6 +25,13 @@ const useNavbarState = () => {
 
 export function Navbar3() {
   const useActive = useNavbarState();
+  const { t, i18n } = useTranslation();
+  const isMobile = useMediaQuery("(max-width: 991px)");
+
+  const toggleLanguage = () => {
+    const nextLang = i18n.language === 'en' ? 'hi' : 'en';
+    i18n.changeLanguage(nextLang);
+  };
   return (
     <section className="z-[999] sticky top-0 w-full h-16 lg:h-20 border-b border-scheme-border bg-scheme-background px-[5%] scheme-7 alternate btn-light">
       <div className="container h-full grid grid-cols-[max-content_1fr_max-content] lg:grid-cols-[1fr_max-content_1fr] items-center">
@@ -43,13 +51,9 @@ export function Navbar3() {
             exit="closed"
             variants={{
               closed: {
-                x: "-100%",
-                opacity: 1,
+                x: isMobile ? "-100%" : "0%",
+                opacity: isMobile ? 0 : 1,
                 transition: { type: "spring", duration: 0.6, bounce: 0 },
-                transitionEnd: {
-                  opacity: "var(--opacity-closed, 0%)",
-                  x: "var(--x-closed, -100%)",
-                },
               },
               open: {
                 x: 0,
@@ -60,47 +64,56 @@ export function Navbar3() {
             className="absolute top-0 left-0 z-50 flex h-dvh w-full flex-col bg-[var(--color-scheme-background)] px-[5%] pb-6 lg:visible lg:static lg:flex lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:pb-0 lg:[--opacity-closed:100%] lg:[--x-closed:0%]"
           >
             {/* Logo inside mobile menu drawer */}
-            <a href="#" className="mt-10 mb-8 flex shrink-0 lg:hidden">
-              <BrandLogo className="h-12 w-auto text-scheme-text" />
-            </a>
+            <div className="h-16 flex items-center shrink-0 lg:hidden mb-8 pr-12">
+              <BrandLogo className="h-9 w-auto text-scheme-text" />
+            </div>
 
             {/* Links list */}
             <div className="flex flex-col lg:flex-row lg:items-center gap-y-3 lg:gap-y-0 lg:gap-x-4 xl:gap-x-6">
               <a
                 href="#services"
-                onClick={useActive.toggleMobileMenu}
+                onClick={() => { if (isMobile) useActive.toggleMobileMenu() }}
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
-                Services
+                {t('navbar.services', 'Services')}
               </a>
               <a
                 href="#/portfolio-page"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={useActive.toggleMobileMenu}
+                onClick={() => { if (isMobile) useActive.toggleMobileMenu() }}
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
-                Portfolio
+                {t('navbar.portfolio', 'Portfolio')}
               </a>
               <a
                 href="#/playground"
-                onClick={useActive.toggleMobileMenu}
+                onClick={() => { if (isMobile) useActive.toggleMobileMenu() }}
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
-                Playground
+                {t('navbar.playground', 'Playground')}
               </a>
               <a
                 href="#testimonials"
-                onClick={useActive.toggleMobileMenu}
+                onClick={() => { if (isMobile) useActive.toggleMobileMenu() }}
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
-                Active Consumers
+                {t('navbar.testimonials', 'Active Consumers')}
               </a>
             </div>
 
+            <div className="mt-8 flex items-center gap-4 lg:hidden">
+              <button 
+                onClick={toggleLanguage}
+                className="flex-1 py-2 px-4 rounded-lg border border-scheme-border/50 text-scheme-text font-bold text-sm bg-white-5 hover:bg-white-10 transition-colors"
+              >
+                {i18n.language === 'en' ? t('navbar.switchToHi', 'Switch to Hindi (HI)') : t('navbar.switchToEn', 'Switch to English (EN)')}
+              </button>
+            </div>
+
             {/* Contact Button inside Mobile Drawer (hidden on desktop) */}
-            <Button asChild className="mt-8 w-full lg:hidden" title="Contact" size="sm">
-              <a href="#/booking">Contact</a>
+            <Button asChild className="mt-4 w-full lg:hidden" title="Contact" size="sm">
+              <a href="#/booking">{t('navbar.getStarted', 'Contact')}</a>
             </Button>
           </motion.div>
 
@@ -121,14 +134,24 @@ export function Navbar3() {
 
         {/* COLUMN 3: Contact & Hamburger Toggle (Right) */}
         <div className="flex items-center justify-end gap-x-4 h-full">
+          
+          {/* Desktop Language Toggle */}
+          <button 
+            onClick={toggleLanguage}
+            className="hidden md:flex items-center justify-center size-9 rounded-full border border-scheme-border/50 text-scheme-text font-bold text-xs hover:bg-white-10 transition-colors"
+            title="Toggle Language"
+          >
+            {i18n.language === 'en' ? 'HI' : 'EN'}
+          </button>
+
           {/* Contact button (visible on tablet/desktop, hidden on small screens) */}
           <Button
             asChild
-            title="Contact"
+            title="Get Started"
             size="sm"
-            className="hidden md:flex px-5 py-2 text-sm font-semibold transition-all hover:scale-[1.02]"
+            className="hidden md:flex w-[130px] justify-center px-2 py-2 text-sm font-semibold transition-all hover:scale-[1.02]"
           >
-            <a href="#/booking">Contact</a>
+            <a href="#/booking">{t('navbar.getStarted', 'Get Started')}</a>
           </Button>
 
           {/* Hamburger Menu Toggle on Mobile with gorgeous micro-animations */}

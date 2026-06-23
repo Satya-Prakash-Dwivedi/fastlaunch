@@ -3,6 +3,7 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const TEASER_MODELS = [
   {
@@ -91,6 +92,7 @@ const TEASER_MODELS = [
 ];
 
 export function PlaygroundTeaser() {
+  const { t } = useTranslation();
   return (
     <section id="playground" className="px-[5%] py-16 md:py-24 lg:py-28 scheme-7 alternate logo-alt border-t border-scheme-border/10">
       <div className="container">
@@ -99,13 +101,13 @@ export function PlaygroundTeaser() {
         <div className="mb-12 text-center md:mb-18 lg:mb-20">
           <div className="mx-auto w-full max-w-2xl">
             <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase tracking-wider text-scheme-accent bg-scheme-accent/15 rounded-full border border-scheme-accent/30">
-              Interactive 3D Studio
+              {t('playgroundTeaser.label', 'Interactive 3D Studio')}
             </span>
             <h2 className="mb-5 text-h2 font-bold md:mb-6">
-              Our 3D Design Playground
+              {t('playgroundTeaser.title', 'Our 3D Design Playground')}
             </h2>
             <p className="text-medium text-scheme-text/85">
-              Step into an immersive, interactive design playground. Click any card to explore our high-tech custom 3D hardware assets or run fully interactive live web applications in real-time.
+              {t('playgroundTeaser.description', 'Step into an immersive, interactive design playground. Click any card to explore our high-tech custom 3D hardware assets or run fully interactive live web applications in real-time.')}
             </p>
           </div>
         </div>
@@ -129,23 +131,23 @@ export function PlaygroundTeaser() {
 
                 {/* Category Badge */}
                 <span className="inline-block px-2.5 py-0.5 text-tiny font-medium text-white/50 bg-white/5 border border-white/10 rounded-md mb-3">
-                  {model.category}
+                  {t(`teaserModels.${model.id}.category`, model.category)}
                 </span>
 
                 {/* Model Title */}
                 <h3 className="text-h6 font-bold text-white mb-2 group-hover:text-scheme-accent transition-colors duration-300">
-                  {model.name}
+                  {t(`teaserModels.${model.id}.name`, model.name)}
                 </h3>
 
                 {/* Short Desc */}
                 <p className="text-regular text-white/60 group-hover:text-white/80 transition-colors duration-300 mb-6 line-clamp-3">
-                  {model.desc}
+                  {t(`teaserModels.${model.id}.desc`, model.desc)}
                 </p>
               </div>
 
               {/* View Link */}
               <div className="flex items-center gap-2 text-sm font-bold text-scheme-accent group-hover:translate-x-1 transition-transform duration-300 mt-auto">
-                <span>{model.type === "iframe" ? "Launch Live Web App" : "View Live 3D Model"}</span>
+                <span>{model.type === "iframe" ? t('playgroundTeaser.launchApp', "Launch Live Web App") : t('playgroundTeaser.view3d', "View Live 3D Model")}</span>
                 <span className="text-base">→</span>
               </div>
             </a>
@@ -158,10 +160,10 @@ export function PlaygroundTeaser() {
                 🚀
               </div>
               <h4 className="text-regular font-bold text-white">
-                Launch Full Design Sandbox
+                {t('playgroundTeaser.launchSandbox', 'Launch Full Design Sandbox')}
               </h4>
               <p className="text-small text-white/50 max-w-[200px] mx-auto">
-                Access the full sandbox viewport with category filters and model technical metrics.
+                {t('playgroundTeaser.sandboxDesc', 'Access the full sandbox viewport with category filters and model technical metrics.')}
               </p>
             </div>
             
@@ -171,7 +173,7 @@ export function PlaygroundTeaser() {
               className="mt-6 w-full text-xs py-2.5 font-bold hover:scale-[1.02]"
             >
               <a href="#/playground">
-                Enter 3D Playground
+                {t('playgroundTeaser.enterPlayground', 'Enter 3D Playground')}
               </a>
             </Button>
           </div>
@@ -185,7 +187,7 @@ export function PlaygroundTeaser() {
             className="px-8 py-3.5 text-base font-bold shadow-lg hover:scale-[1.02] flex items-center gap-3"
           >
             <a href="#/playground">
-              Launch Full 3D Interactive Sandbox
+              {t('playgroundTeaser.launchFull', 'Launch Full 3D Interactive Sandbox')}
               <span className="text-xl">➔</span>
             </a>
           </Button>

@@ -4,6 +4,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BrandLogo } from "@/components/brand-logo";
+import { useTranslation } from "react-i18next";
 
 const MODELS = [
   {
@@ -174,6 +175,8 @@ const MODELS = [
 const CATEGORIES = ["All", "Web Applications", "Infrastructure", "Hardware", "Input Devices", "Algorithms", "Developer Fuel", "Craftsmanship"];
 
 export function PlaygroundPage() {
+  const { t } = useTranslation();
+
   const getModelFromHash = () => {
     const hash = window.location.hash;
     const match = hash.match(/\?id=([^&]+)/);
@@ -212,12 +215,12 @@ export function PlaygroundPage() {
     return MODELS.filter((model) => {
       const matchesCategory = activeCategory === "All" || model.category === activeCategory;
       const matchesSearch =
-        model.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        model.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        model.category.toLowerCase().includes(searchQuery.toLowerCase());
+        t(`teaserModels.${model.id}.name`, model.name).toLowerCase().includes(searchQuery.toLowerCase()) ||
+        t(`teaserModels.${model.id}.desc`, model.desc).toLowerCase().includes(searchQuery.toLowerCase()) ||
+        t(`teaserModels.${model.id}.category`, model.category).toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     });
-  }, [activeCategory, searchQuery]);
+  }, [activeCategory, searchQuery, t]);
 
   return (
     <div className="min-h-screen bg-neutral-980 text-white font-sans flex flex-col scheme-7 alternate logo-alt">
@@ -234,7 +237,7 @@ export function PlaygroundPage() {
           <div className="hidden sm:flex items-center gap-2">
             <span className="size-2 rounded-full bg-emerald-500 animate-pulse" />
             <span className="text-tiny tracking-wider uppercase text-white/50 font-bold">
-              3D Design Sandbox Studio
+              {t('playgroundPage.headerBadge', '3D Design Sandbox Studio')}
             </span>
           </div>
         </div>
@@ -242,7 +245,7 @@ export function PlaygroundPage() {
         {/* Dynamic Model Counter Badge */}
         <div className="flex items-center gap-4">
           <div className="hidden md:block px-3 py-1 bg-white-5 border border-white-10 rounded-full text-xs font-semibold text-white/70 whitespace-nowrap">
-            {MODELS.length} Premium Assets
+            {MODELS.length} {t('playgroundPage.premiumAssets', 'Premium Assets')}
           </div>
           <Button
             asChild
@@ -251,7 +254,7 @@ export function PlaygroundPage() {
             className="px-4 py-1.5 text-xs font-bold transition-all hover:scale-[1.02] flex items-center gap-2"
           >
             <a href="#/">
-              <span>←</span> Back to Homepage
+              <span>←</span> {t('playgroundPage.backToHome', 'Back to Homepage')}
             </a>
           </Button>
         </div>
@@ -277,7 +280,7 @@ export function PlaygroundPage() {
             {isLoading ? (
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-neutral-950/70 backdrop-blur-sm z-30 transition-all duration-300">
                 <div className="size-12 border-2 border-scheme-accent border-t-transparent rounded-full animate-spin mb-4" />
-                <p className="text-sm font-semibold tracking-wide text-white/70">Loading 3D asset data...</p>
+                <p className="text-sm font-semibold tracking-wide text-white/70">{t('playgroundPage.loading', 'Loading 3D asset data...')}</p>
               </div>
             ) : null}
 
@@ -315,9 +318,9 @@ export function PlaygroundPage() {
                   {selectedModel.emoji}
                 </div>
                 <div>
-                  <h2 className="text-sm font-bold text-white leading-none mb-1">{selectedModel.name}</h2>
+                  <h2 className="text-sm font-bold text-white leading-none mb-1">{t(`teaserModels.${selectedModel.id}.name`, selectedModel.name)}</h2>
                   <span className="text-[10px] uppercase font-bold text-white/50 tracking-wider">
-                    {selectedModel.category} // {selectedModel.type === "iframe" ? "Interactive Frame" : "Active Node"}
+                    {t(`teaserModels.${selectedModel.id}.category`, selectedModel.category)} // {selectedModel.type === "iframe" ? t('playgroundPage.interactiveFrame', "Interactive Frame") : t('playgroundPage.activeNode', "Active Node")}
                   </span>
                 </div>
               </div>
@@ -326,15 +329,15 @@ export function PlaygroundPage() {
               <div className="hidden sm:flex absolute top-4 right-4 p-2.5 rounded-xl bg-neutral-950/80 border border-white-10 backdrop-blur-md flex-col gap-1 text-[10px] text-white/40 font-medium">
                 {selectedModel.type === "iframe" ? (
                   <div className="flex items-center gap-2 text-emerald-400 font-bold">
-                    <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" /> Live Web App Active
+                    <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" /> {t('playgroundPage.liveWebApp', 'Live Web App Active')}
                   </div>
                 ) : (
                   <>
                     <div className="flex items-center gap-2">
-                      <span className="px-1.5 py-0.5 rounded bg-white-10 text-white/70 font-semibold font-mono">Drag</span> Rotate Camera
+                      <span className="px-1.5 py-0.5 rounded bg-white-10 text-white/70 font-semibold font-mono">{t('playgroundPage.drag', 'Drag')}</span> {t('playgroundPage.rotateCamera', 'Rotate Camera')}
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="px-1.5 py-0.5 rounded bg-white-10 text-white/70 font-semibold font-mono">Pinch</span> Zoom Asset
+                      <span className="px-1.5 py-0.5 rounded bg-white-10 text-white/70 font-semibold font-mono">{t('playgroundPage.pinch', 'Pinch')}</span> {t('playgroundPage.zoomAsset', 'Zoom Asset')}
                     </div>
                   </>
                 )}
@@ -346,28 +349,28 @@ export function PlaygroundPage() {
                   
                   <div className="flex flex-col items-center">
                     <span className="text-[9px] font-bold text-white/40 uppercase tracking-wider mb-1">
-                      {selectedModel.type === "iframe" ? "Distribution" : "File Size"}
+                      {selectedModel.type === "iframe" ? t('playgroundPage.distribution', "Distribution") : t('playgroundPage.fileSize', "File Size")}
                     </span>
                     <span className="text-xs font-bold text-white">{selectedModel.size}</span>
                   </div>
 
                   <div className="flex flex-col items-center">
                     <span className="text-[9px] font-bold text-white/40 uppercase tracking-wider mb-1">
-                      {selectedModel.type === "iframe" ? "Structure" : "Polygon Count"}
+                      {selectedModel.type === "iframe" ? t('playgroundPage.structure', "Structure") : t('playgroundPage.polygonCount', "Polygon Count")}
                     </span>
                     <span className="text-xs font-bold text-white font-mono">{selectedModel.vertices}</span>
                   </div>
 
                   <div className="flex flex-col items-center">
                     <span className="text-[9px] font-bold text-white/40 uppercase tracking-wider mb-1">
-                      Complexity
+                      {t('playgroundPage.complexity', 'Complexity')}
                     </span>
                     <span className="text-xs font-bold text-white">{selectedModel.complexity}</span>
                   </div>
 
                   <div className="flex flex-col items-center">
                     <span className="text-[9px] font-bold text-white/40 uppercase tracking-wider mb-1">
-                      Texturing Map
+                      {t('playgroundPage.texturingMap', 'Texturing Map')}
                     </span>
                     <span className="text-xs font-bold text-white font-mono">{selectedModel.materials}</span>
                   </div>
@@ -390,7 +393,7 @@ export function PlaygroundPage() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search models..."
+                placeholder={t('playgroundPage.searchModels', 'Search models...')}
                 className="w-full h-11 bg-neutral-950 border border-white-15 rounded-xl px-4 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-scheme-accent transition-all font-medium"
               />
               {searchQuery ? (
@@ -417,7 +420,7 @@ export function PlaygroundPage() {
                         : "bg-transparent border-white-15 text-white/60 hover:text-white hover:border-white-30"
                     }`}
                   >
-                    {cat}
+                    {cat === 'All' ? t('playgroundPage.all', 'All') : t(`teaserModels.${MODELS.find(m => m.category === cat)?.id || 'unknown'}.category`, cat)}
                   </button>
                 );
               })}
@@ -427,12 +430,12 @@ export function PlaygroundPage() {
           {/* Section: Assets Browser List */}
           <div className="p-6 border-b border-white-10 space-y-4">
             <h3 className="text-xs font-bold tracking-widest uppercase text-white/40">
-              Select 3D Hardware Asset ({filteredModels.length})
+              {t('playgroundPage.selectAsset', 'Select 3D Hardware Asset')} ({filteredModels.length})
             </h3>
             
             {filteredModels.length === 0 ? (
               <div className="p-8 text-center border border-dashed border-white-10 rounded-xl bg-white-5 text-white/40">
-                No matching models found in this category.
+                {t('playgroundPage.noMatch', 'No matching models found in this category.')}
               </div>
             ) : (
               <div className="flex flex-col gap-2">
@@ -459,14 +462,14 @@ export function PlaygroundPage() {
                       <div className="flex-grow min-w-0">
                         <div className="flex items-center justify-between gap-2 mb-1">
                           <h5 className="font-bold text-sm truncate leading-tight">
-                            {model.name}
+                            {t(`teaserModels.${model.id}.name`, model.name)}
                           </h5>
                           <span className="text-[9px] px-1.5 py-0.5 rounded bg-white-5 border border-white-10 text-white/50">
                             {model.size}
                           </span>
                         </div>
                         <p className="text-xs text-white/40 truncate leading-none">
-                          {model.desc}
+                          {t(`teaserModels.${model.id}.desc`, model.desc)}
                         </p>
                       </div>
                     </button>
@@ -480,33 +483,33 @@ export function PlaygroundPage() {
           <div className="p-6 space-y-6">
             <div>
               <h3 className="text-xs font-bold tracking-widest uppercase text-white/40 mb-3">
-                Technical Specifications
+                {t('playgroundPage.techSpecs', 'Technical Specifications')}
               </h3>
               
               <Card className="border border-white-15 bg-neutral-950 p-6 space-y-4">
                 
                 <div className="flex justify-between items-center pb-3 border-b border-white-5">
-                  <span className="text-xs text-white/50 font-medium">Standard Scale Bounds</span>
+                  <span className="text-xs text-white/50 font-medium">{t('playgroundPage.scaleBounds', 'Standard Scale Bounds')}</span>
                   <span className="text-xs font-bold text-white font-mono">{selectedModel.scale}</span>
                 </div>
 
                 <div className="flex justify-between items-center pb-3 border-b border-white-5">
-                  <span className="text-xs text-white/50 font-medium">Material Mappings</span>
+                  <span className="text-xs text-white/50 font-medium">{t('playgroundPage.materialMappings', 'Material Mappings')}</span>
                   <span className="text-xs font-bold text-white font-mono">{selectedModel.materials}</span>
                 </div>
 
                 <div className="flex justify-between items-center pb-3 border-b border-white-5">
                   <span className="text-xs text-white/50 font-medium">
-                    {selectedModel.type === "iframe" ? "Iframe Sandbox Mode" : "Auto-Rotation Enabled"}
+                    {selectedModel.type === "iframe" ? t('playgroundPage.iframeSandboxMode', "Iframe Sandbox Mode") : t('playgroundPage.autoRotation', "Auto-Rotation Enabled")}
                   </span>
                   <span className={`text-xs font-bold font-mono flex items-center gap-1.5 ${selectedModel.type === "iframe" ? "text-amber-500" : "text-emerald-500"}`}>
                     <span className={`size-1.5 rounded-full ${selectedModel.type === "iframe" ? "bg-amber-500" : "bg-emerald-500"}`} />
-                    {selectedModel.type === "iframe" ? "Interactive Sandbox" : "Yes"}
+                    {selectedModel.type === "iframe" ? t('playgroundPage.interactiveSandbox', "Interactive Sandbox") : t('playgroundPage.yes', "Yes")}
                   </span>
                 </div>
 
                 <div className="space-y-1.5">
-                  <span className="text-xs text-white/50 font-medium block">Detailed Designer Notes</span>
+                  <span className="text-xs text-white/50 font-medium block">{t('playgroundPage.designerNotes', 'Detailed Designer Notes')}</span>
                   <p className="text-xs text-white/70 leading-relaxed bg-white-5 p-3 rounded-lg border border-white-10">
                     {selectedModel.notes}
                   </p>
@@ -517,8 +520,8 @@ export function PlaygroundPage() {
             {/* Share Link box */}
             <div className="p-4 rounded-xl border border-scheme-accent/20 bg-scheme-accent/5 flex items-center justify-between gap-4">
               <div>
-                <h4 className="text-xs font-bold text-white mb-0.5">Share this asset view</h4>
-                <p className="text-[10px] text-white/50">Direct link pre-selects this exact model automatically.</p>
+                <h4 className="text-xs font-bold text-white mb-0.5">{t('playgroundPage.shareView', 'Share this asset view')}</h4>
+                <p className="text-[10px] text-white/50">{t('playgroundPage.directLink', 'Direct link pre-selects this exact model automatically.')}</p>
               </div>
               <Button
                 variant="secondary"
@@ -526,11 +529,11 @@ export function PlaygroundPage() {
                 onClick={() => {
                   const url = `${window.location.origin}${window.location.pathname}#/playground?id=${selectedModel.id}`;
                   navigator.clipboard.writeText(url);
-                  alert(`Direct link copied to clipboard: ${url}`);
+                  alert(`${t('playgroundPage.copied', 'Direct link copied to clipboard:')} ${url}`);
                 }}
                 className="text-[10px] font-bold px-3 py-1 text-white border border-white-20 hover:bg-white-10"
               >
-                Copy Link
+                {t('playgroundPage.copyLink', 'Copy Link')}
               </Button>
             </div>
           </div>

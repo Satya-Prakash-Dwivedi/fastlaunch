@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "@/components/relume-icons";
+import { useTranslation } from "react-i18next";
 
 export function BookingPage() {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -13,7 +15,7 @@ export function BookingPage() {
         <Button asChild variant="secondary" size="sm" className="rounded-full px-5 hover:scale-[1.02] transition-transform">
           <a href="#/" className="flex items-center gap-2">
             <ChevronLeft className="size-4" />
-            <span className="font-semibold text-sm">Back to Home</span>
+            <span className="font-semibold text-sm">{t('booking.backToHome', 'Back to Home')}</span>
           </a>
         </Button>
       </div>

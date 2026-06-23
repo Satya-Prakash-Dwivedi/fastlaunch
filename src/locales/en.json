@@ -1,0 +1,306 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials",
+    "playground": "Playground",
+    "getStarted": "Get Started"
+  },
+  "header84": {
+    "title": "Build fast. Deploy everywhere. Scale without limits.",
+    "description": "We deliver intelligent solutions that work immediately. From machine learning models to serverless infrastructure, everything is ready to plug in and perform.",
+    "startNow": "Start now"
+  },
+  "layout373": {
+    "capabilities": "Capabilities",
+    "title": "What we build for you",
+    "description": "Intelligent systems that think, learn, and adapt to your needs.",
+    "aiTitle": "AI / ML / RL Solutions",
+    "aiDesc": "Intelligent neural networks, predictive machine learning models, and reinforcement learning systems designed to adapt and scale.",
+    "devopsTitle": "DevOps & Automation",
+    "devopsDesc": "CI/CD pipelines, high-availability deployments, and infrastructure as code to ship code rapidly.",
+    "fullstackTitle": "FullStack Web",
+    "fullstackDesc": "Cohesive frontend interfaces and robust backend architectures built for performance and security.",
+    "mobileTitle": "Mobile Apps",
+    "mobileDesc": "Native iOS and Android applications utilizing smooth animations and shared backend components.",
+    "ecommerceTitle": "E-commerce Applications",
+    "ecommerceDesc": "Complete transactional platforms featuring Stripe/PayPal payments, custom order workflows, smart check-out management, and real-time carrier delivery integrations.",
+    "serverlessTitle": "Serverless Managed",
+    "serverlessDesc": "Fully auto-scaling, modern cloud environments that charge only for exact execution time, reducing cloud waste.",
+    "explore": "Explore",
+    "details": "Details"
+  },
+  "layout239": {
+    "method": "Method",
+    "title": "How we work and what matters",
+    "description": "Speed without shortcuts. Quality without delays. Everything arrives ready to use. We build what you need, test it thoroughly, and hand it over working.",
+    "step1Title": "Fast delivery",
+    "step1Desc": "Code moves from our hands to your servers in days, not months. We deliver high-speed, fully tested, and intelligent pipelines that are ready to run in record time.",
+    "step2Title": "Ready to plug in",
+    "step2Desc": "No assembly required. Your solution works the moment it lands. Everything is engineered to integrate seamlessly and perform inside your active production ecosystem instantly.",
+    "step3Title": "Post-delivery support",
+    "step3Desc": "We stay close after launch to keep everything running smooth. Continuous monitoring, seamless updates, and fast iteration support to ensure your long-term success.",
+    "getStarted": "Get started"
+  },
+  "stats54": {
+    "title": "Numbers that show what we've accomplished in the field",
+    "description": "We measure success by what gets delivered. Hundreds of projects shipped. Thousands of hours of uptime. Clients who came back because we earned it.",
+    "projects": "Projects delivered",
+    "uptime": "Server uptime",
+    "api": "API requests handled"
+  },
+  "dt": {
+    "label": "Digital Transformation",
+    "title": "Eliminate Outdated Infrastructure.",
+    "description": "Transform your legacy and inactive systems into modern, highly secure, AI-native cloud environments."
+  },
+  "cta31": {
+    "title": "Ready to build something",
+    "description": "Tell us what you need. We'll show you what's possible and get moving.",
+    "button": "Schedule a call"
+  },
+  "cta32": {
+    "title": "Stay ahead with our updates",
+    "description": "Get the latest on AI, DevOps, and development trends delivered to your inbox.",
+    "placeholder": "Enter your email",
+    "button": "Subscribe now",
+    "terms": "By clicking Subscribe you're confirming that you agree with our Terms and Conditions."
+  },
+  "testimonial17": {
+    "title": "Client voices",
+    "description": "What they say about working with us",
+    "t1Quote": "\"They delivered a machine learning pipeline that cut our processing time in half. No meetings, no excuses, just results.\"",
+    "t1Role": "CTO, TechVenture Inc",
+    "t2Quote": "\"Our e-commerce platform went live in three weeks. The payment integration worked flawlessly from day one.\"",
+    "t2Role": "Founder, Digital Commerce",
+    "placeholder": "Enter your email",
+    "button": "Subscribe now",
+    "terms": "By clicking Subscribe you're confirming that you agree with our Terms and Conditions."
+  },
+  "testimonial17": {
+    "title": "Client voices",
+    "description": "What they say about working with us",
+    "t1Quote": "\"They delivered a machine learning pipeline that cut our processing time in half. No meetings, no excuses, just results.\"",
+    "t1Role": "CTO, TechVenture Inc",
+    "t2Quote": "\"Our e-commerce platform went live in three weeks. The payment integration worked flawlessly from day one.\"",
+    "t2Role": "Founder, Digital Commerce",
+    "t3Quote": "\"They built our mobile app and backend infrastructure simultaneously. Everything integrated perfectly without a single hiccup.\"",
+    "t3Role": "Product Manager, StartupHub"
+  },
+  "faq": {
+    "title": "Questions",
+    "description": "Everything you need to know about our process, timelines, and what comes after delivery.",
+    "q1": "How fast do you deliver?",
+    "a1": "Most projects ship within days to weeks depending on scope. We move code from development to production without the usual delays. Speed is built into how we work, not something we sacrifice quality for.",
+    "q2": "What happens after launch?",
+    "a2": "We don't disappear once your solution goes live. Post-delivery support keeps everything running smooth and handles any issues that surface. You get ongoing maintenance and optimization to ensure peak performance.",
+    "q3": "Do you handle payments integration?",
+    "a3": "Yes. We build complete e-commerce solutions with payment processing, order management, and checkout flows that work flawlessly. Everything integrates cleanly and handles transactions securely from day one.",
+    "q4": "Can you build mobile and backend together?",
+    "a4": "That's exactly what we do. Mobile apps and backend infrastructure built simultaneously so they fit together perfectly. No integration headaches, no delays waiting for one side to finish.",
+    "q5": "What about serverless infrastructure?",
+    "a5": "We handle full serverless managed services so you don't manage servers. Everything scales automatically, costs stay predictable, and you focus on your business instead of infrastructure.",
+    "moreAnswers": "Need more answers?",
+    "reachOut": "Reach out and we'll walk you through exactly how we work.",
+    "contact": "Contact"
+  },
+  "playgroundTeaser": {
+    "label": "Interactive 3D Studio",
+    "title": "Our 3D Design Playground",
+    "description": "Step into an immersive, interactive design playground. Click any card to explore our high-tech custom 3D hardware assets or run fully interactive live web applications in real-time.",
+    "launchApp": "Launch Live Web App",
+    "view3d": "View Live 3D Model",
+    "launchSandbox": "Launch Full Design Sandbox",
+    "sandboxDesc": "Access the full sandbox viewport with category filters and model technical metrics.",
+    "enterPlayground": "Enter 3D Playground",
+    "launchFull": "Launch Full 3D Interactive Sandbox"
+  },
+  "teaserModels": {
+    "animated-gradient": {
+      "name": "Animated Gradient UI",
+      "category": "Web Applications",
+      "desc": "An interactive, physics-based animated gradient studio. Customize colors, speeds, and flow vectors in real-time."
+    },
+    "rare-natural": {
+      "name": "Rare Natural Elements",
+      "category": "Web Applications",
+      "desc": "A gorgeous, high-end organic interactive landing page showcasing advanced grid physics and color theory integrations."
+    },
+    "element-visualizer": {
+      "name": "Element Visualizer Studio",
+      "category": "Web Applications",
+      "desc": "A powerful developer canvas to experiment with CSS layouts, particle fields, and custom animation configurations dynamically."
+    },
+    "server": {
+      "name": "Futuristic Server Node",
+      "category": "Infrastructure",
+      "desc": "A massive, heavy-duty server rack node with high-fidelity ports, wires, and internal slots. Represents robust serverless infrastructure."
+    },
+    "laptop": {
+      "name": "Laptop Pro",
+      "category": "Hardware",
+      "desc": "A modern, ultra-slim designer laptop with mechanical key bounds, robust hinge articulation, and sleek trackpad boundaries."
+    },
+    "keyboard": {
+      "name": "Mechanical Keyboard",
+      "category": "Input Devices",
+      "desc": "A premium custom mechanical keyboard featuring tactile keycaps, retro-futuristic key mappings, and ergonomic angle support."
+    },
+    "mouse": {
+      "name": "Wireless Mouse",
+      "category": "Input Devices",
+      "desc": "A streamlined, ergonomic modern wireless mouse engineered for precision, custom gestures, and silent tactile scroll feedback."
+    },
+    "rubik": {
+      "name": "Rubik's Game Cube",
+      "category": "Algorithms",
+      "desc": "A perfect game-logic Rubik's Cube representing algorithmic problem solving, reinforcement learning models, and code logic."
+    },
+    "coffee": {
+      "name": "Iced Latte Cup",
+      "category": "Developer Fuel",
+      "desc": "An organic glass cup of iced latte with realistic coffee layers, ice cubes, and a straw. Represents developer fuel and active focus."
+    },
+    "clock": {
+      "name": "Vintage Desk Clock",
+      "category": "Craftsmanship",
+      "desc": "A stunning retro mechanical gears desk clock, showing intricate gear boundaries and timeless mechanical craftsmanship."
+    }
+  },
+  "portfolio": {
+    "headerBadge": "Deployed Projects Portfolio",
+    "backToHome": "← Back to Homepage",
+    "title": "Our Live Projects",
+    "description": "Explore a selection of our deployed platforms, showcasing our commitment to high-performance, secure, and beautiful digital experiences.",
+    "visitLiveSite": "Visit Live Site",
+    "clickToView": "Click \"Visit Live Site\" to view"
+  },
+  "portfolioProjects": {
+    "maedric": {
+      "desc": "A modern, premium experience tailored for high-end digital services."
+    },
+    "igra": {
+      "desc": "Creative digital studio featuring immersive 3D and dynamic web experiences."
+    },
+    "neti": {
+      "desc": "An advanced educational platform built for scale, performance, and seamless user experience."
+    }
+  },
+  "playgroundPage": {
+    "headerBadge": "3D Design Sandbox Studio",
+    "premiumAssets": "Premium Assets",
+    "backToHome": "← Back to Homepage",
+    "loading": "Loading 3D asset data...",
+    "interactiveFrame": "Interactive Frame",
+    "activeNode": "Active Node",
+    "liveWebApp": "Live Web App Active",
+    "drag": "Drag",
+    "rotateCamera": "Rotate Camera",
+    "pinch": "Pinch",
+    "zoomAsset": "Zoom Asset",
+    "distribution": "Distribution",
+    "fileSize": "File Size",
+    "structure": "Structure",
+    "polygonCount": "Polygon Count",
+    "complexity": "Complexity",
+    "texturingMap": "Texturing Map",
+    "searchModels": "Search models...",
+    "selectAsset": "Select 3D Hardware Asset",
+    "noMatch": "No matching models found in this category.",
+    "techSpecs": "Technical Specifications",
+    "scaleBounds": "Standard Scale Bounds",
+    "materialMappings": "Material Mappings",
+    "iframeSandboxMode": "Iframe Sandbox Mode",
+    "autoRotation": "Auto-Rotation Enabled",
+    "interactiveSandbox": "Interactive Sandbox",
+    "yes": "Yes",
+    "designerNotes": "Detailed Designer Notes",
+    "shareView": "Share this asset view",
+    "directLink": "Direct link pre-selects this exact model automatically.",
+    "copyLink": "Copy Link",
+    "copied": "Direct link copied to clipboard:",
+    "all": "All"
+  },
+  "booking": {
+    "backToHome": "Back to Home"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: June 2026",
+      "p1": "This is a placeholder for your Privacy Policy. You should replace this text with your actual privacy policy content.",
+      "p2": "We take your privacy seriously and are committed to protecting your personal information. This policy describes how we collect, use, and handle your data when you use our services.",
+      "s1Title": "1. Information We Collect",
+      "s1Text": "We may collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and services, when you participate in activities on the Website, or otherwise when you contact us. The personal information that we collect depends on the context of your interactions with us and the Website, the choices you make, and the products and features you use.",
+      "s2Title": "2. How We Use Your Information",
+      "s2Text": "We process your personal information for a variety of reasons, depending on how you interact with our services, including:",
+      "s2List1": "To facilitate account creation and authentication and otherwise manage user accounts.",
+      "s2List2": "To respond to user inquiries and offer support to users.",
+      "s2List3": "To fulfill and manage your orders, payments, returns, and exchanges.",
+      "s2List4": "To evaluate and improve our services, products, marketing, and your experience.",
+      "s3Title": "3. Sharing Your Information",
+      "s3Text": "We may share your data with third-party vendors, service providers, contractors, or agents who perform services for us or on our behalf and require access to such information to do that work. We do not sell your personal information to third parties.",
+      "s4Title": "4. Data Security",
+      "s4Text": "We have implemented appropriate and reasonable technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure.",
+      "s5Title": "5. Contact Us",
+      "s5Text": "If you have questions or comments about this notice, you may email us at "
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: June 2026",
+      "p1": "This is a placeholder for your Terms of Service. You should replace this text with your actual terms and conditions.",
+      "p2": "By accessing or using our services, you agree to be bound by these terms. If you disagree with any part of the terms, you may not access the service.",
+      "s1Title": "1. Agreement to Terms",
+      "s1Text": "By accessing our website and using our services, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you are prohibited from using or accessing our website and services.",
+      "s2Title": "2. Intellectual Property Rights",
+      "s2Text": "Unless otherwise indicated, the website and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, and arrangement thereof) are owned by Fastlaunch, its licensors, or other providers of such material and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.",
+      "s3Title": "3. User Representations",
+      "s3Text": "By using the Site, you represent and warrant that: (1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such registration information as necessary; (3) you have the legal capacity and you agree to comply with these Terms of Service.",
+      "s4Title": "4. Limitation of Liability",
+      "s4Text": "In no event will we or our directors, employees, or agents be liable to you or any third party for any direct, indirect, consequential, exemplary, incidental, special, or punitive damages, including lost profit, lost revenue, loss of data, or other damages arising from your use of the site or our services.",
+      "s5Title": "5. Governing Law",
+      "s5Text": "These terms and conditions are governed by and construed in accordance with the laws of our jurisdiction and you irrevocably submit to the exclusive jurisdiction of the courts in that location.",
+      "s6Title": "6. Contact Us",
+      "s6Text": "In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at: "
+    },
+    "cookies": {
+      "title": "Cookie Policy & Settings",
+      "lastUpdated": "Last updated: June 2026",
+      "p1": "This Cookie Policy explains how Fastlaunch (\"we\", \"us\", and \"our\") uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.",
+      "s1Title": "What are cookies?",
+      "s1Text": "Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners in order to make their websites work, or to work more efficiently, as well as to provide reporting information.",
+      "s2Title": "Manage your preferences",
+      "s2Text": "You can review and change your cookie preferences below. Please note that blocking some types of cookies may impact your experience of the site and the services we are able to offer.",
+      "essentialTitle": "Strictly Necessary Cookies",
+      "essentialText": "These cookies are essential for you to browse the website and use its features, such as accessing secure areas of the site. Without these cookies, services you have asked for cannot be provided.",
+      "alwaysActive": "Always Active",
+      "analyticsTitle": "Analytics & Performance Cookies",
+      "analyticsText": "These cookies collect information about how you use a website, like which pages you visited and which links you clicked on. None of this information can be used to identify you. It is all aggregated and, therefore, anonymized.",
+      "marketingTitle": "Marketing & Targeting Cookies",
+      "marketingText": "These cookies track your online activity to help advertisers deliver more relevant advertising or to limit how many times you see an ad. They can share that information with other organizations or advertisers.",
+      "saveBtn": "Save Preferences",
+      "savedMsg": "Preferences saved!"
+    }
+  },
+  "footer": {
+    "contactUs": "Contact us",
+    "services": "Services",
+    "aiSolutions": "AI solutions",
+    "webDev": "Web development",
+    "mobileApps": "Mobile apps",
+    "devOps": "DevOps services",
+    "ecommerce": "E-commerce",
+    "company": "Company",
+    "aboutUs": "About us",
+    "ourTeam": "Our team",
+    "careers": "Careers",
+    "contact": "Contact",
+    "blog": "Blog",
+    "followUs": "Follow us",
+    "rights": "© 2026 Fastlaunch. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of service",
+    "cookieSettings": "Cookie settings"
+  }
+}

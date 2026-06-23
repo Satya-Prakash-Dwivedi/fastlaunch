@@ -1,6 +1,7 @@
 import React from "react";
 import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const PROJECTS = [
   {
@@ -23,6 +24,7 @@ const PROJECTS = [
 ];
 
 export function PortfolioPage() {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-neutral-950 text-white font-sans flex flex-col scheme-7 alternate logo-alt">
       
@@ -35,7 +37,7 @@ export function PortfolioPage() {
           <span className="hidden sm:inline-block h-6 w-px bg-white-20" />
           <div className="hidden sm:flex items-center gap-2">
             <span className="text-tiny tracking-wider uppercase text-white/50 font-bold">
-              Deployed Projects Portfolio
+              {t('portfolio.headerBadge', 'Deployed Projects Portfolio')}
             </span>
           </div>
         </div>
@@ -46,7 +48,7 @@ export function PortfolioPage() {
             size="sm"
             className="px-4 py-1.5 text-xs font-bold transition-all hover:scale-[1.02]"
           >
-            <a href="#/">← Back to Homepage</a>
+            <a href="#/">{t('portfolio.backToHome', '← Back to Homepage')}</a>
           </Button>
         </div>
       </header>
@@ -54,10 +56,10 @@ export function PortfolioPage() {
       {/* HERO SECTION */}
       <section className="px-[5%] py-12 md:py-16 text-center border-b border-white-10">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter mb-4">
-          Our Live Projects
+          {t('portfolio.title', 'Our Live Projects')}
         </h1>
         <p className="text-white/60 max-w-2xl mx-auto text-lg">
-          Explore a selection of our deployed platforms, showcasing our commitment to high-performance, secure, and beautiful digital experiences.
+          {t('portfolio.description', 'Explore a selection of our deployed platforms, showcasing our commitment to high-performance, secure, and beautiful digital experiences.')}
         </p>
       </section>
 
@@ -70,12 +72,16 @@ export function PortfolioPage() {
             <div className={`w-full lg:w-1/3 flex flex-col gap-6 ${idx % 2 !== 0 ? 'lg:order-2' : ''}`}>
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-3">{project.name}</h2>
-                <p className="text-white/70 text-lg leading-relaxed">{project.description}</p>
+                <p className="text-white/70 text-lg leading-relaxed">
+                  {idx === 0 && t('portfolioProjects.maedric.desc', project.description)}
+                  {idx === 1 && t('portfolioProjects.igra.desc', project.description)}
+                  {idx === 2 && t('portfolioProjects.neti.desc', project.description)}
+                </p>
               </div>
               <div>
                 <Button asChild variant="primary" className="gap-2">
                   <a href={project.url} target="_blank" rel="noopener noreferrer">
-                    Visit Live Site <span>↗</span>
+                    {t('portfolio.visitLiveSite', 'Visit Live Site')} <span>↗</span>
                   </a>
                 </Button>
               </div>
@@ -113,7 +119,7 @@ export function PortfolioPage() {
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors pointer-events-none flex items-center justify-center">
                 {project.iframeBlocked && (
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 text-white px-4 py-2 rounded-full text-sm font-bold backdrop-blur-sm">
-                    Click "Visit Live Site" to view
+                    {t('portfolio.clickToView', 'Click "Visit Live Site" to view')}
                   </span>
                 )}
               </div>

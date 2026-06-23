@@ -3,22 +3,22 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { ChevronRight } from "relume-icons";
+import { useTranslation } from "react-i18next";
 
 export function Layout239() {
+  const { t } = useTranslation();
   return (
     <section id="portfolio" className="px-[5%] pt-16 md:pt-24 lg:pt-28 pb-8 md:pb-12 scheme-1">
       <div className="container">
         <div className="flex flex-col items-center">
           <div className="mb-12 text-center md:mb-18 lg:mb-20">
             <div className="w-full max-w-lg mx-auto">
-              <p className="mb-3 font-semibold md:mb-4">Method</p>
+              <p className="mb-3 font-semibold md:mb-4">{t('layout239.method', 'Method')}</p>
               <h2 className="mb-5 text-h2 font-bold md:mb-6">
-                How we work and what matters
+                {t('layout239.title', 'How we work and what matters')}
               </h2>
               <p className="text-medium text-scheme-text/80">
-                Speed without shortcuts. Quality without delays. Everything
-                arrives ready to use. We build what you need, test it
-                thoroughly, and hand it over working.
+                {t('layout239.description', 'Speed without shortcuts. Quality without delays. Everything arrives ready to use. We build what you need, test it thoroughly, and hand it over working.')}
               </p>
             </div>
           </div>
@@ -38,9 +38,9 @@ export function Layout239() {
               </div>
               <div className="order-2 md:order-2 flex flex-col justify-center pl-0 md:pl-6 lg:pl-12">
                 <span className="text-scheme-text/30 text-h4 font-bold mb-2">01</span>
-                <h3 className="mb-4 text-h3 font-bold">Fast delivery</h3>
+                <h3 className="mb-4 text-h3 font-bold">{t('layout239.step1Title', 'Fast delivery')}</h3>
                 <p className="text-medium text-scheme-text/75 leading-relaxed">
-                  Code moves from our hands to your servers in days, not months. We deliver high-speed, fully tested, and intelligent pipelines that are ready to run in record time.
+                  {t('layout239.step1Desc', 'Code moves from our hands to your servers in days, not months. We deliver high-speed, fully tested, and intelligent pipelines that are ready to run in record time.')}
                 </p>
               </div>
             </div>
@@ -49,9 +49,9 @@ export function Layout239() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center w-full pt-12 md:pt-16 border-t border-scheme-border/10">
               <div className="order-2 md:order-1 flex flex-col justify-center pr-0 md:pr-6 lg:pr-12">
                 <span className="text-scheme-text/30 text-h4 font-bold mb-2">02</span>
-                <h3 className="mb-4 text-h3 font-bold">Ready to plug in</h3>
+                <h3 className="mb-4 text-h3 font-bold">{t('layout239.step2Title', 'Ready to plug in')}</h3>
                 <p className="text-medium text-scheme-text/75 leading-relaxed">
-                  No assembly required. Your solution works the moment it lands. Everything is engineered to integrate seamlessly and perform inside your active production ecosystem instantly.
+                  {t('layout239.step2Desc', 'No assembly required. Your solution works the moment it lands. Everything is engineered to integrate seamlessly and perform inside your active production ecosystem instantly.')}
                 </p>
               </div>
               <div className="order-1 md:order-2">
@@ -78,9 +78,9 @@ export function Layout239() {
               </div>
               <div className="order-2 md:order-2 flex flex-col justify-center pl-0 md:pl-6 lg:pl-12">
                 <span className="text-scheme-text/30 text-h4 font-bold mb-2">03</span>
-                <h3 className="mb-4 text-h3 font-bold">Post-delivery support</h3>
+                <h3 className="mb-4 text-h3 font-bold">{t('layout239.step3Title', 'Post-delivery support')}</h3>
                 <p className="text-medium text-scheme-text/75 leading-relaxed">
-                  We stay close after launch to keep everything running smooth. Continuous monitoring, seamless updates, and fast iteration support to ensure your long-term success.
+                  {t('layout239.step3Desc', 'We stay close after launch to keep everything running smooth. Continuous monitoring, seamless updates, and fast iteration support to ensure your long-term success.')}
                 </p>
               </div>
             </div>
@@ -88,7 +88,7 @@ export function Layout239() {
 
           <div className="mt-12 flex flex-wrap items-center gap-4 md:mt-18 lg:mt-20">
             <a href="#/booking">
-              <Button variant="secondary">Get started</Button>
+              <Button variant="secondary">{t('layout239.getStarted', 'Get started')}</Button>
             </a>
             {/* <Button
               iconRight={<ChevronRight className="text-scheme-text" />}

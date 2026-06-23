@@ -4,19 +4,21 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import React from "react";
 import { ChevronRight } from "relume-icons";
+import { useTranslation } from "react-i18next";
 
 export function Layout373() {
+  const { t } = useTranslation();
   return (
     <section id="services" className="px-[5%] py-16 md:py-24 lg:py-28 scheme-7 alternate logo-alt">
       <div className="container">
         <div className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
-            <p className="mb-3 font-semibold md:mb-4">Capabilities</p>
+            <p className="mb-3 font-semibold md:mb-4">{t('layout373.capabilities', 'Capabilities')}</p>
             <h2 className="mb-5 text-h2 font-bold md:mb-6">
-              What we build for you
+              {t('layout373.title', 'What we build for you')}
             </h2>
             <p className="text-medium">
-              Intelligent systems that think, learn, and adapt to your needs.
+              {t('layout373.description', 'Intelligent systems that think, learn, and adapt to your needs.')}
             </p>
           </div>
         </div>
@@ -36,23 +38,23 @@ export function Layout373() {
                     />
                   </div>
                   <h3 className="mb-5 text-h3 font-bold md:mb-6">
-                    AI / ML / RL Solutions
+                    {t('layout373.aiTitle', 'AI / ML / RL Solutions')}
                   </h3>
                   <p>
-                    Intelligent neural networks, predictive machine learning models, and reinforcement learning systems designed to adapt and scale.
+                    {t('layout373.aiDesc', 'Intelligent neural networks, predictive machine learning models, and reinforcement learning systems designed to adapt and scale.')}
                   </p>
                 </div>
                 <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                  <Button title="Explore" variant="secondary">
-                    Explore
+                  <Button title={t('layout373.explore', 'Explore')} variant="secondary">
+                    {t('layout373.explore', 'Explore')}
                   </Button>
                   <Button
-                    title="Details"
+                    title={t('layout373.details', 'Details')}
                     variant="link"
                     size="link"
                     iconRight={<ChevronRight className="text-scheme-text" />}
                   >
-                    Details
+                    {t('layout373.details', 'Details')}
                   </Button>
                 </div>
               </div>
@@ -72,10 +74,10 @@ export function Layout373() {
                     />
                   </div>
                   <h3 className="mb-2 text-h5 font-bold">
-                    DevOps & Automation
+                    {t('layout373.devopsTitle', 'DevOps & Automation')}
                   </h3>
                   <p>
-                    CI/CD pipelines, high-availability deployments, and infrastructure as code to ship code rapidly.
+                    {t('layout373.devopsDesc', 'CI/CD pipelines, high-availability deployments, and infrastructure as code to ship code rapidly.')}
                   </p>
                 </div>
                 <div className="mt-5 flex items-center gap-4 md:mt-6">
@@ -105,10 +107,10 @@ export function Layout373() {
                     />
                   </div>
                   <h3 className="mb-2 text-h5 font-bold">
-                    FullStack Web
+                    {t('layout373.fullstackTitle', 'FullStack Web')}
                   </h3>
                   <p>
-                    Cohesive frontend interfaces and robust backend architectures built for performance and security.
+                    {t('layout373.fullstackDesc', 'Cohesive frontend interfaces and robust backend architectures built for performance and security.')}
                   </p>
                 </div>
                 <div className="mt-5 flex items-center gap-4 md:mt-6">
@@ -138,10 +140,10 @@ export function Layout373() {
                     />
                   </div>
                   <h3 className="mb-2 text-h5 font-bold">
-                    Mobile Apps
+                    {t('layout373.mobileTitle', 'Mobile Apps')}
                   </h3>
                   <p>
-                    Native iOS and Android applications utilizing smooth animations and shared backend components.
+                    {t('layout373.mobileDesc', 'Native iOS and Android applications utilizing smooth animations and shared backend components.')}
                   </p>
                 </div>
                 <div className="mt-5 flex items-center gap-4 md:mt-6">
@@ -171,23 +173,23 @@ export function Layout373() {
                     />
                   </div>
                   <h3 className="mb-5 text-h3 font-bold md:mb-6">
-                    E-commerce Applications
+                    {t('layout373.ecommerceTitle', 'E-commerce Applications')}
                   </h3>
                   <p>
-                    Complete transactional platforms featuring Stripe/PayPal payments, custom order workflows, smart check-out management, and real-time carrier delivery integrations.
+                    {t('layout373.ecommerceDesc', 'Complete transactional platforms featuring Stripe/PayPal payments, custom order workflows, smart check-out management, and real-time carrier delivery integrations.')}
                   </p>
                 </div>
                 <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-                  <Button title="Explore" variant="secondary">
-                    Explore
+                  <Button title={t('layout373.explore', 'Explore')} variant="secondary">
+                    {t('layout373.explore', 'Explore')}
                   </Button>
                   <Button
-                    title="Details"
+                    title={t('layout373.details', 'Details')}
                     variant="link"
                     size="link"
                     iconRight={<ChevronRight className="text-scheme-text" />}
                   >
-                    Details
+                    {t('layout373.details', 'Details')}
                   </Button>
                 </div>
               </div>
@@ -207,10 +209,10 @@ export function Layout373() {
                     />
                   </div>
                   <h3 className="mb-2 text-h5 font-bold">
-                    Serverless Managed
+                    {t('layout373.serverlessTitle', 'Serverless Managed')}
                   </h3>
                   <p>
-                    Fully auto-scaling, modern cloud environments that charge only for exact execution time, reducing cloud waste.
+                    {t('layout373.serverlessDesc', 'Fully auto-scaling, modern cloud environments that charge only for exact execution time, reducing cloud waste.')}
                   </p>
                 </div>
                 <div className="mt-5 flex items-center gap-4 md:mt-6">

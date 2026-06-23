@@ -3,24 +3,24 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export function Header84() {
+  const { t } = useTranslation();
   return (
     <section className="px-[5%] py-12 md:py-16 lg:py-20 scheme-1">
       <div className="container">
         <Card className="grid auto-cols-fr grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col justify-center p-8 md:p-12">
-            <h1 className="mb-5 text-h1 font-bold md:mb-6">
-              Build fast. Deploy everywhere. Scale without limits.
+            <h1 className="mb-5 text-h1 font-bold md:mb-6 whitespace-pre-wrap">
+              {t('header84.title', 'Build fast. Deploy everywhere. Scale without limits.')}
             </h1>
             <p className="text-medium">
-              We deliver intelligent solutions that work immediately. From
-              machine learning models to serverless infrastructure, everything
-              is ready to plug in and perform.
+              {t('header84.description', 'We deliver intelligent solutions that work immediately. From machine learning models to serverless infrastructure, everything is ready to plug in and perform.')}
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
               <a href="#/booking">
-                <Button title="Start now">Start now</Button>
+                <Button title={t('header84.startNow', 'Start now')}>{t('header84.startNow', 'Start now')}</Button>
               </a>
               {/* <Button title="Learn more" variant="secondary">
                 Learn more

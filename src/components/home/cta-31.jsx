@@ -17,7 +17,7 @@ export function Cta31() {
               moving.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
-              <Button title="Request a quote">Request a quote</Button>
+              {/* <Button title="Request a quote">Request a quote</Button> */}
               <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">
                 <Button title="Schedule a call" variant="secondary">
                   Schedule a call

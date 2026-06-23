@@ -10,6 +10,7 @@ export function FigmaPrototype() {
             title="Figma Prototype"
             className="w-full h-[85vh] md:h-[92vh] border-0 bg-white" 
             allowFullScreen
+            loading="lazy"
           />
         </div>
       </div>

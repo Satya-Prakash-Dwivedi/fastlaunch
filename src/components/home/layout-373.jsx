@@ -31,6 +31,8 @@ export function Layout373() {
                       className="size-12 text-scheme-text"
                       src="https://cdn.jsdelivr.net/npm/@material-symbols/svg-500@latest/rounded/pattern.svg"
                       alt="AI/ML/RL Icon"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <h3 className="mb-5 text-h3 font-bold md:mb-6">
@@ -65,6 +67,8 @@ export function Layout373() {
                       className="size-12 text-scheme-text"
                       src="https://cdn.jsdelivr.net/npm/@material-symbols/svg-500@latest/rounded/settings.svg"
                       alt="DevOps Icon"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <h3 className="mb-2 text-h5 font-bold">
@@ -96,6 +100,8 @@ export function Layout373() {
                       className="size-12 text-scheme-text"
                       src="https://cdn.jsdelivr.net/npm/@material-symbols/svg-500@latest/rounded/code.svg"
                       alt="FullStack Icon"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <h3 className="mb-2 text-h5 font-bold">
@@ -127,6 +133,8 @@ export function Layout373() {
                       className="size-12 text-scheme-text"
                       src="https://cdn.jsdelivr.net/npm/@material-symbols/svg-500@latest/rounded/smartphone.svg"
                       alt="Mobile Icon"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <h3 className="mb-2 text-h5 font-bold">
@@ -158,6 +166,8 @@ export function Layout373() {
                       className="size-12 text-scheme-text"
                       src="https://cdn.jsdelivr.net/npm/@material-symbols/svg-500@latest/rounded/shopping_cart.svg"
                       alt="E-commerce Icon"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <h3 className="mb-5 text-h3 font-bold md:mb-6">
@@ -192,6 +202,8 @@ export function Layout373() {
                       className="size-12 text-scheme-text"
                       src="https://cdn.jsdelivr.net/npm/@material-symbols/svg-500@latest/rounded/cloud.svg"
                       alt="Serverless Icon"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <h3 className="mb-2 text-h5 font-bold">

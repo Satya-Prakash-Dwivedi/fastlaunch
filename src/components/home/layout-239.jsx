@@ -59,6 +59,8 @@ export function Layout239() {
                   src="/assets/software-engineers.jpg"
                   alt="Software engineers collaborating at modern desk"
                   className="aspect-video w-full rounded-image object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -70,6 +72,8 @@ export function Layout239() {
                   src="/assets/ux-collaboration.jpg"
                   alt="UI/UX design team collaboration"
                   className="aspect-video w-full rounded-image object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="order-2 md:order-2 flex flex-col justify-center pl-0 md:pl-6 lg:pl-12">

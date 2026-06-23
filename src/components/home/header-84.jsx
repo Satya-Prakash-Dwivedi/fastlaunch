@@ -32,6 +32,8 @@ export function Header84() {
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
               className="w-full h-full object-cover rounded-b-card lg:rounded-bl-none lg:rounded-r-card"
               alt="Fastlaunch Diverse Tech Team Collaborating"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
         </Card>

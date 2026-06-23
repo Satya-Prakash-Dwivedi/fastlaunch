@@ -30,6 +30,8 @@ export function Stats54() {
                 src="/assets/data-classification.png"
                 alt="Data classification charts cover"
                 className="aspect-[3/2] size-full rounded-image object-cover shadow-sm"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </Fragment>

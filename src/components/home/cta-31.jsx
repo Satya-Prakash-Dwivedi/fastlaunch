@@ -28,9 +28,11 @@ export function Cta31() {
         </div>
         <div className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto aspect-video overflow-hidden rounded-image">
           <img
-            src="/assets/ux-chart.jpg"
-            className="size-full object-cover"
-            alt="Collaborator explaining design metrics"
+            src="/assets/code-architecture.jpg"
+            alt="Abstract view of modern software architecture"
+            className="h-full w-full object-cover rounded-image"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

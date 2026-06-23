@@ -19,7 +19,7 @@ export function Header84() {
               is ready to plug in and perform.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">
+              <a href="#/booking">
                 <Button title="Start now">Start now</Button>
               </a>
               {/* <Button title="Learn more" variant="secondary">
@@ -30,7 +30,7 @@ export function Header84() {
           <div className="flex items-center justify-center">
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
-              className="w-full h-full object-cover rounded-r-card"
+              className="w-full h-full object-cover rounded-b-card lg:rounded-bl-none lg:rounded-r-card"
               alt="Fastlaunch Diverse Tech Team Collaborating"
             />
           </div>

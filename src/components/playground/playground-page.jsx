@@ -241,8 +241,8 @@ export function PlaygroundPage() {
 
         {/* Dynamic Model Counter Badge */}
         <div className="flex items-center gap-4">
-          <div className="px-3 py-1 bg-white-5 border border-white-10 rounded-full text-xs font-semibold text-white/70">
-            {MODELS.length} Premium Assets Loaded
+          <div className="hidden md:block px-3 py-1 bg-white-5 border border-white-10 rounded-full text-xs font-semibold text-white/70 whitespace-nowrap">
+            {MODELS.length} Premium Assets
           </div>
           <Button
             asChild
@@ -281,7 +281,7 @@ export function PlaygroundPage() {
               </div>
             ) : null}
 
-            <div className="w-full h-full aspect-[4/3] max-w-4xl mx-auto rounded-2xl bg-black border border-white-10 overflow-hidden relative shadow-2xl flex items-center justify-center transition-all duration-500"
+            <div className="w-full aspect-[4/5] sm:aspect-square lg:aspect-[4/3] max-h-[70vh] lg:max-h-none max-w-4xl mx-auto rounded-2xl bg-black border border-white-10 overflow-hidden relative shadow-2xl flex items-center justify-center transition-all duration-500"
                  style={{ boxShadow: `0 20px 50px -12px ${selectedModel.glowColor}` }}>
               
               {selectedModel.type === "iframe" ? (
@@ -323,7 +323,7 @@ export function PlaygroundPage() {
               </div>
 
               {/* Viewport UI Overlay: Interactive Control Hints */}
-              <div className="absolute top-4 right-4 p-2.5 rounded-xl bg-neutral-950/80 border border-white-10 backdrop-blur-md flex flex-col gap-1 text-[10px] text-white/40 font-medium">
+              <div className="hidden sm:flex absolute top-4 right-4 p-2.5 rounded-xl bg-neutral-950/80 border border-white-10 backdrop-blur-md flex-col gap-1 text-[10px] text-white/40 font-medium">
                 {selectedModel.type === "iframe" ? (
                   <div className="flex items-center gap-2 text-emerald-400 font-bold">
                     <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" /> Live Web App Active
@@ -342,7 +342,7 @@ export function PlaygroundPage() {
 
               {/* Viewport UI Overlay: Interactive Technical Specs Floating Panel */}
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-neutral-950/95 border border-white-10 backdrop-blur-md">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center items-center divide-y md:divide-y-0 md:divide-x divide-white-10">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center items-center lg:divide-x divide-white-10">
                   
                   <div className="flex flex-col items-center">
                     <span className="text-[9px] font-bold text-white/40 uppercase tracking-wider mb-1">
@@ -351,21 +351,21 @@ export function PlaygroundPage() {
                     <span className="text-xs font-bold text-white">{selectedModel.size}</span>
                   </div>
 
-                  <div className="pt-2 md:pt-0 flex flex-col items-center">
+                  <div className="flex flex-col items-center">
                     <span className="text-[9px] font-bold text-white/40 uppercase tracking-wider mb-1">
                       {selectedModel.type === "iframe" ? "Structure" : "Polygon Count"}
                     </span>
                     <span className="text-xs font-bold text-white font-mono">{selectedModel.vertices}</span>
                   </div>
 
-                  <div className="pt-2 md:pt-0 flex flex-col items-center">
+                  <div className="flex flex-col items-center">
                     <span className="text-[9px] font-bold text-white/40 uppercase tracking-wider mb-1">
                       Complexity
                     </span>
                     <span className="text-xs font-bold text-white">{selectedModel.complexity}</span>
                   </div>
 
-                  <div className="pt-2 md:pt-0 flex flex-col items-center">
+                  <div className="flex flex-col items-center">
                     <span className="text-[9px] font-bold text-white/40 uppercase tracking-wider mb-1">
                       Texturing Map
                     </span>

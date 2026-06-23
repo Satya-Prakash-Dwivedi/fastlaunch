@@ -9,7 +9,7 @@ export function DigitalTransformation() {
           <p className="mb-6 font-bold text-scheme-text/50 tracking-[0.25em] uppercase text-xs md:text-sm">
             Digital Transformation
           </p>
-          <h2 className="mb-8 text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tighter leading-[1.1]">
+          <h2 className="mb-8 text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tighter leading-[1.1]">
             Eliminate Outdated Infrastructure.
           </h2>
           <p className="text-lg md:text-2xl lg:text-3xl font-light text-scheme-text/70 leading-relaxed max-w-4xl mx-auto">

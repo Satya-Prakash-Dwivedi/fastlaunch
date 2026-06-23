@@ -73,7 +73,7 @@ export function Footer1() {
                   </a>
                 </li>
                 <li className="text-small py-2">
-                  <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                  <a href="#/booking" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                     Contact
                   </a>
                 </li>

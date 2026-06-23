@@ -15,6 +15,7 @@ import { Cta32 } from './components/home/cta-32';
 import { Faq4 } from './components/home/faq-04';
 import { Footer1 } from './components/footer-01';
 import { PrivacyPolicyPage, TermsOfServicePage, CookieSettingsPage } from './components/legal/legal-pages';
+import { BookingPage } from './components/booking-page';
 
 function App() {
   const [route, setRoute] = useState(window.location.hash || '#/');
@@ -32,9 +33,10 @@ function App() {
   const isPrivacyPage = route.startsWith('#/privacy-policy');
   const isTermsPage = route.startsWith('#/terms-of-service');
   const isCookiePage = route.startsWith('#/cookie-settings');
+  const isBookingPage = route.startsWith('#/booking');
 
   useEffect(() => {
-    if (isPlaygroundPage || isPortfolioPage || isPrivacyPage || isTermsPage || isCookiePage) {
+    if (isPlaygroundPage || isPortfolioPage || isPrivacyPage || isTermsPage || isCookiePage || isBookingPage) {
       window.scrollTo(0, 0);
     } else {
       const hash = window.location.hash;
@@ -56,6 +58,10 @@ function App() {
 
   if (isPortfolioPage) {
     return <PortfolioPage />;
+  }
+
+  if (isBookingPage) {
+    return <BookingPage />;
   }
 
   let content;

@@ -136,9 +136,9 @@ export function Faq4() {
           <p className="text-medium">
             Reach out and we'll walk you through exactly how we work.
           </p>
-          <div className="mt-6 md:mt-8">
-            <Button asChild title="Contact" variant="secondary">
-              <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">Contact</a>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
+            <Button asChild title="Contact">
+              <a href="#/booking">Contact</a>
             </Button>
           </div>
         </div>

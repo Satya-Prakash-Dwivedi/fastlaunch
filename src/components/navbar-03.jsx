@@ -57,7 +57,7 @@ export function Navbar3() {
                 transition: { type: "spring", duration: 0.4, bounce: 0 },
               },
             }}
-            className="absolute top-0 left-0 z-50 flex h-dvh w-[90%] flex-col border-r border-scheme-border bg-scheme-background px-[8%] pb-6 md:w-[80%] lg:visible lg:static lg:flex lg:h-auto lg:w-auto lg:flex-row lg:border-none lg:px-0 lg:pb-0 lg:[--opacity-closed:100%] lg:[--x-closed:0%]"
+            className="absolute top-0 left-0 z-50 flex h-dvh w-full flex-col bg-[var(--color-scheme-background)] px-[5%] pb-6 lg:visible lg:static lg:flex lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:pb-0 lg:[--opacity-closed:100%] lg:[--x-closed:0%]"
           >
             {/* Logo inside mobile menu drawer */}
             <a href="#" className="mt-10 mb-8 flex shrink-0 lg:hidden">
@@ -68,6 +68,7 @@ export function Navbar3() {
             <div className="flex flex-col lg:flex-row lg:items-center gap-y-3 lg:gap-y-0 lg:gap-x-4 xl:gap-x-6">
               <a
                 href="#services"
+                onClick={useActive.toggleMobileMenu}
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
                 Services
@@ -76,18 +77,21 @@ export function Navbar3() {
                 href="#/portfolio-page"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={useActive.toggleMobileMenu}
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
                 Portfolio
               </a>
               <a
                 href="#/playground"
+                onClick={useActive.toggleMobileMenu}
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
                 Playground
               </a>
               <a
                 href="#testimonials"
+                onClick={useActive.toggleMobileMenu}
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
                 Active Consumers
@@ -96,7 +100,7 @@ export function Navbar3() {
 
             {/* Contact Button inside Mobile Drawer (hidden on desktop) */}
             <Button asChild className="mt-8 w-full lg:hidden" title="Contact" size="sm">
-              <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">Contact</a>
+              <a href="#/booking">Contact</a>
             </Button>
           </motion.div>
 
@@ -124,28 +128,28 @@ export function Navbar3() {
             size="sm"
             className="hidden md:flex px-5 py-2 text-sm font-semibold transition-all hover:scale-[1.02]"
           >
-            <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">Contact</a>
+            <a href="#/booking">Contact</a>
           </Button>
 
           {/* Hamburger Menu Toggle on Mobile with gorgeous micro-animations */}
           <button
-            className="flex size-11 flex-col justify-center items-center lg:hidden rounded-lg hover:bg-white-10 transition-colors"
+            className="relative z-[60] flex size-11 flex-col justify-center items-center lg:hidden rounded-lg hover:bg-white-10 transition-colors"
             onClick={useActive.toggleMobileMenu}
             aria-label="Toggle menu"
           >
             <div className="flex flex-col justify-between w-6 h-3.5">
               <span
-                className={`block h-0.5 w-full bg-scheme-text transition-all duration-300 origin-center ${
+                className={`block h-0.5 w-full bg-current transition-all duration-300 origin-center ${
                   useActive.isMobileMenuOpen ? "rotate-45 translate-y-[6px]" : ""
                 }`}
               />
               <span
-                className={`block h-0.5 w-full bg-scheme-text transition-all duration-300 ${
+                className={`block h-0.5 w-full bg-current transition-all duration-300 ${
                   useActive.isMobileMenuOpen ? "opacity-0" : ""
                 }`}
               />
               <span
-                className={`block h-0.5 w-full bg-scheme-text transition-all duration-300 origin-center ${
+                className={`block h-0.5 w-full bg-current transition-all duration-300 origin-center ${
                   useActive.isMobileMenuOpen ? "-rotate-45 -translate-y-[6px]" : ""
                 }`}
               />

@@ -83,7 +83,7 @@ export function Layout239() {
           </div>
 
           <div className="mt-12 flex flex-wrap items-center gap-4 md:mt-18 lg:mt-20">
-            <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">
+            <a href="#/booking">
               <Button variant="secondary">Get started</Button>
             </a>
             {/* <Button

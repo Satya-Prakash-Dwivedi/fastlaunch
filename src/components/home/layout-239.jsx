@@ -83,15 +83,17 @@ export function Layout239() {
           </div>
 
           <div className="mt-12 flex flex-wrap items-center gap-4 md:mt-18 lg:mt-20">
-            <Button variant="secondary">Get started</Button>
-            <Button
+            <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">
+              <Button variant="secondary">Get started</Button>
+            </a>
+            {/* <Button
               iconRight={<ChevronRight className="text-scheme-text" />}
               variant="link"
               size="link"
               title="Learn more"
             >
               Learn more
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

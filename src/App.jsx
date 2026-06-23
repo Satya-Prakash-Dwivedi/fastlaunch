@@ -14,6 +14,7 @@ import { Cta31 } from './components/home/cta-31';
 import { Cta32 } from './components/home/cta-32';
 import { Faq4 } from './components/home/faq-04';
 import { Footer1 } from './components/footer-01';
+import { PrivacyPolicyPage, TermsOfServicePage, CookieSettingsPage } from './components/legal/legal-pages';
 
 function App() {
   const [route, setRoute] = useState(window.location.hash || '#/');
@@ -28,9 +29,12 @@ function App() {
 
   const isPlaygroundPage = route.startsWith('#/playground');
   const isPortfolioPage = route.startsWith('#/portfolio-page');
+  const isPrivacyPage = route.startsWith('#/privacy-policy');
+  const isTermsPage = route.startsWith('#/terms-of-service');
+  const isCookiePage = route.startsWith('#/cookie-settings');
 
   useEffect(() => {
-    if (isPlaygroundPage || isPortfolioPage) {
+    if (isPlaygroundPage || isPortfolioPage || isPrivacyPage || isTermsPage || isCookiePage) {
       window.scrollTo(0, 0);
     } else {
       const hash = window.location.hash;
@@ -44,7 +48,7 @@ function App() {
         }, 100);
       }
     }
-  }, [route, isPlaygroundPage, isPortfolioPage]);
+  }, [route, isPlaygroundPage, isPortfolioPage, isPrivacyPage, isTermsPage, isCookiePage]);
 
   if (isPlaygroundPage) {
     return <PlaygroundPage />;
@@ -54,10 +58,16 @@ function App() {
     return <PortfolioPage />;
   }
 
-  return (
-    <div className="antialiased min-h-screen flex flex-col">
-      <Navbar3 />
-      <main className="flex-grow">
+  let content;
+  if (isPrivacyPage) {
+    content = <PrivacyPolicyPage />;
+  } else if (isTermsPage) {
+    content = <TermsOfServicePage />;
+  } else if (isCookiePage) {
+    content = <CookieSettingsPage />;
+  } else {
+    content = (
+      <>
         <Header84 />
         <Layout373 />
         <FigmaPrototype />
@@ -69,6 +79,15 @@ function App() {
         <Cta31 />
         <Cta32 />
         <Faq4 />
+      </>
+    );
+  }
+
+  return (
+    <div className="antialiased min-h-screen flex flex-col">
+      <Navbar3 />
+      <main className="flex-grow flex flex-col bg-scheme-background text-scheme-text">
+        {content}
       </main>
       <Footer1 />
     </div>

@@ -19,10 +19,12 @@ export function Header84() {
               is ready to plug in and perform.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Start now">Start now</Button>
-              <Button title="Learn more" variant="secondary">
+              <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">
+                <Button title="Start now">Start now</Button>
+              </a>
+              {/* <Button title="Learn more" variant="secondary">
                 Learn more
-              </Button>
+              </Button> */}
             </div>
           </div>
           <div className="flex items-center justify-center">

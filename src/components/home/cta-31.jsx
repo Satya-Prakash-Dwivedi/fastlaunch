@@ -18,9 +18,11 @@ export function Cta31() {
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
               <Button title="Request a quote">Request a quote</Button>
-              <Button title="Schedule a call" variant="secondary">
-                Schedule a call
-              </Button>
+              <a href="https://cal.com/fastlaunch" target="_blank" rel="noopener noreferrer">
+                <Button title="Schedule a call" variant="secondary">
+                  Schedule a call
+                </Button>
+              </a>
             </div>
           </div>
         </div>

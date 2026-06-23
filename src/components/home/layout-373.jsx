@@ -75,14 +75,14 @@ export function Layout373() {
                   </p>
                 </div>
                 <div className="mt-5 flex items-center gap-4 md:mt-6">
-                  <Button
+                  {/* <Button
                     title="Learn more"
                     variant="link"
                     size="link"
                     iconRight={<ChevronRight className="text-scheme-text" />}
                   >
                     Learn more
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </Card>
@@ -106,14 +106,14 @@ export function Layout373() {
                   </p>
                 </div>
                 <div className="mt-5 flex items-center gap-4 md:mt-6">
-                  <Button
+                  {/* <Button
                     title="Learn more"
                     variant="link"
                     size="link"
                     iconRight={<ChevronRight className="text-scheme-text" />}
                   >
                     Learn more
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </Card>
@@ -137,14 +137,14 @@ export function Layout373() {
                   </p>
                 </div>
                 <div className="mt-5 flex items-center gap-4 md:mt-6">
-                  <Button
+                  {/* <Button
                     title="Learn more"
                     variant="link"
                     size="link"
                     iconRight={<ChevronRight className="text-scheme-text" />}
                   >
                     Learn more
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </Card>
@@ -202,14 +202,14 @@ export function Layout373() {
                   </p>
                 </div>
                 <div className="mt-5 flex items-center gap-4 md:mt-6">
-                  <Button
+                  {/* <Button
                     title="Learn more"
                     variant="link"
                     size="link"
                     iconRight={<ChevronRight className="text-scheme-text" />}
                   >
                     Learn more
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </Card>

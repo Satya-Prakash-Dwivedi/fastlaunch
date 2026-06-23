@@ -2,11 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import {
-  FacebookLogo,
-  InstagramLogo,
   LinkedinLogo,
   XLogo,
-  YoutubeLogo,
 } from "relume-icons";
 import { BrandLogo } from "./brand-logo";
 
@@ -19,6 +16,12 @@ export function Footer1() {
             <a href="#" className="flex items-center justify-start w-max">
               <BrandLogo className="h-9 lg:h-11 w-auto text-scheme-text" />
             </a>
+            <div className="mt-8">
+              <p className="mb-2 font-semibold text-scheme-text">Contact us</p>
+              <a href="mailto:contact@fastlaunch.live" className="text-small text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                contact@fastlaunch.live
+              </a>
+            </div>
           </div>
           <div className="grid grid-cols-1 items-start gap-y-10 sm:grid-cols-3 sm:gap-x-6 md:gap-x-8 md:gap-y-4">
             <div className="flex flex-col items-start justify-start">
@@ -74,6 +77,7 @@ export function Footer1() {
                     Contact
                   </a>
                 </li>
+
                 <li className="text-small py-2">
                   <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                     Blog
@@ -85,33 +89,15 @@ export function Footer1() {
               <h2 className="mb-3 font-semibold text-scheme-text md:mb-4">Follow us</h2>
               <ul className="flex flex-col items-start">
                 <li className="text-small py-2">
-                  <a href="#" className="flex items-center gap-3 text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
-                    <FacebookLogo className="size-5 text-current" />
-                    <span>Facebook</span>
-                  </a>
-                </li>
-                <li className="text-small py-2">
-                  <a href="#" className="flex items-center gap-3 text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
-                    <InstagramLogo className="size-5 text-current" />
-                    <span>Instagram</span>
-                  </a>
-                </li>
-                <li className="text-small py-2">
-                  <a href="#" className="flex items-center gap-3 text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                  <a href="https://x.com/fastlaunchlive" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                     <XLogo className="size-5 p-0.5 text-current" />
                     <span>X</span>
                   </a>
                 </li>
                 <li className="text-small py-2">
-                  <a href="#" className="flex items-center gap-3 text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                  <a href="https://www.linkedin.com/company/fast-launch-live/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                     <LinkedinLogo className="size-5 text-current" />
                     <span>LinkedIn</span>
-                  </a>
-                </li>
-                <li className="text-small py-2">
-                  <a href="#" className="flex items-center gap-3 text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
-                    <YoutubeLogo className="size-5 text-current" />
-                    <span>YouTube</span>
                   </a>
                 </li>
               </ul>
@@ -125,13 +111,13 @@ export function Footer1() {
           </p>
           <ul className="text-small flex flex-col items-start gap-y-3 sm:flex-row sm:items-center sm:gap-x-6 sm:gap-y-0">
             <li className="underline">
-              <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">Privacy Policy</a>
+              <a href="#/privacy-policy" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">Privacy Policy</a>
             </li>
             <li className="underline">
-              <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">Terms of service</a>
+              <a href="#/terms-of-service" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">Terms of service</a>
             </li>
             <li className="underline">
-              <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">Cookie settings</a>
+              <a href="#/cookie-settings" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">Cookie settings</a>
             </li>
           </ul>
         </div>

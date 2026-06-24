@@ -29,7 +29,7 @@ export function Navbar3() {
   const isMobile = useMediaQuery("(max-width: 991px)");
 
   const toggleLanguage = () => {
-    const nextLang = i18n.language === 'en' ? 'hi' : 'en';
+    const nextLang = i18n.language === 'en' ? 'hi' : i18n.language === 'hi' ? 'gu' : 'en';
     i18n.changeLanguage(nextLang);
   };
   return (
@@ -107,7 +107,7 @@ export function Navbar3() {
                 onClick={toggleLanguage}
                 className="flex-1 py-2 px-4 rounded-lg border border-scheme-border/50 text-scheme-text font-bold text-sm bg-white-5 hover:bg-white-10 transition-colors"
               >
-                {i18n.language === 'en' ? t('navbar.switchToHi', 'Switch to Hindi (HI)') : t('navbar.switchToEn', 'Switch to English (EN)')}
+                {i18n.language === 'en' ? t('navbar.switchToHi', 'Switch to Hindi (HI)') : i18n.language === 'hi' ? t('navbar.switchToGu', 'Switch to Gujarati (GU)') : t('navbar.switchToEn', 'Switch to English (EN)')}
               </button>
             </div>
 
@@ -141,7 +141,7 @@ export function Navbar3() {
             className="hidden md:flex items-center justify-center size-9 rounded-full border border-scheme-border/50 text-scheme-text font-bold text-xs hover:bg-white-10 transition-colors"
             title="Toggle Language"
           >
-            {i18n.language === 'en' ? 'HI' : 'EN'}
+            {i18n.language === 'en' ? 'HI' : i18n.language === 'hi' ? 'GU' : 'EN'}
           </button>
 
           {/* Contact button (visible on tablet/desktop, hidden on small screens) */}

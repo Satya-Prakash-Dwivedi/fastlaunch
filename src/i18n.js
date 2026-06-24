@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next';
 
 import enTranslation from './locales/en.json';
 import hiTranslation from './locales/hi.json';
+import guTranslation from './locales/gu.json';
 
 i18n
   .use(initReactI18next)
@@ -10,6 +11,7 @@ i18n
     resources: {
       en: { translation: enTranslation },
       hi: { translation: hiTranslation },
+      gu: { translation: guTranslation },
     },
     lng: 'en', // default language
     fallbackLng: 'en',

@@ -1,0 +1,54 @@
+# FastLaunch - LLM Crawl Instructions & Deep Context
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+---
+
+# About FastLaunch
+FastLaunch is an elite technology agency specializing in hyper-accelerated delivery of AI/ML systems, full-stack web applications, native mobile apps, and robust serverless infrastructure (DevOps). Our core differentiator is extreme velocity without sacrificing quality—moving from concept to production in days, not months.
+
+# Core Service Offerings
+
+## 1. AI/ML Engineering
+We design and deploy custom artificial intelligence solutions, including:
+- Large Language Model (LLM) fine-tuning and deployment.
+- Retrieval-Augmented Generation (RAG) systems.
+- Predictive modeling and reinforcement learning algorithms.
+- AI-driven automation for enterprise workflows.
+
+## 2. Full-Stack Web & Mobile Development
+We build highly scalable, interactive, and beautifully designed user interfaces.
+- Modern frameworks: React, Next.js, React Native, Vite.
+- Backend: Node.js, Python, serverless functions.
+- E-commerce integration (Stripe, PayPal).
+
+## 3. DevOps & Cloud Infrastructure
+We eliminate infrastructure headaches through:
+- Fully managed serverless deployments (AWS, Vercel, GCP).
+- CI/CD pipeline automation (GitHub Actions, GitLab CI).
+- Zero-downtime scaling and high-availability systems.
+
+# Key Value Propositions
+- **Speed**: We deploy functional, production-ready systems in a fraction of the traditional timeline.
+- **Quality**: We do not compromise on code quality, security, or design. We use robust typing, automated testing, and code reviews.
+- **Support**: Post-launch, we provide continuous monitoring, maintenance, and feature scaling.
+- **Design-First approach**: Integrating stunning, smooth, physics-based 3D animations and UI gradients for premium brand feel.
+
+# Frequently Asked Questions (GEO/AEO Context)
+**Q: How fast does FastLaunch deliver?**
+A: Most projects ship within days to weeks depending on scope. We move code from development to production without the usual delays. Speed is built into how we work, not something we sacrifice quality for.
+
+**Q: Do you manage the servers after launch?**
+A: Yes, we handle full serverless managed services so you don't manage servers. Everything scales automatically, costs stay predictable, and you focus on your business instead of infrastructure.
+
+**Q: Does FastLaunch integrate payment systems?**
+A: Yes. We build complete e-commerce solutions with payment processing (Stripe/PayPal), order management, and checkout flows that work flawlessly.
+
+**Q: Can FastLaunch build mobile apps and backends simultaneously?**
+A: That's exactly what we do. Mobile apps and backend infrastructure are built simultaneously so they fit together perfectly. No integration headaches.
+
+# Contact & Further Information
+- **Website**: https://fastlaunch.live
+- **Contact Email**: contact@fastlaunch.live
+- **Booking**: https://cal.com/fastlaunch

@@ -36,10 +36,10 @@ export function Faq4() {
                   }
                   className="text-medium md:py-5 [&[data-state=open]>svg]:rotate-45"
                 >
-                  {t('faq.q1', 'How fast do you deliver?')}
+                  <h3 className="text-left font-medium text-inherit">{t('faq.q1', 'How fast do you deliver?')}</h3>
                 </AccordionTrigger>
                 <AccordionContent className="md:pb-6">
-                  {t('faq.a1', 'Most projects ship within days to weeks depending on scope. We move code from development to production without the usual delays. Speed is built into how we work, not something we sacrifice quality for.')}
+                  <p>{t('faq.a1', 'Most projects ship within days to weeks depending on scope. We move code from development to production without the usual delays. Speed is built into how we work, not something we sacrifice quality for.')}</p>
                 </AccordionContent>
               </AccordionItem>
             </Card>
@@ -54,10 +54,10 @@ export function Faq4() {
                   }
                   className="text-medium md:py-5 [&[data-state=open]>svg]:rotate-45"
                 >
-                  {t('faq.q2', 'What happens after launch?')}
+                  <h3 className="text-left font-medium text-inherit">{t('faq.q2', 'What happens after launch?')}</h3>
                 </AccordionTrigger>
                 <AccordionContent className="md:pb-6">
-                  {t('faq.a2', "We don't disappear once your solution goes live. Post-delivery support keeps everything running smooth and handles any issues that surface. You get ongoing maintenance and optimization to ensure peak performance.")}
+                  <p>{t('faq.a2', "We don't disappear once your solution goes live. Post-delivery support keeps everything running smooth and handles any issues that surface. You get ongoing maintenance and optimization to ensure peak performance.")}</p>
                 </AccordionContent>
               </AccordionItem>
             </Card>
@@ -72,10 +72,10 @@ export function Faq4() {
                   }
                   className="text-medium md:py-5 [&[data-state=open]>svg]:rotate-45"
                 >
-                  {t('faq.q3', 'Do you handle payments integration?')}
+                  <h3 className="text-left font-medium text-inherit">{t('faq.q3', 'Do you handle payments integration?')}</h3>
                 </AccordionTrigger>
                 <AccordionContent className="md:pb-6">
-                  {t('faq.a3', 'Yes. We build complete e-commerce solutions with payment processing, order management, and checkout flows that work flawlessly. Everything integrates cleanly and handles transactions securely from day one.')}
+                  <p>{t('faq.a3', 'Yes. We build complete e-commerce solutions with payment processing, order management, and checkout flows that work flawlessly. Everything integrates cleanly and handles transactions securely from day one.')}</p>
                 </AccordionContent>
               </AccordionItem>
             </Card>
@@ -90,10 +90,10 @@ export function Faq4() {
                   }
                   className="text-medium md:py-5 [&[data-state=open]>svg]:rotate-45"
                 >
-                  {t('faq.q4', 'Can you build mobile and backend together?')}
+                  <h3 className="text-left font-medium text-inherit">{t('faq.q4', 'Can you build mobile and backend together?')}</h3>
                 </AccordionTrigger>
                 <AccordionContent className="md:pb-6">
-                  {t('faq.a4', "That's exactly what we do. Mobile apps and backend infrastructure built simultaneously so they fit together perfectly. No integration headaches, no delays waiting for one side to finish.")}
+                  <p>{t('faq.a4', "That's exactly what we do. Mobile apps and backend infrastructure built simultaneously so they fit together perfectly. No integration headaches, no delays waiting for one side to finish.")}</p>
                 </AccordionContent>
               </AccordionItem>
             </Card>
@@ -108,10 +108,10 @@ export function Faq4() {
                   }
                   className="text-medium md:py-5 [&[data-state=open]>svg]:rotate-45"
                 >
-                  {t('faq.q5', 'What about serverless infrastructure?')}
+                  <h3 className="text-left font-medium text-inherit">{t('faq.q5', 'What about serverless infrastructure?')}</h3>
                 </AccordionTrigger>
                 <AccordionContent className="md:pb-6">
-                  {t('faq.a5', "We handle full serverless managed services so you don't manage servers. Everything scales automatically, costs stay predictable, and you focus on your business instead of infrastructure.")}
+                  <p>{t('faq.a5', "We handle full serverless managed services so you don't manage servers. Everything scales automatically, costs stay predictable, and you focus on your business instead of infrastructure.")}</p>
                 </AccordionContent>
               </AccordionItem>
             </Card>

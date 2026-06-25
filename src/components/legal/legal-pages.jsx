@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
+import { SEO } from '@/components/seo';
 
 export function PrivacyPolicyPage() {
   const { t } = useTranslation();
   return (
     <div className="w-full flex-grow scheme-1 bg-scheme-background text-scheme-text">
+      <SEO title="Privacy Policy | FastLaunch" description="Read our privacy policy to understand how we collect, use, and protect your data." />
       <div className="container px-[5%] py-24 md:py-32 mx-auto max-w-3xl">
         <h1 className="text-h1 font-bold mb-8">{t('legal.privacy.title', 'Privacy Policy')}</h1>
         <p className="text-medium text-scheme-text/75 mb-6">{t('legal.privacy.lastUpdated', 'Last updated: June 2026')}</p>
@@ -45,6 +47,7 @@ export function TermsOfServicePage() {
   const { t } = useTranslation();
   return (
     <div className="w-full flex-grow scheme-1 bg-scheme-background text-scheme-text">
+      <SEO title="Terms of Service | FastLaunch" description="Read our terms of service that govern the use of our platform and services." />
       <div className="container px-[5%] py-24 md:py-32 mx-auto max-w-3xl">
         <h1 className="text-h1 font-bold mb-8">{t('legal.terms.title', 'Terms of Service')}</h1>
         <p className="text-medium text-scheme-text/75 mb-6">{t('legal.terms.lastUpdated', 'Last updated: June 2026')}</p>
@@ -84,6 +87,7 @@ export function CookieSettingsPage() {
 
   return (
     <div className="w-full flex-grow scheme-1 bg-scheme-background text-scheme-text">
+      <SEO title="Cookie Settings | FastLaunch" description="Manage your cookie preferences for our website." />
       <div className="container px-[5%] py-24 md:py-32 mx-auto max-w-3xl">
         <h1 className="text-h1 font-bold mb-8">{t('legal.cookies.title', 'Cookie Policy & Settings')}</h1>
         <p className="text-medium text-scheme-text/75 mb-6">{t('legal.cookies.lastUpdated', 'Last updated: June 2026')}</p>

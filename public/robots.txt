@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Prevent crawling of internal or action routes (if any are added later)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?*
+
+# Allow generative AI and answer engines (good for GEO/AEO visibility)
+User-agent: CCBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: OmgiliBot
+Allow: /
+User-agent: FacebookBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+# Point to sitemap
+Sitemap: https://fastlaunch.live/sitemap.xml

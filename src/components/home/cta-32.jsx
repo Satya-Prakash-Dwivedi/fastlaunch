@@ -37,8 +37,8 @@ export function Cta32() {
         </div>
         <div className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto aspect-video overflow-hidden rounded-image">
           <img
-            src="/assets/ux-chart.jpg"
-            alt="Data analytics dashboard displayed on laptop screen"
+            src="/assets/workspace.jpg"
+            alt="Abstract view of modern software architecture"
             className="h-full w-full object-cover rounded-image"
             loading="lazy"
             decoding="async"

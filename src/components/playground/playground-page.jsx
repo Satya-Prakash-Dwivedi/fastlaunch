@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BrandLogo } from "@/components/brand-logo";
 import { useTranslation } from "react-i18next";
+import { SEO } from "@/components/seo";
 
 const MODELS = [
   {
@@ -224,7 +225,17 @@ export function PlaygroundPage() {
 
   return (
     <div className="min-h-screen bg-neutral-980 text-white font-sans flex flex-col scheme-7 alternate logo-alt">
-      
+      <SEO 
+        title={`${t('playgroundPage.headerBadge', '3D Sandbox')} | FastLaunch`}
+        description="Interact with our premium 3D assets and web applications in the FastLaunch playground."
+        schemas={[{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "FastLaunch Playground",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Web"
+        }]}
+      />
       {/* 3D STUDIO TOPBAR */}
       <header className="sticky top-0 z-[100] w-full h-16 border-b border-white-10 bg-neutral-950/80 backdrop-blur-md px-[5%] flex items-center justify-between">
         

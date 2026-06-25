@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO } from "@/components/seo";
 import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
@@ -27,7 +28,20 @@ export function PortfolioPage() {
   const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-neutral-950 text-white font-sans flex flex-col scheme-7 alternate logo-alt">
-      
+      <SEO 
+        title={`${t('portfolio.title', 'Our Live Projects')} | FastLaunch`}
+        description="Explore a selection of our deployed platforms, showcasing our commitment to high-performance, secure, and beautiful digital experiences."
+        schemas={[{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "itemListElement": PROJECTS.map((p, idx) => ({
+            "@type": "ListItem",
+            "position": idx + 1,
+            "url": p.url,
+            "name": p.name
+          }))
+        }]}
+      />
       {/* HEADER */}
       <header className="sticky top-0 z-[100] w-full h-16 border-b border-white-10 bg-neutral-950/80 backdrop-blur-md px-[5%] flex items-center justify-between">
         <div className="flex items-center gap-6">

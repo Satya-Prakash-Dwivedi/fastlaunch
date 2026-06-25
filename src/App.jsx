@@ -16,9 +16,26 @@ import { Faq4 } from './components/home/faq-04';
 import { Footer1 } from './components/footer-01';
 import { PrivacyPolicyPage, TermsOfServicePage, CookieSettingsPage } from './components/legal/legal-pages';
 import { BookingPage } from './components/booking-page';
+import { SEO } from './components/seo';
 
 function App() {
-  const [route, setRoute] = useState(window.location.hash || '#/');
+  const getInitialRoute = () => {
+    const hash = window.location.hash;
+    if (hash && hash !== '#/') return hash;
+    
+    // SEO Fallback: if search engines visit the raw pathname (e.g. /playground) from the sitemap
+    const path = window.location.pathname;
+    if (path === '/playground') return '#/playground';
+    if (path === '/portfolio-page') return '#/portfolio-page';
+    if (path === '/booking') return '#/booking';
+    if (path === '/privacy-policy') return '#/privacy-policy';
+    if (path === '/terms-of-service') return '#/terms-of-service';
+    if (path === '/cookie-settings') return '#/cookie-settings';
+    
+    return '#/';
+  };
+
+  const [route, setRoute] = useState(getInitialRoute());
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -93,6 +110,23 @@ function App() {
     <div className="antialiased min-h-screen flex flex-col">
       <Navbar3 />
       <main className="flex-grow flex flex-col bg-scheme-background text-scheme-text">
+        {!isPrivacyPage && !isTermsPage && !isCookiePage && !isPlaygroundPage && !isPortfolioPage && !isBookingPage && (
+          <SEO 
+            title="FastLaunch - AI/ML, DevOps & Web Solutions"
+            description="Deploy intelligent systems in days. AI/ML, DevOps, mobile apps, and serverless solutions."
+            schemas={[{
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "FastLaunch",
+              "url": "https://fastlaunch.live",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://fastlaunch.live/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }]}
+          />
+        )}
         {content}
       </main>
       <Footer1 />

@@ -20,9 +20,15 @@ export function Footer1() {
             </a>
             <div className="mt-8">
               <p className="mb-2 font-semibold text-scheme-text">{t('footer.contactUs', 'Contact us')}</p>
-              <a href="mailto:contact@fastlaunch.live" className="text-small text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+              <a href="mailto:contact@fastlaunch.live" className="block text-small text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                 contact@fastlaunch.live
               </a>
+              <p className="mt-4 text-small text-scheme-text/75 leading-relaxed max-w-xs">
+                {t('footer.address', 'E-6 Arera Colony, Bhopal, Madhya Pradesh, India')}
+              </p>
+              <p className="mt-2 text-xs text-scheme-text/60 font-medium">
+                {t('footer.freelanceNote', 'Top Freelance AI & Web Agency • Available Worldwide')}
+              </p>
             </div>
           </div>
           <div className="grid grid-cols-1 items-start gap-y-10 sm:grid-cols-3 sm:gap-x-6 md:gap-x-8 md:gap-y-4">

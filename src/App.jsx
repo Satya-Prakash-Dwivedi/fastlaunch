@@ -31,6 +31,7 @@ function App() {
     if (path === '/privacy-policy') return '#/privacy-policy';
     if (path === '/terms-of-service') return '#/terms-of-service';
     if (path === '/cookie-settings') return '#/cookie-settings';
+    if (['/services', '/freelancer-hire', '/ai-ml-engineering', '/web-development', '/mobile-app-development', '/devops-cloud'].includes(path)) return '#services';
     
     return '#/';
   };
@@ -114,17 +115,76 @@ function App() {
           <SEO 
             title="FastLaunch - AI/ML, DevOps & Web Solutions"
             description="Deploy intelligent systems in days. AI/ML, DevOps, mobile apps, and serverless solutions."
-            schemas={[{
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "FastLaunch",
-              "url": "https://fastlaunch.live",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://fastlaunch.live/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
+            schemas={[
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "FastLaunch",
+                "url": "https://fastlaunch.live",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://fastlaunch.live/search?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ProfessionalService",
+                "name": "FastLaunch",
+                "alternateName": "FastLaunch Freelance AI & Web Development Agency",
+                "url": "https://fastlaunch.live",
+                "description": "Elite technology agency and top freelancer collective providing hyper-accelerated delivery of AI/ML systems, custom LLMs, RAG, full-stack web applications (React, Next.js, Vite), native mobile apps, and DevOps serverless cloud infrastructure.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "E-6 Arera Colony",
+                  "addressLocality": "Bhopal",
+                  "addressRegion": "Madhya Pradesh",
+                  "postalCode": "462016",
+                  "addressCountry": "IN"
+                },
+                "email": "contact@fastlaunch.live",
+                "priceRange": "$$$",
+                "sameAs": [
+                  "https://x.com/fastlaunchlive",
+                  "https://www.linkedin.com/company/fast-launch-live/"
+                ],
+                "areaServed": "Worldwide",
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Freelance & Agency Technology Services",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Freelance AI/ML & LLM Engineering"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Freelance Full-Stack Web Development (React, Next.js, Vite)"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Freelance Mobile Development (React Native)"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Freelance DevOps & Cloud Infrastructure"
+                      }
+                    }
+                  ]
+                }
               }
-            }]}
+            ]}
           />
         )}
         {content}

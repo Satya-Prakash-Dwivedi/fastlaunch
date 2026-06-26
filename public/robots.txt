@@ -1,28 +1,107 @@
+# FastLaunch - Robots & Crawler Permissions
+# Comprehensive GEO & AEO Visibility Configuration
+
+# LLM & AI Agent Context File (Deep Context Standard)
+# See https://fastlaunch.live/llms.txt
+
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /sitemap.xml
 
-# Prevent crawling of internal or action routes (if any are added later)
+# Prevent crawling of admin or private internal action routes
 Disallow: /admin/
 Disallow: /private/
 Disallow: /*?*
 
-# Allow generative AI and answer engines (good for GEO/AEO visibility)
+# Allow Generative AI, Answer Engines, and Agent Scrapers (Top GEO/AEO Visibility)
 User-agent: CCBot
 Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
+
 User-agent: GPTBot
 Allow: /
+
 User-agent: Google-Extended
 Allow: /
+
 User-agent: anthropic-ai
 Allow: /
+
 User-agent: OmgiliBot
 Allow: /
+
 User-agent: FacebookBot
 Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
-# Point to sitemap
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: PhindBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+User-agent: Scrapy
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Point to sitemap and LLM context files
 Sitemap: https://fastlaunch.live/sitemap.xml
+

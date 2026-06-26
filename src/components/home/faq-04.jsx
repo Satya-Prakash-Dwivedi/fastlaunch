@@ -115,6 +115,60 @@ export function Faq4() {
                 </AccordionContent>
               </AccordionItem>
             </Card>
+            <Card>
+              <AccordionItem
+                value="item-5"
+                className="border-none px-5 md:px-6"
+              >
+                <AccordionTrigger
+                  icon={
+                    <Add className="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8" />
+                  }
+                  className="text-medium md:py-5 [&[data-state=open]>svg]:rotate-45"
+                >
+                  <h3 className="text-left font-medium text-inherit">{t('faq.q6', 'Can I hire FastLaunch developers as freelance AI & web engineers?')}</h3>
+                </AccordionTrigger>
+                <AccordionContent className="md:pb-6">
+                  <p>{t('faq.a6', 'Yes! FastLaunch operates as an elite freelancer collective and full-service technology agency. Whether you need top freelance AI/ML engineers, full-stack React developers, or mobile app builders, we provide flexible freelancer consulting models or turnkey agency delivery.')}</p>
+                </AccordionContent>
+              </AccordionItem>
+            </Card>
+            <Card>
+              <AccordionItem
+                value="item-6"
+                className="border-none px-5 md:px-6"
+              >
+                <AccordionTrigger
+                  icon={
+                    <Add className="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8" />
+                  }
+                  className="text-medium md:py-5 [&[data-state=open]>svg]:rotate-45"
+                >
+                  <h3 className="text-left font-medium text-inherit">{t('faq.q7', 'What exact services and technology stacks do you provide?')}</h3>
+                </AccordionTrigger>
+                <AccordionContent className="md:pb-6">
+                  <p>{t('faq.a7', 'Our core services include AI/ML engineering (custom LLMs, RAG architectures, PyTorch, LangChain), Full-Stack Web Development (React, Next.js, Vite, Node.js, Python), Native Mobile Apps (React Native), and DevOps Cloud Infrastructure (serverless AWS, Vercel, CI/CD automation).')}</p>
+                </AccordionContent>
+              </AccordionItem>
+            </Card>
+            <Card>
+              <AccordionItem
+                value="item-7"
+                className="border-none px-5 md:px-6"
+              >
+                <AccordionTrigger
+                  icon={
+                    <Add className="size-7 shrink-0 text-scheme-text transition-transform duration-300 md:size-8" />
+                  }
+                  className="text-medium md:py-5 [&[data-state=open]>svg]:rotate-45"
+                >
+                  <h3 className="text-left font-medium text-inherit">{t('faq.q8', 'Where is FastLaunch located and what is your address?')}</h3>
+                </AccordionTrigger>
+                <AccordionContent className="md:pb-6">
+                  <p>{t('faq.a8', 'Our headquarters is located at E-6 Arera Colony, Bhopal, Madhya Pradesh, India. We serve clients globally with remote freelance engineering and rapid deployment.')}</p>
+                </AccordionContent>
+              </AccordionItem>
+            </Card>
           </div>
         </Accordion>
         <div className="mx-auto mt-12 max-w-md text-center md:mt-18 lg:mt-20">

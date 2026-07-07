@@ -5,6 +5,7 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router-dom";
 import { BrandLogo } from "./brand-logo";
 
 const ConditionalRender = ({ condition, children }) => {
@@ -27,6 +28,13 @@ export function Navbar3() {
   const useActive = useNavbarState();
   const { t, i18n } = useTranslation();
   const isMobile = useMediaQuery("(max-width: 991px)");
+  const navigate = useNavigate();
+
+  const handleScrollNav = (e, id) => {
+    e.preventDefault();
+    if (isMobile) useActive.toggleMobileMenu();
+    navigate('/', { state: { scrollTo: id } });
+  };
 
   const toggleLanguage = () => {
     const nextLang = i18n.language === 'en' ? 'hi' : i18n.language === 'hi' ? 'gu' : 'en';
@@ -38,9 +46,9 @@ export function Navbar3() {
         
         {/* COLUMN 1: Logo (Left on desktop and mobile) */}
         <div className="flex items-center justify-start h-full">
-          <a href="#" className="flex shrink-0 items-center">
+          <Link to="/" className="flex shrink-0 items-center">
             <BrandLogo className="h-9 lg:h-11 w-auto text-scheme-text" />
-          </a>
+          </Link>
         </div>
 
         {/* COLUMN 2: Navigation Links (Centered on desktop, sliding drawer on mobile) */}
@@ -70,36 +78,36 @@ export function Navbar3() {
 
             {/* Links list */}
             <div className="flex flex-col lg:flex-row lg:items-center gap-y-3 lg:gap-y-0 lg:gap-x-4 xl:gap-x-6">
-              <a
-                href="#services"
-                onClick={() => { if (isMobile) useActive.toggleMobileMenu() }}
-                className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
+              <Link
+                to="/services"
+                onClick={(e) => handleScrollNav(e, 'services')}
+                className="relative block py-3 text-left text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
                 {t('navbar.services', 'Services')}
-              </a>
-              <a
-                href="#/portfolio-page"
+              </Link>
+              <Link
+                to="/portfolio-page"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => { if (isMobile) useActive.toggleMobileMenu() }}
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
                 {t('navbar.portfolio', 'Portfolio')}
-              </a>
-              <a
-                href="#/playground"
+              </Link>
+              <Link
+                to="/playground"
                 onClick={() => { if (isMobile) useActive.toggleMobileMenu() }}
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
                 {t('navbar.playground', 'Playground')}
-              </a>
-              <a
-                href="#testimonials"
-                onClick={() => { if (isMobile) useActive.toggleMobileMenu() }}
-                className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
+              </Link>
+              <Link
+                to="/testimonials"
+                onClick={(e) => handleScrollNav(e, 'testimonials')}
+                className="relative block py-3 text-left text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >
                 {t('navbar.testimonials', 'Active Consumers')}
-              </a>
+              </Link>
             </div>
 
             <div className="mt-8 flex items-center gap-4 lg:hidden">
@@ -113,7 +121,7 @@ export function Navbar3() {
 
             {/* Contact Button inside Mobile Drawer (hidden on desktop) */}
             <Button asChild className="mt-4 w-full lg:hidden" title="Contact" size="sm">
-              <a href="#/booking">{t('navbar.getStarted', 'Contact')}</a>
+              <Link to="/booking">{t('navbar.getStarted', 'Contact')}</Link>
             </Button>
           </motion.div>
 
@@ -151,7 +159,7 @@ export function Navbar3() {
             size="sm"
             className="hidden md:flex w-[130px] justify-center px-2 py-2 text-sm font-semibold transition-all hover:scale-[1.02]"
           >
-            <a href="#/booking">{t('navbar.getStarted', 'Get Started')}</a>
+            <Link to="/booking">{t('navbar.getStarted', 'Get Started')}</Link>
           </Button>
 
           {/* Hamburger Menu Toggle on Mobile with gorgeous micro-animations */}

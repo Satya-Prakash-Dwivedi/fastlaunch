@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { BrandLogo } from "@/components/brand-logo";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import { Link, useSearchParams } from "react-router-dom";
 import { SEO } from "@/components/seo";
 
 const MODELS = [
@@ -177,38 +178,30 @@ const CATEGORIES = ["All", "Web Applications", "Infrastructure", "Hardware", "In
 
 export function PlaygroundPage() {
   const { t } = useTranslation();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const getModelFromHash = () => {
-    const hash = window.location.hash;
-    const match = hash.match(/\?id=([^&]+)/);
-    const id = match ? match[1] : null;
+  const getModelFromParams = () => {
+    const id = searchParams.get("id");
     return MODELS.find((m) => m.id === id) || MODELS[0];
   };
 
-  const [selectedModel, setSelectedModel] = useState(MODELS[0]);
+  const [selectedModel, setSelectedModel] = useState(() => getModelFromParams());
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  // Sync state on hash change
+  // Sync state on search params change
   useEffect(() => {
-    // Initial read
-    const model = getModelFromHash();
-    setSelectedModel(model);
-
-    const handleHashChange = () => {
+    const model = getModelFromParams();
+    if (model.id !== selectedModel.id) {
       setIsLoading(true);
-      const newModel = getModelFromHash();
-      setSelectedModel(newModel);
+      setSelectedModel(model);
       setTimeout(() => setIsLoading(false), 300);
-    };
-
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []);
+    }
+  }, [searchParams]);
 
   const selectModel = (model) => {
-    window.location.hash = `#/playground?id=${model.id}`;
+    setSearchParams({ id: model.id });
   };
 
   // Filtered models list
@@ -241,9 +234,9 @@ export function PlaygroundPage() {
         
         {/* Brand Logo & Back link */}
         <div className="flex items-center gap-6">
-          <a href="#/" className="flex shrink-0 items-center hover:opacity-85 transition-opacity">
+          <Link to="/" className="flex shrink-0 items-center hover:opacity-85 transition-opacity">
             <BrandLogo className="h-9 lg:h-10 w-auto text-white" />
-          </a>
+          </Link>
           <span className="hidden sm:inline-block h-6 w-px bg-white-20" />
           <div className="hidden sm:flex items-center gap-2">
             <span className="size-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -264,9 +257,9 @@ export function PlaygroundPage() {
             size="sm"
             className="px-4 py-1.5 text-xs font-bold transition-all hover:scale-[1.02] flex items-center gap-2"
           >
-            <a href="#/">
+            <Link to="/">
               <span>←</span> {t('playgroundPage.backToHome', 'Back to Homepage')}
-            </a>
+            </Link>
           </Button>
         </div>
       </header>

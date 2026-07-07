@@ -4,6 +4,7 @@ import React from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const TEASER_MODELS = [
   {
@@ -172,9 +173,9 @@ export function PlaygroundTeaser() {
               variant="alternate"
               className="mt-6 w-full text-xs py-2.5 font-bold hover:scale-[1.02]"
             >
-              <a href="#/playground">
+              <Link to="/playground">
                 {t('playgroundTeaser.enterPlayground', 'Enter 3D Playground')}
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
@@ -186,10 +187,10 @@ export function PlaygroundTeaser() {
             variant="alternate"
             className="px-8 py-3.5 text-base font-bold shadow-lg hover:scale-[1.02] flex items-center gap-3"
           >
-            <a href="#/playground">
+            <Link to="/playground">
               {t('playgroundTeaser.launchFull', 'Launch Full 3D Interactive Sandbox')}
               <span className="text-xl">➔</span>
-            </a>
+            </Link>
           </Button>
         </div>
 

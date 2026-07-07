@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export function Header84() {
   const { t } = useTranslation();
@@ -19,9 +20,9 @@ export function Header84() {
               {t('header84.description', 'We deliver intelligent solutions that work immediately. From machine learning models to serverless infrastructure, everything is ready to plug in and perform.')}
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <a href="#/booking">
+              <Link to="/booking">
                 <Button title={t('header84.startNow', 'Start now')}>{t('header84.startNow', 'Start now')}</Button>
-              </a>
+              </Link>
               {/* <Button title="Learn more" variant="secondary">
                 Learn more
               </Button> */}

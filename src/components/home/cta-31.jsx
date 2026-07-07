@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export function Cta31() {
   const { t } = useTranslation();
@@ -19,11 +20,11 @@ export function Cta31() {
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
               {/* <Button title="Request a quote">Request a quote</Button> */}
-              <a href="#/booking">
+              <Link to="/booking">
                 <Button title={t('cta31.button', 'Schedule a call')} variant="secondary">
                   {t('cta31.button', 'Schedule a call')}
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

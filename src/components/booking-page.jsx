@@ -3,6 +3,7 @@ import { SEO } from "@/components/seo";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "@/components/relume-icons";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export function BookingPage() {
   const { t } = useTranslation();
@@ -18,10 +19,10 @@ export function BookingPage() {
       />
       <div className="px-[5%] h-16 lg:h-20 flex items-center justify-end shrink-0 border-b border-[var(--color-scheme-border)]">
         <Button asChild variant="secondary" size="sm" className="rounded-full px-5 hover:scale-[1.02] transition-transform">
-          <a href="#/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <ChevronLeft className="size-4" />
             <span className="font-semibold text-sm">{t('booking.backToHome', 'Back to Home')}</span>
-          </a>
+          </Link>
         </Button>
       </div>
       <div className="flex-grow w-full relative bg-[var(--color-scheme-background)]">

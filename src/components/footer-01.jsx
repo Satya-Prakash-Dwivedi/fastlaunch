@@ -7,17 +7,24 @@ import {
 } from "relume-icons";
 import { BrandLogo } from "./brand-logo";
 import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router-dom";
 
 export function Footer1() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleScrollNav = (e, id) => {
+    e.preventDefault();
+    navigate('/', { state: { scrollTo: id } });
+  };
   return (
     <footer className="px-[5%] py-12 md:py-18 lg:py-20 scheme-5 alternate">
       <div className="container">
         <div className="grid grid-cols-1 gap-x-[8vw] gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:grid-cols-[0.75fr_1fr] lg:gap-y-4 lg:pb-20">
           <div className="flex flex-col justify-start">
-            <a href="#" className="flex items-center justify-start w-max">
+            <Link to="/" className="flex items-center justify-start w-max">
               <BrandLogo className="h-9 lg:h-11 w-auto text-scheme-text" />
-            </a>
+            </Link>
             <div className="mt-8">
               <p className="mb-2 font-semibold text-scheme-text">{t('footer.contactUs', 'Contact us')}</p>
               <a href="mailto:contact@fastlaunch.live" className="block text-small text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
@@ -36,29 +43,29 @@ export function Footer1() {
               <h2 className="mb-3 font-semibold text-scheme-text md:mb-4">{t('footer.services', 'Services')}</h2>
               <ul>
                 <li className="text-small py-2">
-                  <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                  <Link to="/ai-ml-engineering" onClick={(e) => handleScrollNav(e, 'services')} className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                     {t('footer.aiSolutions', 'AI solutions')}
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-small py-2">
-                  <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                  <Link to="/web-development" onClick={(e) => handleScrollNav(e, 'services')} className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                     {t('footer.webDev', 'Web development')}
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-small py-2">
-                  <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                  <Link to="/mobile-app-development" onClick={(e) => handleScrollNav(e, 'services')} className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                     {t('footer.mobileApps', 'Mobile apps')}
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-small py-2">
-                  <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                  <Link to="/devops-cloud" onClick={(e) => handleScrollNav(e, 'services')} className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                     {t('footer.devOps', 'DevOps services')}
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-small py-2">
-                  <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                  <Link to="/ecommerce" onClick={(e) => handleScrollNav(e, 'services')} className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                     {t('footer.ecommerce', 'E-commerce')}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -81,9 +88,9 @@ export function Footer1() {
                   </a>
                 </li>
                 <li className="text-small py-2">
-                  <a href="#/booking" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                  <Link to="/booking" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                     {t('footer.contact', 'Contact')}
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="text-small py-2">
@@ -119,13 +126,13 @@ export function Footer1() {
           </p>
           <ul className="text-small flex flex-col items-start gap-y-3 sm:flex-row sm:items-center sm:gap-x-6 sm:gap-y-0">
             <li className="underline">
-              <a href="#/privacy-policy" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">{t('footer.privacyPolicy', 'Privacy Policy')}</a>
+              <Link to="/privacy-policy" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">{t('footer.privacyPolicy', 'Privacy Policy')}</Link>
             </li>
             <li className="underline">
-              <a href="#/terms-of-service" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">{t('footer.termsOfService', 'Terms of service')}</a>
+              <Link to="/terms-of-service" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">{t('footer.termsOfService', 'Terms of service')}</Link>
             </li>
             <li className="underline">
-              <a href="#/cookie-settings" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">{t('footer.cookieSettings', 'Cookie settings')}</a>
+              <Link to="/cookie-settings" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">{t('footer.cookieSettings', 'Cookie settings')}</Link>
             </li>
           </ul>
         </div>

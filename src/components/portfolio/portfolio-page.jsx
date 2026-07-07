@@ -3,6 +3,7 @@ import { SEO } from "@/components/seo";
 import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const PROJECTS = [
   {
@@ -45,9 +46,9 @@ export function PortfolioPage() {
       {/* HEADER */}
       <header className="sticky top-0 z-[100] w-full h-16 border-b border-white-10 bg-neutral-950/80 backdrop-blur-md px-[5%] flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <a href="#/" className="flex shrink-0 items-center hover:opacity-85 transition-opacity">
+          <Link to="/" className="flex shrink-0 items-center hover:opacity-85 transition-opacity">
             <BrandLogo className="h-9 lg:h-10 w-auto text-white" />
-          </a>
+          </Link>
           <span className="hidden sm:inline-block h-6 w-px bg-white-20" />
           <div className="hidden sm:flex items-center gap-2">
             <span className="text-tiny tracking-wider uppercase text-white/50 font-bold">
@@ -62,7 +63,7 @@ export function PortfolioPage() {
             size="sm"
             className="px-4 py-1.5 text-xs font-bold transition-all hover:scale-[1.02]"
           >
-            <a href="#/">{t('portfolio.backToHome', '← Back to Homepage')}</a>
+            <Link to="/">{t('portfolio.backToHome', '← Back to Homepage')}</Link>
           </Button>
         </div>
       </header>

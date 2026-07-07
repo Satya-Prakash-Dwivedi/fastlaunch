@@ -11,6 +11,7 @@ import { Card } from "@/components/ui/card";
 import React from "react";
 import { Add } from "relume-icons";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export function Faq4() {
   const { t } = useTranslation();
@@ -178,7 +179,7 @@ export function Faq4() {
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
             <Button asChild title={t('faq.contact', 'Contact')}>
-              <a href="#/booking">{t('faq.contact', 'Contact')}</a>
+              <Link to="/booking">{t('faq.contact', 'Contact')}</Link>
             </Button>
           </div>
         </div>

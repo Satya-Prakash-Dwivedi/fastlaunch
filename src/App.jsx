@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar3 } from './components/navbar-03';
 import { Header84 } from './components/home/header-84';
 import { Layout373 } from './components/home/layout-373';
@@ -17,179 +18,147 @@ import { Footer1 } from './components/footer-01';
 import { PrivacyPolicyPage, TermsOfServicePage, CookieSettingsPage } from './components/legal/legal-pages';
 import { BookingPage } from './components/booking-page';
 import { SEO } from './components/seo';
+import { ServicesPage } from './components/services-page';
+import { TestimonialsPage } from './components/testimonials-page';
+import { FaqPage } from './components/faq-page';
 
-function App() {
-  const getInitialRoute = () => {
-    const hash = window.location.hash;
-    if (hash && hash !== '#/') return hash;
-    
-    // SEO Fallback: if search engines visit the raw pathname (e.g. /playground) from the sitemap
-    const path = window.location.pathname;
-    if (path === '/playground') return '#/playground';
-    if (path === '/portfolio-page') return '#/portfolio-page';
-    if (path === '/booking') return '#/booking';
-    if (path === '/privacy-policy') return '#/privacy-policy';
-    if (path === '/terms-of-service') return '#/terms-of-service';
-    if (path === '/cookie-settings') return '#/cookie-settings';
-    if (['/services', '/freelancer-hire', '/ai-ml-engineering', '/web-development', '/mobile-app-development', '/devops-cloud'].includes(path)) return '#services';
-    
-    return '#/';
-  };
-
-  const [route, setRoute] = useState(getInitialRoute());
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      setRoute(window.location.hash || '#/');
-    };
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
-  const isPlaygroundPage = route.startsWith('#/playground');
-  const isPortfolioPage = route.startsWith('#/portfolio-page');
-  const isPrivacyPage = route.startsWith('#/privacy-policy');
-  const isTermsPage = route.startsWith('#/terms-of-service');
-  const isCookiePage = route.startsWith('#/cookie-settings');
-  const isBookingPage = route.startsWith('#/booking');
-
-  useEffect(() => {
-    if (isPlaygroundPage || isPortfolioPage || isPrivacyPage || isTermsPage || isCookiePage || isBookingPage) {
-      window.scrollTo(0, 0);
-    } else {
-      const hash = window.location.hash;
-      if (hash && hash !== '#/' && hash !== '#') {
-        const id = hash.replace('#', '');
-        setTimeout(() => {
-          const element = document.getElementById(id);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+const Home = () => (
+  <>
+    <SEO 
+      title="FastLaunch - AI/ML, DevOps & Web Solutions"
+      description="Deploy intelligent systems in days. AI/ML, DevOps, mobile apps, and serverless solutions."
+      schemas={[
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "FastLaunch",
+          "url": "https://fastlaunch.live",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://fastlaunch.live/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
           }
-        }, 100);
-      }
-    }
-  }, [route, isPlaygroundPage, isPortfolioPage, isPrivacyPage, isTermsPage, isCookiePage]);
-
-  if (isPlaygroundPage) {
-    return <PlaygroundPage />;
-  }
-
-  if (isPortfolioPage) {
-    return <PortfolioPage />;
-  }
-
-  if (isBookingPage) {
-    return <BookingPage />;
-  }
-
-  let content;
-  if (isPrivacyPage) {
-    content = <PrivacyPolicyPage />;
-  } else if (isTermsPage) {
-    content = <TermsOfServicePage />;
-  } else if (isCookiePage) {
-    content = <CookieSettingsPage />;
-  } else {
-    content = (
-      <>
-        <Header84 />
-        <Layout373 />
-        <FigmaPrototype />
-        <Layout239 />
-        <DigitalTransformation />
-        <PlaygroundTeaser />
-        <Testimonial17 />
-        <Stats54 />
-        <Cta31 />
-        <Cta32 />
-        <Faq4 />
-      </>
-    );
-  }
-
-  return (
-    <div className="antialiased min-h-screen flex flex-col">
-      <Navbar3 />
-      <main className="flex-grow flex flex-col bg-scheme-background text-scheme-text">
-        {!isPrivacyPage && !isTermsPage && !isCookiePage && !isPlaygroundPage && !isPortfolioPage && !isBookingPage && (
-          <SEO 
-            title="FastLaunch - AI/ML, DevOps & Web Solutions"
-            description="Deploy intelligent systems in days. AI/ML, DevOps, mobile apps, and serverless solutions."
-            schemas={[
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "FastLaunch",
+          "alternateName": "FastLaunch Freelance AI & Web Development Agency",
+          "url": "https://fastlaunch.live",
+          "description": "Elite technology agency and top freelancer collective providing hyper-accelerated delivery of AI/ML systems, custom LLMs, RAG, full-stack web applications (React, Next.js, Vite), native mobile apps, and DevOps serverless cloud infrastructure.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "E-6 Arera Colony",
+            "addressLocality": "Bhopal",
+            "addressRegion": "Madhya Pradesh",
+            "postalCode": "462016",
+            "addressCountry": "IN"
+          },
+          "email": "contact@fastlaunch.live",
+          "priceRange": "$$$",
+          "sameAs": [
+            "https://x.com/fastlaunchlive",
+            "https://www.linkedin.com/company/fast-launch-live/"
+          ],
+          "areaServed": "Worldwide",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Freelance & Agency Technology Services",
+            "itemListElement": [
               {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                "name": "FastLaunch",
-                "url": "https://fastlaunch.live",
-                "potentialAction": {
-                  "@type": "SearchAction",
-                  "target": "https://fastlaunch.live/search?q={search_term_string}",
-                  "query-input": "required name=search_term_string"
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Freelance AI/ML & LLM Engineering"
                 }
               },
               {
-                "@context": "https://schema.org",
-                "@type": "ProfessionalService",
-                "name": "FastLaunch",
-                "alternateName": "FastLaunch Freelance AI & Web Development Agency",
-                "url": "https://fastlaunch.live",
-                "description": "Elite technology agency and top freelancer collective providing hyper-accelerated delivery of AI/ML systems, custom LLMs, RAG, full-stack web applications (React, Next.js, Vite), native mobile apps, and DevOps serverless cloud infrastructure.",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "E-6 Arera Colony",
-                  "addressLocality": "Bhopal",
-                  "addressRegion": "Madhya Pradesh",
-                  "postalCode": "462016",
-                  "addressCountry": "IN"
-                },
-                "email": "contact@fastlaunch.live",
-                "priceRange": "$$$",
-                "sameAs": [
-                  "https://x.com/fastlaunchlive",
-                  "https://www.linkedin.com/company/fast-launch-live/"
-                ],
-                "areaServed": "Worldwide",
-                "hasOfferCatalog": {
-                  "@type": "OfferCatalog",
-                  "name": "Freelance & Agency Technology Services",
-                  "itemListElement": [
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Freelance AI/ML & LLM Engineering"
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Freelance Full-Stack Web Development (React, Next.js, Vite)"
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Freelance Mobile Development (React Native)"
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Freelance DevOps & Cloud Infrastructure"
-                      }
-                    }
-                  ]
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Freelance Full-Stack Web Development (React, Next.js, Vite)"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Freelance Mobile Development (React Native)"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Freelance DevOps & Cloud Infrastructure"
                 }
               }
-            ]}
-          />
-        )}
-        {content}
-      </main>
-      <Footer1 />
+            ]
+          }
+        }
+      ]}
+    />
+    <Header84 />
+    <Layout373 />
+    <FigmaPrototype />
+    <Layout239 />
+    <DigitalTransformation />
+    <PlaygroundTeaser />
+    <Testimonial17 />
+    <Stats54 />
+    <Cta31 />
+    <Cta32 />
+    <Faq4 />
+  </>
+);
+
+function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const id = location.state.scrollTo;
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
+  return (
+    <div className="antialiased min-h-screen flex flex-col">
+      <Routes>
+        <Route path="/playground" element={<PlaygroundPage />} />
+        <Route path="/portfolio-page" element={<PortfolioPage />} />
+        <Route path="/booking" element={<BookingPage />} />
+        <Route path="*" element={
+          <>
+            <Navbar3 />
+            <main className="flex-grow flex flex-col bg-scheme-background text-scheme-text">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/faq/:slug" element={<FaqPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/testimonials" element={<TestimonialsPage />} />
+                <Route path="/freelancer-hire" element={<ServicesPage />} />
+                <Route path="/ai-ml-engineering" element={<ServicesPage />} />
+                <Route path="/web-development" element={<ServicesPage />} />
+                <Route path="/mobile-app-development" element={<ServicesPage />} />
+                <Route path="/devops-cloud" element={<ServicesPage />} />
+                <Route path="/ecommerce" element={<ServicesPage />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+                <Route path="/cookie-settings" element={<CookieSettingsPage />} />
+              </Routes>
+            </main>
+            <Footer1 />
+          </>
+        } />
+      </Routes>
     </div>
   );
 }

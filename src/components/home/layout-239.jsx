@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import { ChevronRight } from "relume-icons";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export function Layout239() {
   const { t } = useTranslation();
@@ -87,9 +88,9 @@ export function Layout239() {
           </div>
 
           <div className="mt-12 flex flex-wrap items-center gap-4 md:mt-18 lg:mt-20">
-            <a href="#/booking">
+            <Link to="/booking">
               <Button variant="secondary">{t('layout239.getStarted', 'Get started')}</Button>
-            </a>
+            </Link>
             {/* <Button
               iconRight={<ChevronRight className="text-scheme-text" />}
               variant="link"

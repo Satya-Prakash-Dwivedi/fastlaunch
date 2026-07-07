@@ -87,8 +87,6 @@ export function Navbar3() {
               </Link>
               <Link
                 to="/portfolio-page"
-                target="_blank"
-                rel="noopener noreferrer"
                 onClick={() => { if (isMobile) useActive.toggleMobileMenu() }}
                 className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
               >

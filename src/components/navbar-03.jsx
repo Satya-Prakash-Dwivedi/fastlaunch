@@ -29,6 +29,15 @@ export function Navbar3() {
   const { t, i18n } = useTranslation();
   const isMobile = useMediaQuery("(max-width: 991px)");
   const navigate = useNavigate();
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
+
+  const languages = [
+    { code: 'en', name: 'English' },
+    { code: 'hi', name: 'Hindi' },
+    { code: 'gu', name: 'Gujarati' },
+    { code: 'ja', name: 'Japanese' }
+  ];
+  const activeLang = languages.find(l => l.code === i18n.language) || languages[0];
 
   const handleScrollNav = (e, id) => {
     e.preventDefault();
@@ -36,9 +45,9 @@ export function Navbar3() {
     navigate('/', { state: { scrollTo: id } });
   };
 
-  const toggleLanguage = () => {
-    const nextLang = i18n.language === 'en' ? 'hi' : i18n.language === 'hi' ? 'gu' : 'en';
-    i18n.changeLanguage(nextLang);
+  const handleLanguageChange = (code) => {
+    i18n.changeLanguage(code);
+    setLangMenuOpen(false);
   };
   return (
     <section className="z-[999] sticky top-0 w-full h-16 lg:h-20 border-b border-scheme-border bg-scheme-background px-[5%] scheme-7 alternate btn-light">
@@ -108,13 +117,23 @@ export function Navbar3() {
               </Link>
             </div>
 
-            <div className="mt-8 flex items-center gap-4 lg:hidden">
-              <button 
-                onClick={toggleLanguage}
-                className="flex-1 py-2 px-4 rounded-lg border border-scheme-border/50 text-scheme-text font-bold text-sm bg-white-5 hover:bg-white-10 transition-colors"
-              >
-                {i18n.language === 'en' ? t('navbar.switchToHi', 'Switch to Hindi (HI)') : i18n.language === 'hi' ? t('navbar.switchToGu', 'Switch to Gujarati (GU)') : t('navbar.switchToEn', 'Switch to English (EN)')}
-              </button>
+            <div className="mt-8 flex flex-col gap-2 lg:hidden">
+              <span className="text-sm font-semibold text-scheme-text/60 px-2 uppercase tracking-wider">{t('navbar.selectLanguage', 'Select Language')}</span>
+              <div className="grid grid-cols-2 gap-2">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => handleLanguageChange(lang.code)}
+                    className={`py-2 px-3 rounded-lg border text-sm font-bold transition-all ${
+                      i18n.language === lang.code 
+                        ? 'border-scheme-text bg-scheme-text text-scheme-background shadow-md' 
+                        : 'border-scheme-border/50 text-scheme-text bg-scheme-background hover:bg-white-10'
+                    }`}
+                  >
+                    {lang.name}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Contact Button inside Mobile Drawer (hidden on desktop) */}
@@ -141,14 +160,52 @@ export function Navbar3() {
         {/* COLUMN 3: Contact & Hamburger Toggle (Right) */}
         <div className="flex items-center justify-end gap-x-4 h-full">
           
-          {/* Desktop Language Toggle */}
-          <button 
-            onClick={toggleLanguage}
-            className="hidden md:flex items-center justify-center size-9 rounded-full border border-scheme-border/50 text-scheme-text font-bold text-xs hover:bg-white-10 transition-colors"
-            title="Toggle Language"
-          >
-            {i18n.language === 'en' ? 'HI' : i18n.language === 'hi' ? 'GU' : 'EN'}
-          </button>
+          {/* Desktop Language Custom Dropdown */}
+          <div className="relative hidden md:block">
+            <button
+              onClick={() => setLangMenuOpen(!langMenuOpen)}
+              className="flex items-center justify-between gap-2 h-10 px-4 rounded-full border border-scheme-border/50 text-scheme-text font-semibold text-sm hover:bg-white-5 transition-colors bg-scheme-background cursor-pointer shadow-sm outline-none focus:border-scheme-text min-w-[120px]"
+            >
+              <span>{activeLang.name}</span>
+              <svg 
+                className={`w-4 h-4 transition-transform duration-300 ${langMenuOpen ? 'rotate-180' : ''}`} 
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <AnimatePresence>
+              {langMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                  transition={{ duration: 0.15, ease: "easeOut" }}
+                  className="absolute top-full right-0 mt-2 w-40 rounded-xl border border-white/10 bg-black shadow-2xl overflow-hidden z-50 py-2"
+                >
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => handleLanguageChange(lang.code)}
+                      className={`w-full text-left px-5 py-2.5 text-sm transition-colors flex items-center justify-between ${
+                        i18n.language === lang.code 
+                          ? 'bg-white/10 text-white font-bold' 
+                          : 'text-white/80 hover:bg-white/5 hover:text-white font-medium'
+                      }`}
+                    >
+                      {lang.name}
+                      {i18n.language === lang.code && (
+                        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                      )}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
           {/* Contact button (visible on tablet/desktop, hidden on small screens) */}
           <Button

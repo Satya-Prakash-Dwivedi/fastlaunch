@@ -101,6 +101,12 @@
     "a4": "That's exactly what we do. Mobile apps and backend infrastructure built simultaneously so they fit together perfectly. No integration headaches, no delays waiting for one side to finish.",
     "q5": "What about serverless infrastructure?",
     "a5": "We handle full serverless managed services so you don't manage servers. Everything scales automatically, costs stay predictable, and you focus on your business instead of infrastructure.",
+    "q6": "Can I hire FastLaunch developers as freelance AI & web engineers?",
+    "a6": "Yes! FastLaunch operates as an elite freelancer collective and full-service technology agency. Whether you need top freelance AI/ML engineers, full-stack React developers, or mobile app builders, we provide flexible freelancer consulting models or turnkey agency delivery.",
+    "q7": "What exact services and technology stacks do you provide?",
+    "a7": "Our core services include AI/ML engineering (custom LLMs, RAG architectures, PyTorch, LangChain), Full-Stack Web Development (React, Next.js, Vite, Node.js, Python), Native Mobile Apps (React Native), and DevOps Cloud Infrastructure (serverless AWS, Vercel, CI/CD automation).",
+    "q8": "Where is FastLaunch located and what is your address?",
+    "a8": "Our headquarters is located at E-6 Arera Colony, Bhopal, Madhya Pradesh, India. We serve clients globally with remote freelance engineering and rapid deployment.",
     "moreAnswers": "Need more answers?",
     "reachOut": "Reach out and we'll walk you through exactly how we work.",
     "contact": "Contact"

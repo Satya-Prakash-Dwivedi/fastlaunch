@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { WhatsAppButton } from './components/whatsapp-button';
 import { Navbar3 } from './components/navbar-03';
 import { Header84 } from './components/home/header-84';
 import { Layout373 } from './components/home/layout-373';
@@ -159,6 +160,7 @@ function App() {
           </>
         } />
       </Routes>
+      <WhatsAppButton />
     </div>
   );
 }

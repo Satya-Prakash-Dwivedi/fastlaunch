@@ -42,9 +42,12 @@ export function Stats54() {
               </p>
               <h2 className="text-h6 font-bold">{t('stats54.uptime', 'Server uptime')}</h2>
             </Card>
-            <div className="order-1 md:order-2 aspect-[3/2] size-full rounded-image bg-scheme-text/5 border border-scheme-border flex items-center justify-center text-scheme-text/30 font-medium">
-              {/* Space preserved */}
-            </div>
+            <Card className="flex w-full flex-col items-center justify-center p-8 text-center order-1 md:order-2">
+              <p className="mb-2 text-[3.5rem] leading-[1.3] font-bold md:text-[4rem] lg:text-[5rem]">
+                1M+
+              </p>
+              <h2 className="text-h6 font-bold">{t('stats54.loc', 'Lines of code written')}</h2>
+            </Card>
           </Fragment>
           <Fragment>
             <Card className="flex w-full flex-col items-center justify-center p-8 text-center order-2 md:order-1">

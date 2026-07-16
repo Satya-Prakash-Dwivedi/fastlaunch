@@ -227,7 +227,59 @@ export function Layout373() {
                 </div>
               </div>
             </Card>
+
+            {/* Card 7: Product / Service Listing */}
+            <Card className="flex flex-col sm:col-span-1 lg:col-span-2">
+              <div className="flex h-full flex-col justify-between p-6 md:p-8 lg:p-12 items-start">
+                <div className="flex-1">
+                  <div className="mb-3 md:mb-4">
+                    <img
+                      className="size-12 text-scheme-text"
+                      src="https://cdn.jsdelivr.net/npm/@material-symbols/svg-500@latest/rounded/view_list.svg"
+                      alt="Listing Icon"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 className="mb-2 text-h4 font-bold">
+                    {t('layout373.listingTitle', 'Product / Service Listing')}
+                  </h3>
+                  <p className="max-w-lg">
+                    {t('layout373.listingDesc', 'Bulk Product/Service listing on demand on your region / location.')}
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Card 8: SEO / GEO / AEO */}
+            <Card className="flex flex-col sm:col-span-1 lg:col-span-2">
+              <div className="flex h-full flex-col justify-between p-6 md:p-8 lg:p-12 items-start">
+                <div className="flex-1">
+                  <div className="mb-3 md:mb-4">
+                    <img
+                      className="size-12 text-scheme-text"
+                      src="https://cdn.jsdelivr.net/npm/@material-symbols/svg-500@latest/rounded/search.svg"
+                      alt="SEO Icon"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 className="mb-2 text-h4 font-bold">
+                    {t('layout373.seoTitle', 'SEO / GEO / AEO')}
+                  </h3>
+                  <p className="max-w-lg">
+                    {t('layout373.seoDesc', 'Optimize your digital presence across traditional search, geographic targeting, and generative AI engines.')}
+                  </p>
+                </div>
+              </div>
+            </Card>
           </div>
+        </div>
+        
+        <div className="mt-16 md:mt-24 text-center">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-scheme-text tracking-tight">
+            {t('layout373.tagline', 'We make business autonomous with AI.')}
+          </h3>
         </div>
       </div>
     </section>

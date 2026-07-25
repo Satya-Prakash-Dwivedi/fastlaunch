@@ -52,7 +52,7 @@ export function Navbar3() {
   return (
     <section className="z-[999] sticky top-0 w-full h-16 lg:h-20 border-b border-scheme-border bg-scheme-background px-[5%] scheme-7 alternate btn-light">
       <div className="container h-full grid grid-cols-[max-content_1fr_max-content] lg:grid-cols-[1fr_max-content_1fr] items-center">
-        
+
         {/* COLUMN 1: Logo (Left on desktop and mobile) */}
         <div className="flex items-center justify-start h-full">
           <Link to="/" className="flex shrink-0 items-center">
@@ -109,6 +109,13 @@ export function Navbar3() {
                 {t('navbar.playground', 'Playground')}
               </Link>
               <Link
+                to="/blog"
+                onClick={() => { if (isMobile) useActive.toggleMobileMenu() }}
+                className="relative block py-3 text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
+              >
+                {t('navbar.blogs', 'Blogs')}
+              </Link>
+              <Link
                 to="/testimonials"
                 onClick={(e) => handleScrollNav(e, 'testimonials')}
                 className="relative block py-3 text-left text-base font-bold text-scheme-text/75 lg:px-4 lg:py-2 transition-colors duration-300 hover:text-scheme-text"
@@ -124,11 +131,10 @@ export function Navbar3() {
                   <button
                     key={lang.code}
                     onClick={() => handleLanguageChange(lang.code)}
-                    className={`py-2 px-3 rounded-lg border text-sm font-bold transition-all ${
-                      i18n.language === lang.code 
-                        ? 'border-scheme-text bg-scheme-text text-scheme-background shadow-md' 
+                    className={`py-2 px-3 rounded-lg border text-sm font-bold transition-all ${i18n.language === lang.code
+                        ? 'border-scheme-text bg-scheme-text text-scheme-background shadow-md'
                         : 'border-scheme-border/50 text-scheme-text bg-scheme-background hover:bg-white-10'
-                    }`}
+                      }`}
                   >
                     {lang.name}
                   </button>
@@ -159,7 +165,7 @@ export function Navbar3() {
 
         {/* COLUMN 3: Contact & Hamburger Toggle (Right) */}
         <div className="flex items-center justify-end gap-x-4 h-full">
-          
+
           {/* Desktop Language Custom Dropdown */}
           <div className="relative hidden md:block">
             <button
@@ -167,8 +173,8 @@ export function Navbar3() {
               className="flex items-center justify-between gap-2 h-10 px-4 rounded-full border border-scheme-border/50 text-scheme-text font-semibold text-sm hover:bg-white-5 transition-colors bg-scheme-background cursor-pointer shadow-sm outline-none focus:border-scheme-text min-w-[120px]"
             >
               <span>{activeLang.name}</span>
-              <svg 
-                className={`w-4 h-4 transition-transform duration-300 ${langMenuOpen ? 'rotate-180' : ''}`} 
+              <svg
+                className={`w-4 h-4 transition-transform duration-300 ${langMenuOpen ? 'rotate-180' : ''}`}
                 fill="none" viewBox="0 0 24 24" stroke="currentColor"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -188,11 +194,10 @@ export function Navbar3() {
                     <button
                       key={lang.code}
                       onClick={() => handleLanguageChange(lang.code)}
-                      className={`w-full text-left px-5 py-2.5 text-sm transition-colors flex items-center justify-between ${
-                        i18n.language === lang.code 
-                          ? 'bg-white/10 text-white font-bold' 
+                      className={`w-full text-left px-5 py-2.5 text-sm transition-colors flex items-center justify-between ${i18n.language === lang.code
+                          ? 'bg-white/10 text-white font-bold'
                           : 'text-white/80 hover:bg-white/5 hover:text-white font-medium'
-                      }`}
+                        }`}
                     >
                       {lang.name}
                       {i18n.language === lang.code && (
@@ -225,19 +230,16 @@ export function Navbar3() {
           >
             <div className="flex flex-col justify-between w-6 h-3.5">
               <span
-                className={`block h-0.5 w-full bg-current transition-all duration-300 origin-center ${
-                  useActive.isMobileMenuOpen ? "rotate-45 translate-y-[6px]" : ""
-                }`}
+                className={`block h-0.5 w-full bg-current transition-all duration-300 origin-center ${useActive.isMobileMenuOpen ? "rotate-45 translate-y-[6px]" : ""
+                  }`}
               />
               <span
-                className={`block h-0.5 w-full bg-current transition-all duration-300 ${
-                  useActive.isMobileMenuOpen ? "opacity-0" : ""
-                }`}
+                className={`block h-0.5 w-full bg-current transition-all duration-300 ${useActive.isMobileMenuOpen ? "opacity-0" : ""
+                  }`}
               />
               <span
-                className={`block h-0.5 w-full bg-current transition-all duration-300 origin-center ${
-                  useActive.isMobileMenuOpen ? "-rotate-45 -translate-y-[6px]" : ""
-                }`}
+                className={`block h-0.5 w-full bg-current transition-all duration-300 origin-center ${useActive.isMobileMenuOpen ? "-rotate-45 -translate-y-[6px]" : ""
+                  }`}
               />
             </div>
           </button>

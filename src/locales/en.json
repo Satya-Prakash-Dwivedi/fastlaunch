@@ -5,6 +5,7 @@
     "portfolio": "Portfolio",
     "testimonials": "Testimonials",
     "playground": "Playground",
+    "blogs": "Blogs",
     "getStarted": "Get Started"
   },
   "header84": {
@@ -63,17 +64,6 @@
   "cta32": {
     "title": "Stay ahead with our updates",
     "description": "Get the latest on AI, DevOps, and development trends delivered to your inbox.",
-    "placeholder": "Enter your email",
-    "button": "Subscribe now",
-    "terms": "By clicking Subscribe you're confirming that you agree with our Terms and Conditions."
-  },
-  "testimonial17": {
-    "title": "Client voices",
-    "description": "What they say about working with us",
-    "t1Quote": "\"They delivered a machine learning pipeline that cut our processing time in half. No meetings, no excuses, just results.\"",
-    "t1Role": "CTO, TechVenture Inc",
-    "t2Quote": "\"Our e-commerce platform went live in three weeks. The payment integration worked flawlessly from day one.\"",
-    "t2Role": "Founder, Digital Commerce",
     "placeholder": "Enter your email",
     "button": "Subscribe now",
     "terms": "By clicking Subscribe you're confirming that you agree with our Terms and Conditions."
@@ -308,5 +298,51 @@
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of service",
     "cookieSettings": "Cookie settings"
+  },
+  "blogListPage": {
+    "badge": "FastLaunch Insights",
+    "heroTitle": "Engineering & Business Intelligence",
+    "heroDesc": "Tactical playbooks and deep dives on scaling D2C, deploying autonomous AI, and white-label tech stacks.",
+    "searchPlaceholder": "Search blogs or topics...",
+    "noResults": "No articles found matching your query.",
+    "readMore": "Read",
+    "author": "FastLaunch"
+  },
+  "blogPostPage": {
+    "backToBlogs": "Back to All Blogs",
+    "share": "Share",
+    "linkCopied": "Link copied to clipboard!",
+    "prevArticle": "Previous Article",
+    "nextArticle": "Next Article",
+    "ctaTitle": "Transform Your Business with FastLaunch",
+    "ctaDesc": "Whether you want to build an autonomous AI enterprise, launch white-label tech, or turn your ODOP products into a D2C powerhouse — our team is ready.",
+    "bookCall": "Book a Call",
+    "exploreServices": "Explore Services"
+  },
+  "blogsData": {
+    "odopD2c": {
+      "title": "From Districts to Doorsteps: How Fastlaunch is Turning India's ODOP Sellers into D2C Powerhouses",
+      "excerpt": "Bridging heritage with digital - how Fastlaunch transforms local district artisans and ODOP sellers into automated, high-margin D2C brands.",
+      "category": "D2C Transformation",
+      "badgeText": "ODOP D2C Engine"
+    },
+    "whiteLabel": {
+      "title": "White-Label Power: How Fastlaunch Builds the Engine Behind the Brands",
+      "excerpt": "Why top enterprises and modern startups white-label Fastlaunch's AI, D2C, and social commerce infrastructure instead of building from scratch.",
+      "category": "White-Label Tech",
+      "badgeText": "White Label Stack"
+    },
+    "autonomousEnterprise": {
+      "title": "The Autonomous Enterprise: How Fastlaunch is Making Businesses Autonomous in the Age of AI",
+      "excerpt": "Stop managing operations. Start commanding an autonomous business powered by multi-agent AI networks and self-executing systems.",
+      "category": "Autonomous AI",
+      "badgeText": "Autonomous AI Core"
+    },
+    "socialCommerce": {
+      "title": "From WhatsApp Chats to Full-Fledged Brands: How Fastlaunch Converts Social Commerce Sellers into D2C Powerhouses",
+      "excerpt": "You built the hustle on Instagram and WhatsApp. Now let Fastlaunch build you an automated, scalable D2C brand in 30 days.",
+      "category": "Social Commerce",
+      "badgeText": "Social to D2C"
+    }
   }
 }

@@ -197,12 +197,12 @@ export function Testimonial17() {
                 whileHover={{ y: -3 }}
                 className={`group p-4 rounded-2xl bg-neutral-950 border transition-all duration-300 cursor-pointer ${
                   isSelected
-                    ? "border-cyan-500/80 shadow-[0_0_20px_-5px_rgba(6,182,212,0.3)] bg-neutral-900/90"
-                    : "border-neutral-850 hover:border-neutral-750"
+                    ? "border-white/40 shadow-[0_0_20px_-5px_rgba(255,255,255,0.15)] bg-neutral-900/90"
+                    : "border-neutral-850 hover:border-neutral-700"
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-cyan-300">
+                  <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-neutral-300">
                     {item.badge}
                   </span>
                   <div className="flex gap-0.5">
@@ -212,7 +212,7 @@ export function Testimonial17() {
                   </div>
                 </div>
 
-                <h3 className="text-xs font-bold text-white group-hover:text-cyan-300 transition-colors">
+                <h3 className="text-xs font-bold text-white group-hover:text-neutral-300 transition-colors">
                   {item.client}
                 </h3>
                 <p className="text-[10px] text-neutral-400 line-clamp-2 mt-1 italic">
@@ -221,7 +221,7 @@ export function Testimonial17() {
 
                 <div className="mt-3 pt-2 border-t border-neutral-900 flex items-center justify-between text-[10px]">
                   <span className="font-semibold text-neutral-400">{item.role.split(" ")[0]}</span>
-                  <span className="text-cyan-400 font-bold">View Case &rarr;</span>
+                  <span className="text-white group-hover:text-neutral-300 font-bold">View Case &rarr;</span>
                 </div>
               </motion.div>
             );

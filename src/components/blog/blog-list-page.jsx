@@ -86,7 +86,7 @@ export function BlogListPage() {
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: idx * 0.05 }}
-                  className="group relative flex flex-col rounded-2xl bg-neutral-950/90 border border-neutral-850 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-cyan-950/30"
+                  className="group relative flex flex-col rounded-2xl bg-neutral-950/90 border border-neutral-850 overflow-hidden hover:border-neutral-700 transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-black/60"
                 >
                   <Link to={`/blog/${blog.slug}`} className="block flex-grow flex flex-col">
                     {/* Card Cover Header Graphic */}
@@ -105,7 +105,7 @@ export function BlogListPage() {
 
                       {/* Topic Badge */}
                       <div className="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1 px-2 py-0.5 rounded-md bg-black/70 backdrop-blur-md border border-white/15 text-white text-[9px] font-semibold">
-                        <span className="w-1.2 h-1.2 rounded-full bg-cyan-400 animate-pulse" />
+                        <span className="w-1.2 h-1.2 rounded-full bg-white animate-pulse" />
                         {translatedBadge}
                       </div>
                     </div>
@@ -127,7 +127,7 @@ export function BlogListPage() {
                         </div>
 
                         {/* Title */}
-                        <h2 className="text-sm sm:text-base font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug line-clamp-2">
+                        <h2 className="text-sm sm:text-base font-bold text-white group-hover:text-neutral-300 transition-colors leading-snug line-clamp-2">
                           {translatedTitle}
                         </h2>
 
@@ -148,7 +148,7 @@ export function BlogListPage() {
                           <span className="text-xs font-semibold text-white">{t('blogListPage.author', 'FastLaunch')}</span>
                         </div>
 
-                        <div className="inline-flex items-center gap-0.5 text-xs font-bold text-cyan-400 group-hover:text-cyan-300 group-hover:translate-x-0.5 transition-all duration-200">
+                        <div className="inline-flex items-center gap-0.5 text-xs font-bold text-white group-hover:text-neutral-300 group-hover:translate-x-0.5 transition-all duration-200">
                           {t('blogListPage.readMore', 'Read')}
                           <ArrowRight className="w-3.5 h-3.5" />
                         </div>

@@ -94,6 +94,9 @@ export function BlogListPage() {
                       <img
                         src={blog.image}
                         alt={translatedTitle}
+                        loading={idx < 3 ? "eager" : "lazy"}
+                        fetchPriority={idx < 3 ? "high" : "auto"}
+                        decoding="async"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
 

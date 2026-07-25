@@ -75,7 +75,14 @@ export function BlogPostPage() {
           {/* Left Column: Square Graphic Cover Image */}
           <div className="flex justify-center md:justify-start">
             <div className="relative w-48 sm:w-56 lg:w-64 aspect-square rounded-2xl overflow-hidden border border-neutral-800 shadow-[0_0_35px_-5px_rgba(6,182,212,0.25)] bg-neutral-950 flex items-center justify-center p-2 shrink-0">
-              <img src={blog.image} alt={translatedTitle} className="w-full h-full object-contain rounded-xl" />
+              <img
+                src={blog.image}
+                alt={translatedTitle}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="w-full h-full object-contain rounded-xl"
+              />
             </div>
           </div>
 

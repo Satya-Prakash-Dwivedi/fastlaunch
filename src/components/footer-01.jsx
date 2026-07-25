@@ -36,7 +36,7 @@ export function Footer1() {
                 {t('footer.address', 'E-6 Arera Colony, Bhopal, Madhya Pradesh, India')}
               </p>
               <p className="mt-2 text-xs text-scheme-text/60 font-medium">
-                {t('footer.freelanceNote', 'Top Freelance AI & Web Agency • Available Worldwide')}
+                {t('footer.tagline', 'Autonomous AI & High-Velocity Engineering Studio • Available Worldwide')}
               </p>
             </div>
           </div>
@@ -75,19 +75,9 @@ export function Footer1() {
               <h2 className="mb-3 font-semibold text-scheme-text md:mb-4">{t('footer.company', 'Company')}</h2>
               <ul>
                 <li className="text-small py-2">
-                  <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                  <Link to="/" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
                     {t('footer.aboutUs', 'About us')}
-                  </a>
-                </li>
-                <li className="text-small py-2">
-                  <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
-                    {t('footer.ourTeam', 'Our team')}
-                  </a>
-                </li>
-                <li className="text-small py-2">
-                  <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
-                    {t('footer.careers', 'Careers')}
-                  </a>
+                  </Link>
                 </li>
                 <li className="text-small py-2">
                   <Link to="/booking" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
@@ -96,9 +86,9 @@ export function Footer1() {
                 </li>
 
                 <li className="text-small py-2">
-                  <a href="#" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
-                    {t('footer.blog', 'Blog')}
-                  </a>
+                  <Link to="/blog" className="text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                    {t('footer.blogs', 'Blogs')}
+                  </Link>
                 </li>
               </ul>
             </div>

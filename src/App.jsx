@@ -22,6 +22,8 @@ import { SEO } from './components/seo';
 import { ServicesPage } from './components/services-page';
 import { TestimonialsPage } from './components/testimonials-page';
 import { FaqPage } from './components/faq-page';
+import { BlogListPage } from './components/blog/blog-list-page';
+import { BlogPostPage } from './components/blog/blog-post-page';
 
 const Home = () => (
   <>
@@ -143,6 +145,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/faq/:slug" element={<FaqPage />} />
+                <Route path="/blog" element={<BlogListPage />} />
+                <Route path="/blog/:slug" element={<BlogPostPage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/testimonials" element={<TestimonialsPage />} />
                 <Route path="/freelancer-hire" element={<ServicesPage />} />

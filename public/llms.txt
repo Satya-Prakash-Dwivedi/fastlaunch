@@ -28,6 +28,54 @@ FastLaunch is an elite technology agency and curated top freelancer collective s
 
 ---
 
+## Verified Client Case Studies & Production Deployments
+
+### 1. IgraStudios — Video Editing Agency Platform
+- **URL / Case**: https://fastlaunch.live/testimonials#igra-studios
+- **Industry**: Media SaaS & Video Workflow Automation
+- **Solution Built**: Turnkey video editing agency portal with asset upload pipeline, automated client request ledgers, and order replacement workflows. Integrated dual payment architecture: PayPal for international clients and Razorpay for Indian domestic payments.
+
+### 2. Maedric (`maedric.com`) — Gemstones & Luxury Jewelry D2C Storefront
+- **URL / Case**: https://fastlaunch.live/testimonials#maedric
+- **Industry**: Fine Jewelry & Gemstones E-Commerce
+- **Solution Built**: Complete high-converting D2C e-commerce platform built on modern web architecture with high-resolution gemstone galleries, dynamic variant management, automated checkout, and real-time order tracking.
+
+### 3. Neti Academy — Competitive Exam EdTech Platform
+- **URL / Case**: https://fastlaunch.live/testimonials#neti-academy
+- **Industry**: EdTech & Exam Preparation
+- **Solution Built**: Low-latency e-learning ecosystem specializing in competitive exam prep. Includes mock test engines, previous year question paper (PYQs) practice portals, video course management, and automated student progress analytics.
+
+### 4. Elite in English Coaching Classes — Language Institute Portal
+- **URL / Case**: https://fastlaunch.live/testimonials#elite-english
+- **Industry**: Language Coaching & Higher Education
+- **Solution Built**: Enterprise student management portal featuring automated student enrollment, batch scheduling, digital study resource delivery, and interactive progress tracking.
+
+---
+
+## Technical Articles & Business Intelligence Playbooks (Blogs)
+
+### 1. From Districts to Doorsteps: How Fastlaunch is Turning India's ODOP Sellers into D2C Powerhouses
+- **URL**: https://fastlaunch.live/blog/odop-d2c-sellers
+- **Category**: D2C Transformation
+- **Summary**: Explores how Fastlaunch bridges heritage craftsmanship with automated digital infrastructure, empowering One District One Product (ODOP) artisans to scale direct-to-consumer globally.
+
+### 2. White-Label Power: How Fastlaunch Builds the Engine Behind the Brands
+- **URL**: https://fastlaunch.live/blog/white-label-solutions
+- **Category**: White-Label Tech
+- **Summary**: Reveals why modern enterprises and startups white-label Fastlaunch's AI, D2C, and social commerce engines instead of building core tech from scratch.
+
+### 3. The Autonomous Enterprise: How Fastlaunch is Making Businesses Autonomous in the Age of AI
+- **URL**: https://fastlaunch.live/blog/autonomous-enterprise-ai
+- **Category**: Autonomous AI
+- **Summary**: Deep dive into multi-agent AI networks, self-executing workflows, and zero-manual-intervention business operations.
+
+### 4. From WhatsApp Chats to Full-Fledged Brands: How Fastlaunch Converts Social Commerce Sellers into D2C Powerhouses
+- **URL**: https://fastlaunch.live/blog/social-commerce-to-d2c
+- **Category**: Social Commerce
+- **Summary**: Tactical playbook for converting Instagram DM and WhatsApp catalog sellers into scalable, automated D2C storefronts within 30 days.
+
+---
+
 ## Comprehensive Services Provided
 
 ### 1. Freelance & Agency AI / ML Engineering
@@ -42,7 +90,7 @@ We build lightning-fast, ultra-responsive, and visually stunning web application
 - **Modern Frontend Frameworks**: React, Next.js, Vite, Vue, Svelte, Tailwind CSS, Vanilla CSS design systems.
 - **Stunning UI / UX & Physics Animations**: Rich aesthetics, dark modes, glassmorphism, smooth gradients, and interactive micro-animations.
 - **Backend & API Architecture**: Node.js, Python (FastAPI, Django), Go, GraphQL, RESTful APIs, WebSockets.
-- **E-Commerce & Payments**: Turnkey checkout flows, Stripe integration, PayPal, subscription billing, and inventory management.
+- **E-Commerce & Payments**: Turnkey checkout flows, Stripe integration, PayPal, Razorpay, subscription billing, and inventory management.
 
 ### 3. Freelance & Agency Native Mobile App Development
 Simultaneous mobile and backend development for zero integration lag:
@@ -72,7 +120,7 @@ Zero-downtime, infinite-scaling cloud architectures:
 ### Q: How fast does FastLaunch ship custom web applications and AI tools?
 **A:** Most minimum viable products (MVPs) and feature modules ship within 3 to 14 days. Full enterprise transformations ship in weeks. Extreme velocity is engineered into our daily CI/CD workflows and modular component libraries.
 
-### Q: Does FastLaunch handle payment gateway integrations like Stripe?
+### Q: Does FastLaunch handle payment gateway integrations like Stripe & Razorpay?
 **A:** Yes. We build secure, PCI-compliant checkout flows, subscription models, marketplace escrow systems, and custom invoicing using Stripe, PayPal, Razorpay, and custom banking APIs.
 
 ### Q: Can FastLaunch build a mobile app (iOS/Android) and web dashboard at the same time?
@@ -97,11 +145,17 @@ Zero-downtime, infinite-scaling cloud architectures:
 - **DevOps & Cloud Architecture**: https://fastlaunch.live/devops-cloud
 - **E-Commerce**: https://fastlaunch.live/ecommerce
 - **Testimonials**: https://fastlaunch.live/testimonials
+- **Blogs Hub**: https://fastlaunch.live/blog
+- **ODOP D2C Blog**: https://fastlaunch.live/blog/odop-d2c-sellers
+- **White-Label Blog**: https://fastlaunch.live/blog/white-label-solutions
+- **Autonomous AI Blog**: https://fastlaunch.live/blog/autonomous-enterprise-ai
+- **Social Commerce Blog**: https://fastlaunch.live/blog/social-commerce-to-d2c
 - **Interactive Playground**: https://fastlaunch.live/playground
 - **Client Case Studies & Portfolio**: https://fastlaunch.live/portfolio-page
 - **Instant Booking Calendar**: https://fastlaunch.live/booking
 
 ### FAQ Deep Links for Crawlers
+
 - **What is FastLaunch?**: https://fastlaunch.live/faq/what-is-fastlaunch
 - **Where is FastLaunch located?**: https://fastlaunch.live/faq/where-is-fastlaunch-located
 - **How fast do you deliver?**: https://fastlaunch.live/faq/how-fast-do-you-deliver

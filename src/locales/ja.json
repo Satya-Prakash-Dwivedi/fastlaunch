@@ -5,6 +5,7 @@
     "portfolio": "ポートフォリオ",
     "testimonials": "お客様の声",
     "playground": "遊び場",
+    "blogs": "ブログ",
     "getStarted": "始めましょう"
   },
   "header84": {
@@ -297,5 +298,51 @@
     "privacyPolicy": "プライバシーポリシー",
     "termsOfService": "利用規約",
     "cookieSettings": "クッキーの設定"
+  },
+  "blogListPage": {
+    "badge": "FastLaunch インサイト",
+    "heroTitle": "エンジニアリング＆ビジネスインテリジェンス",
+    "heroDesc": "D2Cスケーリング、自律型AIの導入、ホワイトレーベル技術スタックに関する戦術的プレイブックと詳細解説。",
+    "searchPlaceholder": "ブログやトピックを検索...",
+    "noResults": "検索クエリに一致する記事が見つかりませんでした。",
+    "readMore": "読む",
+    "author": "FastLaunch"
+  },
+  "blogPostPage": {
+    "backToBlogs": "すべてのブログに戻る",
+    "share": "共有",
+    "linkCopied": "リンクをクリップボードにコピーしました！",
+    "prevArticle": "前の記事",
+    "nextArticle": "次の記事",
+    "ctaTitle": "FastLaunchでビジネスに変革を",
+    "ctaDesc": "自律型AIエンタープライズの構築、ホワイトレーベル技術の立ち上げ、またはODOP製品のD2C化など、私たちのチームがサポートします。",
+    "bookCall": "通話を予約する",
+    "exploreServices": "サービスを見る"
+  },
+  "blogsData": {
+    "odopD2c": {
+      "title": "地域から全国の玄関へ：FastlaunchがインドのODOP事業者をD2Cブランドに変換する方法",
+      "excerpt": "伝統とデジタルを繋ぐ — Fastlaunchが地域の職人やODOP事業者を自動化された高利益率のD2Cブランドに変革する方法。",
+      "category": "D2C変革",
+      "badgeText": "ODOP D2Cエンジン"
+    },
+    "whiteLabel": {
+      "title": "ホワイトレーベルの力：Fastlaunchがブランドの裏で動くエンジンを構築する方法",
+      "excerpt": "大手企業や現代のスタートアップがゼロから開発する代わりにFastlaunchのAI、D2C、ソーシャルコマース基盤を採用する理由。",
+      "category": "ホワイトレーベル技術",
+      "badgeText": "ホワイトレーベルスタック"
+    },
+    "autonomousEnterprise": {
+      "title": "自律型エンタープライズ：AI時代にFastlaunchがビジネスを自律化する方法",
+      "excerpt": "手動による運用管理をストップ。マルチエージェントAIネットワークと自動実行システムで指揮を執る自律型ビジネスへ。",
+      "category": "自律型AI",
+      "badgeText": "自律型AIコア"
+    },
+    "socialCommerce": {
+      "title": "WhatsAppチャットから本格ブランドへ：Fastlaunchがソーシャルコマース事業者をD2Cブランドへ導く方法",
+      "excerpt": "InstagramやWhatsAppで培った実績を活かし、30日間で自動化された拡張可能なD2Cブランドを構築します。",
+      "category": "ソーシャルコマース",
+      "badgeText": "ソーシャル to D2C"
+    }
   }
 }

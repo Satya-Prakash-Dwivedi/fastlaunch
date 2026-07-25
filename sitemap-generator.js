@@ -9,13 +9,20 @@ const links = [
   { url: '/web-development', changefreq: 'weekly', priority: 0.9 },
   { url: '/mobile-app-development', changefreq: 'weekly', priority: 0.9 },
   { url: '/devops-cloud', changefreq: 'weekly', priority: 0.9 },
+  { url: '/ecommerce', changefreq: 'weekly', priority: 0.9 },
+  { url: '/testimonials', changefreq: 'daily', priority: 0.95 },
   { url: '/playground', changefreq: 'weekly', priority: 0.9 },
-  { url: '/portfolio-page', changefreq: 'monthly', priority: 0.8 },
-  { url: '/booking', changefreq: 'monthly', priority: 0.85 },
+  { url: '/blog', changefreq: 'daily', priority: 1.0 },
+  { url: '/blog/odop-d2c-sellers', changefreq: 'weekly', priority: 0.9 },
+  { url: '/blog/white-label-solutions', changefreq: 'weekly', priority: 0.9 },
+  { url: '/blog/autonomous-enterprise-ai', changefreq: 'weekly', priority: 0.9 },
+  { url: '/blog/social-commerce-to-d2c', changefreq: 'weekly', priority: 0.9 },
+  { url: '/portfolio-page', changefreq: 'monthly', priority: 0.85 },
+  { url: '/booking', changefreq: 'daily', priority: 0.95 },
   { url: '/privacy-policy', changefreq: 'yearly', priority: 0.3 },
   { url: '/terms-of-service', changefreq: 'yearly', priority: 0.3 },
   { url: '/cookie-settings', changefreq: 'yearly', priority: 0.3 },
-  { url: '/llms.txt', changefreq: 'weekly', priority: 0.8 },
+  { url: '/llms.txt', changefreq: 'weekly', priority: 0.9 },
 ];
 
 const stream = new SitemapStream({ hostname: 'https://fastlaunch.live' });

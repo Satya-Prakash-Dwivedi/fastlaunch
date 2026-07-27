@@ -343,6 +343,12 @@
       "excerpt": "InstagramやWhatsAppで培った実績を活かし、30日間で自動化された拡張可能なD2Cブランドを構築します。",
       "category": "ソーシャルコマース",
       "badgeText": "ソーシャル to D2C"
+    },
+    "ondcD2c": {
+      "title": "セラーからブランドへ：FastlaunchがONDC・ECセラーをD2Cに進化させる方法",
+      "excerpt": "プラットフォームの場所貸しを脱却。FastlaunchがONDCやECセラーの自社D2Cブランド構築を支援します。",
+      "category": "ONDC & D2C 戦略",
+      "badgeText": "ONDC D2C エンジン"
     }
   }
 }

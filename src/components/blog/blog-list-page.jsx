@@ -11,9 +11,9 @@ export function BlogListPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredBlogs = blogsData.filter((blog) => {
-    const title = t(`blogsData.${blog.translationKey}.title`, blog.title);
-    const excerpt = t(`blogsData.${blog.translationKey}.excerpt`, blog.excerpt);
-    const category = t(`blogsData.${blog.translationKey}.category`, blog.category);
+    const title = blog.title;
+    const excerpt = blog.excerpt;
+    const category = blog.category;
     
     return (
       title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -76,9 +76,9 @@ export function BlogListPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredBlogs.map((blog, idx) => {
-              const translatedTitle = t(`blogsData.${blog.translationKey}.title`, blog.title);
-              const translatedExcerpt = t(`blogsData.${blog.translationKey}.excerpt`, blog.excerpt);
-              const translatedBadge = t(`blogsData.${blog.translationKey}.badgeText`, blog.badgeText);
+              const translatedTitle = blog.title;
+              const translatedExcerpt = blog.excerpt;
+              const translatedBadge = blog.badgeText;
 
               return (
                 <motion.article

@@ -30,15 +30,14 @@ export function BlogPostPage() {
     );
   }
 
-  const currentLang = (i18n.language || 'en').slice(0, 2);
   const activeContent = (typeof blog.content === 'object' && blog.content !== null)
-    ? (blog.content[currentLang] || blog.content['en'] || '')
+    ? (blog.content['en'] || '')
     : (typeof blog.content === 'string' ? blog.content : '');
 
-  const translatedTitle = t(`blogsData.${blog.translationKey}.title`, blog.title);
-  const translatedExcerpt = t(`blogsData.${blog.translationKey}.excerpt`, blog.excerpt);
-  const translatedCategory = t(`blogsData.${blog.translationKey}.category`, blog.category);
-  const translatedBadge = t(`blogsData.${blog.translationKey}.badgeText`, blog.badgeText);
+  const translatedTitle = blog.title;
+  const translatedExcerpt = blog.excerpt;
+  const translatedCategory = blog.category;
+  const translatedBadge = blog.badgeText;
 
   const relatedBlogs = blogsData.filter((b) => b.slug !== slug).slice(0, 2);
 
@@ -258,9 +257,9 @@ export function BlogPostPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {relatedBlogs.map((rBlog) => {
-              const rTitle = t(`blogsData.${rBlog.translationKey}.title`, rBlog.title);
-              const rExcerpt = t(`blogsData.${rBlog.translationKey}.excerpt`, rBlog.excerpt);
-              const rCategory = t(`blogsData.${rBlog.translationKey}.category`, rBlog.category);
+              const rTitle = rBlog.title;
+              const rExcerpt = rBlog.excerpt;
+              const rCategory = rBlog.category;
 
               return (
                 <Link

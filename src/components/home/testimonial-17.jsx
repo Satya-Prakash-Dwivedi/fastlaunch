@@ -53,12 +53,63 @@ export function Testimonial17() {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const testimonials = [
+    {
+      id: "igra-studios",
+      client: "IgraStudios",
+      role: t("testimonialsData.igraStudios.role", "Video Editing Agency Platform"),
+      avatar: "IS",
+      badge: t("testimonialsData.igraStudios.badge", "Media SaaS & Workflows"),
+      quote: t(
+        "testimonialsData.igraStudios.quote",
+        "Fastlaunch built our complete video editing agency platform. Clients effortlessly upload assets, request custom edits, and pay via PayPal internationally or Razorpay in India. The automated ledgers and order replacement system made our agency operations completely hands-free!"
+      ),
+      metrics: t("testimonialsData.igraStudios.metrics", "Dual Payments & Asset Portal")
+    },
+    {
+      id: "maedric",
+      client: "Maedric",
+      role: t("testimonialsData.maedric.role", "Gemstones & Luxury Jewelry D2C"),
+      avatar: "MA",
+      badge: t("testimonialsData.maedric.badge", "E-Commerce & D2C"),
+      quote: t(
+        "testimonialsData.maedric.quote",
+        "Fastlaunch engineered maedric.com into a stunning, high-converting luxury e-commerce platform for our gemstone and jewelry collection. From high-resolution product showcases to seamless checkout, our online sales surged from day one!"
+      ),
+      metrics: t("testimonialsData.maedric.metrics", "Turnkey D2C Storefront")
+    },
+    {
+      id: "neti-academy",
+      client: "Neti Academy",
+      role: t("testimonialsData.netiAcademy.role", "Competitive Exam EdTech Platform"),
+      avatar: "NA",
+      badge: t("testimonialsData.netiAcademy.badge", "EdTech & Test Series"),
+      quote: t(
+        "testimonialsData.netiAcademy.quote",
+        "Fastlaunch built Neti Academy into a powerful competitive exam platform. Students easily access mock tests, PYQ practice engines, and structured courses with zero latency. It transformed how our students prepare for exams!"
+      ),
+      metrics: t("testimonialsData.netiAcademy.metrics", "PYQs & Course Engine")
+    },
+    {
+      id: "elite-english",
+      client: "Elite in English Coaching Classes",
+      role: t("testimonialsData.eliteEnglish.role", "Language & Coaching Institute"),
+      avatar: "EE",
+      badge: t("testimonialsData.eliteEnglish.badge", "Coaching & Education"),
+      quote: t(
+        "testimonialsData.eliteEnglish.quote",
+        "Fastlaunch built our complete digital institute portal for Elite in English Coaching Classes. Batch scheduling, student enrollment, and digital study resources run smoothly on autopilot. It gave our coaching institute an enterprise edge!"
+      ),
+      metrics: t("testimonialsData.eliteEnglish.metrics", "Student Portal & Scheduling")
+    }
+  ];
+
   const nextTestimonial = () => {
-    setActiveIndex((prev) => (prev + 1) % realTestimonials.length);
+    setActiveIndex((prev) => (prev + 1) % testimonials.length);
   };
 
   const prevTestimonial = () => {
-    setActiveIndex((prev) => (prev - 1 + realTestimonials.length) % realTestimonials.length);
+    setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   return (
@@ -68,13 +119,13 @@ export function Testimonial17() {
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900 text-neutral-300 text-[10px] font-semibold uppercase tracking-wider">
             <Sparkles className="w-3 h-3 text-white" />
-            {t("testimonial17.badge", "Verified Client Impact")}
+            {t("testimonialsData.badge", "Verified Client Impact")}
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
-            {t("testimonial17.title", "Trusted by Growth Leaders")}
+            {t("testimonialsData.title", "Trusted by Growth Leaders")}
           </h2>
           <p className="text-xs sm:text-sm text-neutral-400 font-normal">
-            {t("testimonial17.description", "See how we empower video platforms, D2C brands, EdTech portals, and coaching institutes to scale faster.")}
+            {t("testimonialsData.description", "See how we empower video platforms, D2C brands, EdTech portals, and coaching institutes to scale faster.")}
           </p>
         </div>
 
@@ -82,7 +133,7 @@ export function Testimonial17() {
         <div className="mb-12">
           <AnimatePresence mode="wait">
             <motion.div
-              key={realTestimonials[activeIndex].id}
+              key={testimonials[activeIndex].id}
               initial={{ opacity: 0, y: 15, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -15, scale: 0.98 }}
@@ -100,36 +151,36 @@ export function Testimonial17() {
                       ))}
                     </div>
                     <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-neutral-300 bg-neutral-900 border border-neutral-800 px-2.5 py-0.5 rounded-full">
-                      <CheckCircle2 className="w-3 h-3 text-white" /> Verified Client Case
+                      <CheckCircle2 className="w-3 h-3 text-white" /> {t("testimonialsData.verifiedCase", "Verified Client Case")}
                     </span>
                   </div>
 
                   <div className="relative">
                     <Quote className="absolute -top-3 -left-4 w-10 h-10 text-white/5 pointer-events-none" />
                     <p className="text-base sm:text-lg lg:text-xl font-medium text-white leading-relaxed italic relative z-10">
-                      "{realTestimonials[activeIndex].quote}"
+                      "{testimonials[activeIndex].quote}"
                     </p>
                   </div>
 
                   {/* Client Info */}
                   <div className="flex items-center gap-3 pt-2">
                     <div className="w-10 h-10 rounded-full bg-neutral-900 border border-neutral-700 flex items-center justify-center font-extrabold text-white text-xs shadow-md">
-                      {realTestimonials[activeIndex].avatar}
+                      {testimonials[activeIndex].avatar}
                     </div>
                     <div>
                       <h4 className="text-sm font-bold text-white flex items-center gap-1.5">
-                        {realTestimonials[activeIndex].client}
+                        {testimonials[activeIndex].client}
                       </h4>
-                      <p className="text-xs text-neutral-400">{realTestimonials[activeIndex].role}</p>
+                      <p className="text-xs text-neutral-400">{testimonials[activeIndex].role}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Side Impact Metric Box */}
                 <div className="shrink-0 p-5 rounded-2xl bg-neutral-900 border border-neutral-800 text-center w-full lg:w-52 space-y-1">
-                  <div className="text-[10px] font-semibold text-neutral-400 uppercase tracking-wider">Solution Built</div>
-                  <div className="text-xs font-extrabold text-white">{realTestimonials[activeIndex].metrics}</div>
-                  <div className="text-[10px] text-neutral-400 font-medium">Production Deployed</div>
+                  <div className="text-[10px] font-semibold text-neutral-400 uppercase tracking-wider">{t("testimonialsData.solutionBuilt", "Solution Built")}</div>
+                  <div className="text-xs font-extrabold text-white">{testimonials[activeIndex].metrics}</div>
+                  <div className="text-[10px] text-neutral-400 font-medium">{t("testimonialsData.productionDeployed", "Production Deployed")}</div>
                 </div>
               </div>
             </motion.div>
@@ -138,7 +189,7 @@ export function Testimonial17() {
           {/* Navigation Controls */}
           <div className="flex items-center justify-between mt-4 px-2">
             <div className="flex items-center gap-2">
-              {realTestimonials.map((_, idx) => (
+              {testimonials.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveIndex(idx)}
@@ -173,7 +224,7 @@ export function Testimonial17() {
 
         {/* 4-Card Grid Overview */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {realTestimonials.map((item, index) => {
+          {testimonials.map((item, index) => {
             const isSelected = activeIndex === index;
             return (
               <motion.div
@@ -206,7 +257,7 @@ export function Testimonial17() {
 
                 <div className="mt-3 pt-2 border-t border-neutral-900 flex items-center justify-between text-[10px]">
                   <span className="font-semibold text-neutral-400">{item.role.split(" ")[0]}</span>
-                  <span className="text-white group-hover:text-neutral-300 font-bold">View Case &rarr;</span>
+                  <span className="text-white group-hover:text-neutral-300 font-bold">{t("testimonialsData.viewCase", "View Case")} &rarr;</span>
                 </div>
               </motion.div>
             );

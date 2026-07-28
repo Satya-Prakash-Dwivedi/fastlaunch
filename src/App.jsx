@@ -61,7 +61,8 @@ const Home = () => (
           "priceRange": "$$$",
           "sameAs": [
             "https://x.com/fastlaunchlive",
-            "https://www.linkedin.com/company/fast-launch-live/"
+            "https://www.linkedin.com/company/fast-launch-live/",
+            "https://www.instagram.com/fast.launch/"
           ],
           "areaServed": "Worldwide",
           "hasOfferCatalog": {

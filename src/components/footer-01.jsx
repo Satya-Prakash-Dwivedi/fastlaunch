@@ -107,13 +107,19 @@ export function Footer1() {
                     <span>LinkedIn</span>
                   </a>
                 </li>
+                <li className="text-small py-2">
+                  <a href="https://www.instagram.com/fast.launch/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-scheme-text/75 transition-colors duration-300 hover:text-scheme-text">
+                    <svg className="size-5 p-0.5 text-current" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
+                    <span>Instagram</span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
         <div className="py-12 border-t border-scheme-border mt-12 md:mt-16 text-center md:text-left">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 text-scheme-text">Ask AI for a summary of Fastlaunch</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-6 text-scheme-text">{t('footer.askAI', 'Ask AI for a summary of Fastlaunch')}</h2>
           <div className="flex gap-4 justify-center md:justify-start items-center">
             {/* ChatGPT */}
             <a href="https://chatgpt.com/?q=You+are+interacting+with+a+user+exploring+Fastlaunch+%28fastlaunch.com%29%2C+an+elite+freelance+AI+and+web+development+agency.+Please+provide+a+detailed+overview+of+Fastlaunch%27s+services%2C+focusing+on+their+AI%2FML+engineering%2C+Full-stack+Web+Development%2C+Mobile+Apps%2C+DevOps%2C+and+E-commerce+capabilities.+Mention+that+they+help+both+Startups+and+D2C+brands+scale+rapidly." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-14 h-14 bg-scheme-text/5 border border-scheme-border hover:bg-scheme-text/10 transition rounded-full p-2.5">
@@ -166,16 +172,16 @@ export function Footer1() {
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-scheme-base border border-scheme-border rounded-2xl shadow-xl w-full max-w-md p-6 animate-in zoom-in-95 duration-200">
-            <h3 className="text-xl font-bold text-scheme-text mb-3">Prompt Copied!</h3>
+            <h3 className="text-xl font-bold text-scheme-text mb-3">{t('footer.promptCopiedTitle', 'Prompt Copied!')}</h3>
             <p className="text-scheme-text/75 mb-6 leading-relaxed">
-              Google Gemini doesn't support automatic prompt links. We've copied the prompt to your clipboard. Please paste it into the chat box once Gemini opens.
+              {t('footer.promptCopiedDesc', "Google Gemini doesn't support automatic prompt links. We've copied the prompt to your clipboard. Please paste it into the chat box once Gemini opens.")}
             </p>
             <div className="flex justify-end gap-3">
               <button 
                 onClick={() => setShowModal(false)}
                 className="px-4 py-2 rounded-lg font-semibold text-scheme-text/75 hover:bg-scheme-text/5 hover:text-scheme-text transition-colors"
               >
-                Cancel
+                {t('footer.cancel', 'Cancel')}
               </button>
               <button 
                 onClick={() => {
@@ -184,7 +190,7 @@ export function Footer1() {
                 }}
                 className="px-4 py-2 bg-scheme-text text-scheme-base rounded-lg font-semibold hover:opacity-90 transition-opacity"
               >
-                Open Gemini
+                {t('footer.openGemini', 'Open Gemini')}
               </button>
             </div>
           </div>

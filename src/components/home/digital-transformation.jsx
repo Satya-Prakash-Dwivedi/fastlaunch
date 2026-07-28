@@ -9,7 +9,7 @@ export function DigitalTransformation() {
         <hr className="w-full border-t-2 border-black/60 mb-12 md:mb-20" />
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="mb-4 text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] font-extrabold tracking-tighter leading-[1.1] text-scheme-text">
-            {t('dt.lable', 'Digital Transformation')}
+            {t('dt.label', 'Digital Transformation')}
           </h2>
           <p className="mb-8 font-medium text-scheme-text/60 text-lg md:text-xl">
             {t('dt.title', 'Eliminate Outdated Infrastructure.')}
@@ -25,8 +25,8 @@ export function DigitalTransformation() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-1 text-scheme-text">D2C Brands</h3>
-                <p className="text-scheme-text/70 text-lg">As we make and scale your social commerce business into D2C.</p>
+                <h3 className="font-bold text-xl mb-1 text-scheme-text">{t('dt.d2cTitle', 'D2C Brands')}</h3>
+                <p className="text-scheme-text/70 text-lg">{t('dt.d2cDesc', 'As we make and scale your social commerce business into D2C.')}</p>
               </div>
             </div>
             <div className="flex items-start gap-4 p-4 rounded-xl bg-scheme-text/5 border border-scheme-border">
@@ -36,8 +36,8 @@ export function DigitalTransformation() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-bold text-xl mb-1 text-scheme-text">Startups</h3>
-                <p className="text-scheme-text/70 text-lg">As we support fast delivery for custom developments, which help to launch startups fast into the desired region or jurisdiction.</p>
+                <h3 className="font-bold text-xl mb-1 text-scheme-text">{t('dt.startupsTitle', 'Startups')}</h3>
+                <p className="text-scheme-text/70 text-lg">{t('dt.startupsDesc', 'As we support fast delivery for custom developments, which help to launch startups fast into the desired region or jurisdiction.')}</p>
               </div>
             </div>
           </div>
@@ -54,7 +54,8 @@ export function DigitalTransformation() {
             `}
           </style>
           <div className="mt-16 w-full overflow-hidden">
-            <h4 className="text-sm font-bold tracking-widest text-scheme-text/50 uppercase mb-8 text-center">Powering Social Commerce</h4>
+            <h4 className="text-sm font-bold tracking-widest text-scheme-text/50 uppercase mb-8 text-center">{t('dt.poweringSocialCommerce', 'Powering Social Commerce')}</h4>
+
             <div className="flex w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
               <div className="flex w-max animate-marquee-ltr items-center">
                 {/* SET 1 */}

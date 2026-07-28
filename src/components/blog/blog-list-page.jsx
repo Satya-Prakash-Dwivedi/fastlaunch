@@ -1,20 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { blogsData } from '@/data/blogsData';
+import { getSanityPosts } from '@/lib/sanity';
 import { SEO } from '@/components/seo';
 import { ArrowRight, Search, Calendar, Clock, Sparkles } from 'lucide-react';
 
 export function BlogListPage() {
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
+  const [blogs, setBlogs] = useState(blogsData);
 
-  const filteredBlogs = blogsData.filter((blog) => {
-    const title = t(`blogsData.${blog.translationKey}.title`, blog.title);
-    const excerpt = t(`blogsData.${blog.translationKey}.excerpt`, blog.excerpt);
-    const category = t(`blogsData.${blog.translationKey}.category`, blog.category);
-    
+  useEffect(() => {
+    getSanityPosts().then((posts) => {
+      if (posts && posts.length > 0) {
+        setBlogs(posts);
+      }
+    });
+  }, []);
+
+  const filteredBlogs = blogs.filter((blog) => {
+    const title = blog.title;
+    const excerpt = blog.excerpt;
+    const category = blog.category;
+
     return (
       title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -76,9 +86,9 @@ export function BlogListPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredBlogs.map((blog, idx) => {
-              const translatedTitle = t(`blogsData.${blog.translationKey}.title`, blog.title);
-              const translatedExcerpt = t(`blogsData.${blog.translationKey}.excerpt`, blog.excerpt);
-              const translatedBadge = t(`blogsData.${blog.translationKey}.badgeText`, blog.badgeText);
+              const translatedTitle = blog.title;
+              const translatedExcerpt = blog.excerpt;
+              const translatedBadge = blog.badgeText;
 
               return (
                 <motion.article

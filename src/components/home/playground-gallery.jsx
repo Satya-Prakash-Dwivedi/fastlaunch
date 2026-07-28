@@ -3,6 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const MODELS = [
   {
@@ -57,6 +58,7 @@ const MODELS = [
 ];
 
 export function PlaygroundGallery() {
+  const { t } = useTranslation();
   const [selectedModel, setSelectedModel] = useState(MODELS[0]);
 
   return (
@@ -64,12 +66,12 @@ export function PlaygroundGallery() {
       <div className="container flex flex-col items-center">
         <div className="mb-12 text-center md:mb-18 lg:mb-20">
           <div className="mx-auto w-full max-w-lg">
-            <p className="mb-3 font-semibold md:mb-4">Interactive 3D</p>
+            <p className="mb-3 font-semibold md:mb-4">{t('playgroundGallery.label', 'Interactive 3D')}</p>
             <h2 className="mb-5 text-h2 font-bold md:mb-6">
-              Our 3D Design Playground
+              {t('playgroundGallery.title', 'Our 3D Design Playground')}
             </h2>
             <p className="text-medium text-scheme-text/80">
-              Drag to rotate, pinch to zoom, and explore our custom 3D hardware & workspace design assets in real-time.
+              {t('playgroundGallery.description', 'Drag to rotate, pinch to zoom, and explore our custom 3D hardware & workspace design assets in real-time.')}
             </p>
           </div>
         </div>
@@ -107,7 +109,8 @@ export function PlaygroundGallery() {
 
           {/* Right Panel: Scrollable Grid Selector */}
           <div className="flex flex-col gap-4 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
-            <h4 className="text-sm font-semibold tracking-wider uppercase text-scheme-text/40 mb-2">Select Asset to Render</h4>
+            <h4 className="text-sm font-semibold tracking-wider uppercase text-scheme-text/40 mb-2">{t('playgroundGallery.selectAsset', 'Select Asset to Render')}</h4>
+
             <div className="flex flex-col gap-3">
               {MODELS.map((model) => {
                 const isActive = selectedModel.id === model.id;

@@ -29,6 +29,11 @@
     "ecommerceDesc": "Complete transactional platforms featuring Stripe/PayPal payments, custom order workflows, smart check-out management, and real-time carrier delivery integrations.",
     "serverlessTitle": "Serverless Managed",
     "serverlessDesc": "Fully auto-scaling, modern cloud environments that charge only for exact execution time, reducing cloud waste.",
+    "listingTitle": "Product / Service Listing",
+    "listingDesc": "Bulk Product/Service listing on demand on your region / location.",
+    "seoTitle": "SEO / GEO / AEO",
+    "seoDesc": "Optimize your digital presence across traditional search, geographic targeting, and generative AI engines.",
+    "tagline": "We make business autonomous with AI.",
     "explore": "Explore",
     "details": "Details"
   },
@@ -49,12 +54,18 @@
     "description": "We measure success by what gets delivered. Hundreds of projects shipped. Thousands of hours of uptime. Clients who came back because we earned it.",
     "projects": "Projects delivered",
     "uptime": "Server uptime",
+    "loc": "Lines of code written",
     "api": "API requests handled"
   },
   "dt": {
     "label": "Digital Transformation",
     "title": "Eliminate Outdated Infrastructure.",
-    "description": "Transform your legacy and inactive systems into modern, highly secure, AI-native cloud environments."
+    "description": "Transform your legacy and inactive systems into modern, highly secure, AI-native cloud environments.",
+    "d2cTitle": "D2C Brands",
+    "d2cDesc": "As we make and scale your social commerce business into D2C.",
+    "startupsTitle": "Startups",
+    "startupsDesc": "As we support fast delivery for custom developments, which help to launch startups fast into the desired region or jurisdiction.",
+    "poweringSocialCommerce": "Powering Social Commerce"
   },
   "cta31": {
     "title": "Ready to build something",
@@ -297,7 +308,12 @@
     "rights": "© 2026 Fastlaunch. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of service",
-    "cookieSettings": "Cookie settings"
+    "cookieSettings": "Cookie settings",
+    "askAI": "Ask AI for a summary of Fastlaunch",
+    "promptCopiedTitle": "Prompt Copied!",
+    "promptCopiedDesc": "Google Gemini doesn't support automatic prompt links. We've copied the prompt to your clipboard. Please paste it into the chat box once Gemini opens.",
+    "cancel": "Cancel",
+    "openGemini": "Open Gemini"
   },
   "blogListPage": {
     "badge": "FastLaunch Insights",
@@ -349,6 +365,39 @@
       "excerpt": "Stop renting space on platforms and competing in price wars. Learn how Fastlaunch helps ONDC and marketplace sellers build automated, high-margin D2C brands.",
       "category": "ONDC & D2C Strategy",
       "badgeText": "ONDC D2C Engine"
+    }
+  },
+  "testimonialsData": {
+    "badge": "Verified Client Impact",
+    "title": "Trusted by Growth Leaders",
+    "description": "See how we empower video platforms, D2C brands, EdTech portals, and coaching institutes to scale faster.",
+    "verifiedCase": "Verified Client Case",
+    "solutionBuilt": "Solution Built",
+    "productionDeployed": "Production Deployed",
+    "viewCase": "View Case",
+    "igraStudios": {
+      "role": "Video Editing Agency Platform",
+      "badge": "Media SaaS & Workflows",
+      "quote": "Fastlaunch built our complete video editing agency platform. Clients effortlessly upload assets, request custom edits, and pay via PayPal internationally or Razorpay in India. The automated ledgers and order replacement system made our agency operations completely hands-free!",
+      "metrics": "Dual Payments & Asset Portal"
+    },
+    "maedric": {
+      "role": "Gemstones & Luxury Jewelry D2C",
+      "badge": "E-Commerce & D2C",
+      "quote": "Fastlaunch engineered maedric.com into a stunning, high-converting luxury e-commerce platform for our gemstone and jewelry collection. From high-resolution product showcases to seamless checkout, our online sales surged from day one!",
+      "metrics": "Turnkey D2C Storefront"
+    },
+    "netiAcademy": {
+      "role": "Competitive Exam EdTech Platform",
+      "badge": "EdTech & Test Series",
+      "quote": "Fastlaunch built Neti Academy into a powerful competitive exam platform. Students easily access mock tests, PYQ practice engines, and structured courses with zero latency. It transformed how our students prepare for exams!",
+      "metrics": "PYQs & Course Engine"
+    },
+    "eliteEnglish": {
+      "role": "Language & Coaching Institute",
+      "badge": "Coaching & Education",
+      "quote": "Fastlaunch built our complete digital institute portal for Elite in English Coaching Classes. Batch scheduling, student enrollment, and digital study resources run smoothly on autopilot. It gave our coaching institute an enterprise edge!",
+      "metrics": "Student Portal & Scheduling"
     }
   }
 }

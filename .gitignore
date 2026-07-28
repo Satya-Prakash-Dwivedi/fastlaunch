@@ -41,3 +41,6 @@ coverage/
 # System files (macOS / Windows)
 .DS_Store
 Thumbs.db
+
+# Sanity Studio cache
+.sanity/

@@ -1,27 +1,31 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 export function SEO({
   title = 'FastLaunch - AI/ML, DevOps & Web Solutions',
   description = 'Deploy intelligent systems in days. AI/ML, DevOps, mobile apps, and serverless solutions.',
   name = 'FastLaunch',
   type = 'website',
-  url = 'https://fastlaunch.live',
+  url,
   image = 'https://fastlaunch.live/og-image.jpg',
   schemas = []
 }) {
+  const location = useLocation();
+  const canonicalUrl = url || `https://fastlaunch.live${location.pathname === '/' ? '' : location.pathname}`;
+
   return (
     <Helmet>
       {/* Standard metadata tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* Facebook tags */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={image} />
 
       {/* Twitter tags */}
@@ -40,3 +44,4 @@ export function SEO({
     </Helmet>
   );
 }
+

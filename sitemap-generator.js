@@ -1,7 +1,14 @@
 import { SitemapStream, streamToPromise } from 'sitemap';
 import fs from 'fs';
+import { faqs } from './src/data/faqs.js';
 
-const links = [
+const faqLinks = faqs.map(faq => ({
+  url: `/faq/${faq.slug}`,
+  changefreq: 'weekly',
+  priority: 0.8
+}));
+
+const staticLinks = [
   { url: '/', changefreq: 'daily', priority: 1.0 },
   { url: '/services', changefreq: 'daily', priority: 0.95 },
   { url: '/freelancer-hire', changefreq: 'weekly', priority: 0.95 },
@@ -25,13 +32,16 @@ const links = [
   { url: '/llms.txt', changefreq: 'weekly', priority: 0.9 },
 ];
 
+const links = [...staticLinks, ...faqLinks];
+
 const stream = new SitemapStream({ hostname: 'https://fastlaunch.live' });
 links.forEach(link => stream.write(link));
 stream.end();
 
 streamToPromise(stream).then(sitemap => {
   fs.writeFileSync('./public/sitemap.xml', sitemap.toString());
-  console.log('Sitemap generated successfully!');
+  console.log(`Sitemap generated successfully with ${links.length} URLs!`);
 }).catch(err => {
   console.error('Error generating sitemap:', err);
 });
+

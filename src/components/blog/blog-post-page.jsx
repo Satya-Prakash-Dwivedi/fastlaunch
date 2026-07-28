@@ -1,21 +1,69 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { PortableText } from '@portabletext/react';
 import { blogsData } from '@/data/blogsData';
+import { getSanityPosts, urlFor } from '@/lib/sanity';
 import { SEO } from '@/components/seo';
 import { ArrowLeft, Calendar, Clock, Share2, Sparkles, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
+const portableTextComponents = {
+  types: {
+    image: ({ value }) => {
+      const imgUrl = urlFor(value);
+      if (!imgUrl) return null;
+      return (
+        <figure className="my-8 ml-4 sm:ml-6">
+          <img src={imgUrl} alt={value.alt || 'Sanity Blog Image'} className="w-full rounded-2xl border border-neutral-800 shadow-xl" />
+          {value.caption && <figcaption className="text-center text-xs text-neutral-400 mt-2">{value.caption}</figcaption>}
+        </figure>
+      );
+    },
+  },
+  block: {
+    h1: ({ children }) => <h2 className="text-xl sm:text-2xl font-black text-white mt-12 mb-4 pb-2 border-b border-neutral-800 tracking-tight">{children}</h2>,
+    h2: ({ children }) => <h3 className="text-base sm:text-lg font-bold text-white mt-8 mb-3 flex items-center gap-2.5 pl-4 sm:pl-6"><span className="w-1.5 h-1.5 rounded-full bg-white shrink-0" />{children}</h3>,
+    h3: ({ children }) => <h4 className="text-sm sm:text-base font-semibold text-neutral-200 mt-6 mb-2 pl-8 sm:pl-10">{children}</h4>,
+    normal: ({ children }) => <p className="text-neutral-200 leading-relaxed font-normal text-sm sm:text-base mb-5 pl-4 sm:pl-6">{children}</p>,
+    blockquote: ({ children }) => <blockquote className="my-8 ml-4 sm:ml-6 px-6 py-4 rounded-2xl bg-neutral-950 border border-neutral-800 text-white italic font-serif text-sm sm:text-base leading-relaxed shadow-lg">{children}</blockquote>,
+  },
+  list: {
+    bullet: ({ children }) => <ul className="space-y-2.5 my-4 pl-8 sm:pl-12">{children}</ul>,
+    number: ({ children }) => <ol className="space-y-2.5 my-4 pl-8 sm:pl-12 list-decimal text-neutral-200 text-xs sm:text-sm">{children}</ol>,
+  },
+  listItem: {
+    bullet: ({ children }) => (
+      <li className="flex gap-2.5 items-start text-neutral-200 text-xs sm:text-sm leading-relaxed">
+        <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 shrink-0" />
+        <div>{children}</div>
+      </li>
+    ),
+    number: ({ children }) => <li className="text-neutral-200 text-xs sm:text-sm leading-relaxed">{children}</li>,
+  },
+};
 
 export function BlogPostPage() {
   const { t, i18n } = useTranslation();
   const { slug } = useParams();
 
-  const blog = blogsData.find((b) => b.slug === slug);
+  const [blog, setBlog] = useState(() => blogsData.find((b) => b.slug === slug));
+  const [allBlogs, setAllBlogs] = useState(blogsData);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    getSanityPosts().then((posts) => {
+      if (posts && posts.length > 0) {
+        setAllBlogs(posts);
+        const found = posts.find((p) => p.slug === slug);
+        if (found) {
+          setBlog(found);
+        }
+      }
+    });
   }, [slug]);
 
   if (!blog) {
@@ -39,7 +87,7 @@ export function BlogPostPage() {
   const translatedCategory = blog.category;
   const translatedBadge = blog.badgeText;
 
-  const relatedBlogs = blogsData.filter((b) => b.slug !== slug).slice(0, 2);
+  const relatedBlogs = allBlogs.filter((b) => b.slug !== slug).slice(0, 2);
 
   const handleShare = () => {
     if (navigator.share) {
@@ -150,85 +198,89 @@ export function BlogPostPage() {
 
         {/* Article Body: Structured Visual Hierarchy (Scoped Indentation) */}
         <article className="py-10 text-left w-full space-y-2">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            components={{
-              // H1: Top-level section title (No left border line, clean pure white)
-              h1: ({ children }) => (
-                <h2 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight mt-10 mb-4 pb-2 border-b border-neutral-900">
-                  {children}
-                </h2>
-              ),
-              // H2: Subheading (Shifted right with pl-4 sm:pl-6 to show scope)
-              h2: ({ children }) => (
-                <h3 className="text-base sm:text-lg font-bold text-white mt-8 mb-3 flex items-center gap-2.5 pl-4 sm:pl-6">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white shrink-0" />
-                  {children}
-                </h3>
-              ),
-              // H3: Nested Subheading (Shifted further right with pl-8 sm:pl-10)
-              h3: ({ children }) => (
-                <h4 className="text-sm sm:text-base font-semibold text-neutral-200 mt-6 mb-2 pl-8 sm:pl-10">
-                  {children}
-                </h4>
-              ),
-              // Paragraphs: Shifted right under subheadings (pl-4 sm:pl-6)
-              p: ({ children }) => (
-                <p className="text-neutral-200 leading-relaxed font-normal text-sm sm:text-base mb-5 pl-4 sm:pl-6">
-                  {children}
-                </p>
-              ),
-              strong: ({ children }) => (
-                <strong className="font-bold text-white bg-neutral-800 px-1.5 py-0.5 rounded border border-neutral-700">
-                  {children}
-                </strong>
-              ),
-              em: ({ children }) => (
-                <em className="text-neutral-300 italic font-medium">{children}</em>
-              ),
-              // Bullet lists & numbered lists: Shifted further right (pl-8 sm:pl-12) to show clear scope
-              ul: ({ children }) => (
-                <ul className="space-y-2.5 my-4 pl-8 sm:pl-12">{children}</ul>
-              ),
-              ol: ({ children }) => (
-                <ol className="space-y-2.5 my-4 pl-8 sm:pl-12 list-decimal text-neutral-200 text-xs sm:text-sm">{children}</ol>
-              ),
-              li: ({ children }) => (
-                <li className="flex gap-2.5 items-start text-neutral-200 text-xs sm:text-sm leading-relaxed">
-                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 shrink-0" />
-                  <div>{children}</div>
-                </li>
-              ),
-              blockquote: ({ children }) => (
-                <blockquote className="my-8 ml-4 sm:ml-6 px-6 py-4 rounded-2xl bg-neutral-950 border border-neutral-800 text-white italic font-serif text-sm sm:text-base leading-relaxed shadow-lg">
-                  {children}
-                </blockquote>
-              ),
-              // Table Component: Left-Aligned, Clean Padding & Borders
-              table: ({ children }) => (
-                <div className="flex justify-start my-8 pl-4 sm:pl-6 w-full">
-                  <div className="overflow-x-auto w-full border border-neutral-800 rounded-xl bg-neutral-950 shadow-xl">
-                    <table className="w-full text-left text-xs sm:text-sm text-white border-collapse">
-                      {children}
-                    </table>
+          {blog.body && Array.isArray(blog.body) && blog.body.length > 0 ? (
+            <PortableText value={blog.body} components={portableTextComponents} />
+          ) : (
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                // H1: Top-level section title (No left border line, clean pure white)
+                h1: ({ children }) => (
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight mt-10 mb-4 pb-2 border-b border-neutral-900">
+                    {children}
+                  </h2>
+                ),
+                // H2: Subheading (Shifted right with pl-4 sm:pl-6 to show scope)
+                h2: ({ children }) => (
+                  <h3 className="text-base sm:text-lg font-bold text-white mt-8 mb-3 flex items-center gap-2.5 pl-4 sm:pl-6">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white shrink-0" />
+                    {children}
+                  </h3>
+                ),
+                // H3: Nested Subheading (Shifted further right with pl-8 sm:pl-10)
+                h3: ({ children }) => (
+                  <h4 className="text-sm sm:text-base font-semibold text-neutral-200 mt-6 mb-2 pl-8 sm:pl-10">
+                    {children}
+                  </h4>
+                ),
+                // Paragraphs: Shifted right under subheadings (pl-4 sm:pl-6)
+                p: ({ children }) => (
+                  <p className="text-neutral-200 leading-relaxed font-normal text-sm sm:text-base mb-5 pl-4 sm:pl-6">
+                    {children}
+                  </p>
+                ),
+                strong: ({ children }) => (
+                  <strong className="font-bold text-white bg-neutral-800 px-1.5 py-0.5 rounded border border-neutral-700">
+                    {children}
+                  </strong>
+                ),
+                em: ({ children }) => (
+                  <em className="text-neutral-300 italic font-medium">{children}</em>
+                ),
+                // Bullet lists & numbered lists: Shifted further right (pl-8 sm:pl-12) to show clear scope
+                ul: ({ children }) => (
+                  <ul className="space-y-2.5 my-4 pl-8 sm:pl-12">{children}</ul>
+                ),
+                ol: ({ children }) => (
+                  <ol className="space-y-2.5 my-4 pl-8 sm:pl-12 list-decimal text-neutral-200 text-xs sm:text-sm">{children}</ol>
+                ),
+                li: ({ children }) => (
+                  <li className="flex gap-2.5 items-start text-neutral-200 text-xs sm:text-sm leading-relaxed">
+                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 shrink-0" />
+                    <div>{children}</div>
+                  </li>
+                ),
+                blockquote: ({ children }) => (
+                  <blockquote className="my-8 ml-4 sm:ml-6 px-6 py-4 rounded-2xl bg-neutral-950 border border-neutral-800 text-white italic font-serif text-sm sm:text-base leading-relaxed shadow-lg">
+                    {children}
+                  </blockquote>
+                ),
+                // Table Component: Left-Aligned, Clean Padding & Borders
+                table: ({ children }) => (
+                  <div className="flex justify-start my-8 pl-4 sm:pl-6 w-full">
+                    <div className="overflow-x-auto w-full border border-neutral-800 rounded-xl bg-neutral-950 shadow-xl">
+                      <table className="w-full text-left text-xs sm:text-sm text-white border-collapse">
+                        {children}
+                      </table>
+                    </div>
                   </div>
-                </div>
-              ),
-              thead: ({ children }) => (
-                <thead className="bg-neutral-900 text-neutral-200 font-bold uppercase text-[11px] tracking-wider border-b border-neutral-800">
-                  {children}
-                </thead>
-              ),
-              th: ({ children }) => (
-                <th className="p-3.5 sm:p-4 font-bold border-r border-neutral-800 last:border-r-0 text-left text-white">{children}</th>
-              ),
-              td: ({ children }) => (
-                <td className="p-3.5 sm:p-4 border-t border-neutral-900 border-r border-neutral-900/80 last:border-r-0 text-neutral-300 font-normal text-left leading-relaxed">{children}</td>
-              ),
-            }}
-          >
-            {activeContent}
-          </ReactMarkdown>
+                ),
+                thead: ({ children }) => (
+                  <thead className="bg-neutral-900 text-neutral-200 font-bold uppercase text-[11px] tracking-wider border-b border-neutral-800">
+                    {children}
+                  </thead>
+                ),
+                th: ({ children }) => (
+                  <th className="p-3.5 sm:p-4 font-bold border-r border-neutral-800 last:border-r-0 text-left text-white">{children}</th>
+                ),
+                td: ({ children }) => (
+                  <td className="p-3.5 sm:p-4 border-t border-neutral-900 border-r border-neutral-900/80 last:border-r-0 text-neutral-300 font-normal text-left leading-relaxed">{children}</td>
+                ),
+              }}
+            >
+              {activeContent}
+            </ReactMarkdown>
+          )}
         </article>
 
         {/* CTA Box */}

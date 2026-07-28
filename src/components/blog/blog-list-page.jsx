@@ -1,20 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { blogsData } from '@/data/blogsData';
+import { getSanityPosts } from '@/lib/sanity';
 import { SEO } from '@/components/seo';
 import { ArrowRight, Search, Calendar, Clock, Sparkles } from 'lucide-react';
 
 export function BlogListPage() {
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
+  const [blogs, setBlogs] = useState(blogsData);
 
-  const filteredBlogs = blogsData.filter((blog) => {
+  useEffect(() => {
+    getSanityPosts().then((posts) => {
+      if (posts && posts.length > 0) {
+        setBlogs(posts);
+      }
+    });
+  }, []);
+
+  const filteredBlogs = blogs.filter((blog) => {
     const title = blog.title;
     const excerpt = blog.excerpt;
     const category = blog.category;
-    
+
     return (
       title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||

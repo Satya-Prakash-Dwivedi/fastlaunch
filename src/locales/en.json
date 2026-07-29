@@ -6,7 +6,8 @@
     "testimonials": "Testimonials",
     "playground": "Playground",
     "blogs": "Blogs",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "selectLanguage": "Select Language"
   },
   "header84": {
     "title": "Build fast. Deploy everywhere. Scale without limits.",
@@ -292,6 +293,8 @@
   },
   "footer": {
     "contactUs": "Contact us",
+    "address": "E-6 Arera Colony, Bhopal, Madhya Pradesh, India",
+    "tagline": "Autonomous AI & High-Velocity Engineering Studio • Available Worldwide",
     "services": "Services",
     "aiSolutions": "AI solutions",
     "webDev": "Web development",
@@ -304,6 +307,7 @@
     "careers": "Careers",
     "contact": "Contact",
     "blog": "Blog",
+    "blogs": "Blogs",
     "followUs": "Follow us",
     "rights": "© 2026 Fastlaunch. All rights reserved.",
     "privacyPolicy": "Privacy Policy",

@@ -1,0 +1,407 @@
+{
+  "navbar": {
+    "home": "Strona główna",
+    "services": "Usługi",
+    "portfolio": "Portfolio",
+    "testimonials": "Opinie",
+    "playground": "Plac zabaw",
+    "blogs": "Blogi",
+    "getStarted": "Rozpocznij",
+    "selectLanguage": "Wybierz język"
+  },
+  "header84": {
+    "title": "Buduj szybko. Wdrażaj wszędzie. Skaluj bez granic.",
+    "description": "Dostarczamy inteligentne rozwiązania, które działają natychmiast. Od modeli uczenia maszynowego po infrastrukturę bezserwerową, wszystko jest gotowe do wdrożenia i działania.",
+    "startNow": "Rozpocznij teraz"
+  },
+  "layout373": {
+    "capabilities": "Możliwości",
+    "title": "Co dla Ciebie budujemy",
+    "description": "Inteligentne systemy, które myślą, uczą się i dostosowują do Twoich potrzeb.",
+    "aiTitle": "Rozwiązania AI / ML / RL",
+    "aiDesc": "Inteligentne sieci neuronowe, predykcyjne modele uczenia maszynowego i systemy uczenia przez wzmacnianie zaprojektowane do adaptacji i skalowania.",
+    "devopsTitle": "DevOps i Automatyzacja",
+    "devopsDesc": "Rurociągi CI/CD, wdrożenia o wysokiej dostępności i infrastruktura jako kod do szybkiego wdrażania kodu.",
+    "fullstackTitle": "FullStack Web",
+    "fullstackDesc": "Spójne interfejsy frontendowe i solidne architektury backendowe stworzone z myślą o wydajności i bezpieczeństwie.",
+    "mobileTitle": "Aplikacje mobilne",
+    "mobileDesc": "Natywne aplikacje na systemy iOS i Android wykorzystujące płynne animacje i wspólne komponenty backendowe.",
+    "ecommerceTitle": "Aplikacje E-commerce",
+    "ecommerceDesc": "Kompletne platformy transakcyjne z płatnościami Stripe/PayPal, niestandardowymi przepływami zamówień, inteligentnym zarządzaniem kasą i integracją dostaw w czasie rzeczywistym.",
+    "serverlessTitle": "Zarządzana infrastruktura bezserwerowa",
+    "serverlessDesc": "W pełni automatycznie skalowalne, nowoczesne środowiska chmurowe, które pobierają opłaty tylko za dokładny czas wykonania, zmniejszając koszty chmury.",
+    "listingTitle": "Katalog produktów / usług",
+    "listingDesc": "Masowe dodawanie produktów/usług na żądanie w Twoim regionie / lokalizacji.",
+    "seoTitle": "SEO / GEO / AEO",
+    "seoDesc": "Zoptymalizuj swoją obecność cyfrową w tradycyjnym wyszukiwaniu, kierowaniu geograficznym i silnikach generatywnej sztucznej inteligencji.",
+    "tagline": "Sprawiamy, że biznes staje się autonomiczny dzięki AI.",
+    "explore": "Odkrywaj",
+    "details": "Szczegóły"
+  },
+  "layout239": {
+    "method": "Metoda",
+    "title": "Jak pracujemy i co ma znaczenie",
+    "description": "Szybkość bez dróg na skróty. Jakość bez opóźnień. Wszystko dociera gotowe do użycia. Budujemy to, czego potrzebujesz, dokładnie to testujemy i przekazujemy działające.",
+    "step1Title": "Szybka dostawa",
+    "step1Desc": "Kod przechodzi z naszych rąk na Twoje serwery w dni, a nie miesiące. Dostarczamy szybkie, w pełni przetestowane i inteligentne rurociągi gotowe do uruchomienia w rekordowym tempie.",
+    "step2Title": "Gotowe do podłączenia",
+    "step2Desc": "Nie wymaga montażu. Twoje rozwiązanie działa od momentu wdrożenia. Wszystko jest zaprojektowane tak, aby natychmiast integrować się i działać w Twoim aktywnym ekosystemie produkcyjnym.",
+    "step3Title": "Wsparcie po wdrożeniu",
+    "step3Desc": "Zostajemy w kontakcie po uruchomieniu, aby wszystko działało płynnie. Ciągły monitoring, bezproblemowe aktualizacje i szybkie wsparcie iteracji zapewniają długoterminowy sukces.",
+    "getStarted": "Rozpocznij"
+  },
+  "stats54": {
+    "title": "Liczby, które pokazują, co osiągnęliśmy w branży",
+    "description": "Mierzymy sukces tym, co zostało dostarczone. Setki zrealizowanych projektów. Tysiące godzin bezawaryjnej pracy. Klienci, którzy wrócili, ponieważ na to zasłużyliśmy.",
+    "projects": "Zrealizowane projekty",
+    "uptime": "Bezawaryjność serwerów",
+    "loc": "Napisane linie kodu",
+    "api": "Obsłużone zapytania API"
+  },
+  "dt": {
+    "label": "Cyfrowa Transformacja",
+    "title": "Wyeliminuj przestarzałą infrastrukturę.",
+    "description": "Przekształć swoje starsze i nieaktywne systemy w nowoczesne, wysoce bezpieczne środowiska chmurowe natywne dla AI.",
+    "d2cTitle": "Marki D2C",
+    "d2cDesc": "Tworzymy i skalujemy Twój biznes commerce społecznościowy w model D2C.",
+    "startupsTitle": "Startupy",
+    "startupsDesc": "Wspieramy szybką dostawę niestandardowych rozwiązań, pomagając nowym firmom szybko wejść na docelowy rynek.",
+    "poweringSocialCommerce": "Wspieranie Social Commerce"
+  },
+  "cta31": {
+    "title": "Gotowy, aby coś zbudować?",
+    "description": "Powiedz nam, czego potrzebujesz. Pokażemy Ci, co jest możliwe i przejdziemy do działania.",
+    "button": "Zaplanuj rozmowę"
+  },
+  "cta32": {
+    "title": "Bądź na bieżąco z naszymi aktualizacjami",
+    "description": "Otrzymuj najnowsze wiadomości o AI, DevOps i trendach programistycznych prosto do swojej skrzynki.",
+    "placeholder": "Wprowadź swój e-mail",
+    "button": "Subskrybuj teraz",
+    "terms": "Klikając Subskrybuj, potwierdzasz zgodę z naszym Regulaminem i Polityką Prywatności."
+  },
+  "testimonial17": {
+    "title": "Głosy klientów",
+    "description": "Co mówią o współpracy z nami",
+    "t1Quote": "\"Dostarczyli rurociąg uczenia maszynowego, który skrócił nasz czas przetwarzania o połowę. Bez zbędnych spotkań, bez wymówek, po prostu rezultaty.\"",
+    "t1Role": "CTO, TechVenture Inc",
+    "t2Quote": "\"Nasza platforma e-commerce ruszyła w trzy tygodnie. Integracja płatności działała bezbłędnie od pierwszego dnia.\"",
+    "t2Role": "Założyciel, Digital Commerce",
+    "t3Quote": "\"Zbudowali naszą aplikację mobilną i infrastrukturę backendową jednocześnie. Wszystko zintegrowało się idealnie bez żadnych problemów.\"",
+    "t3Role": "Kierownik Produktu, StartupHub"
+  },
+  "faq": {
+    "title": "Pytania",
+    "description": "Wszystko, co musisz wiedzieć o naszym procesie, terminach i tym, co dzieje się po dostarczeniu.",
+    "q1": "Jak szybko dostarczacie projekty?",
+    "a1": "Większość projektów dostarczamy w ciągu kilku dni lub tygodni w zależności od zakresu. Przenosimy kod z fazy rozwoju do produkcji bez zwykłych opóźnień. Szybkość jest wbudowana w nasz sposób pracy.",
+    "q2": "Co dzieje się po uruchomieniu?",
+    "a2": "Nie znikamy po uruchomieniu rozwiązania. Wsparcie po wdrożeniu dba o to, aby wszystko działało płynnie i rozwiązywało pojawiające się problemy. Otrzymujesz stałą konserwację i optymalizację.",
+    "q3": "Czy zajmujecie się integracją płatności?",
+    "a3": "Tak. Budujemy kompletne rozwiązania e-commerce z przetwarzaniem płatności, zarządzaniem zamówieniami i bezpiecznym procesem zakupu.",
+    "q4": "Czy możecie budować aplikację mobilną i backend jednocześnie?",
+    "a4": "Dokładnie to robimy. Aplikacje mobilne i infrastruktura backendowa są budowane symultanicznie, dzięki czemu pasują do siebie idealnie bez opóźnień integracyjnych.",
+    "q5": "A co z infrastrukturą bezserwerową?",
+    "a5": "Zarządzamy w pełni usługami bezserwerowymi, więc nie musisz zarządzać serwerami. Wszystko skaluje się automatycznie, koszty pozostają przewidywalne.",
+    "q6": "Czy mogę zatrudnić programistów FastLaunch jako freelancerów AI i Web?",
+    "a6": "Tak! FastLaunch działa jako elitarne konsorcjum freelancerów i agencja technologiczna pełnej obsługi. Zapewniamy elastyczne modele doradztwa lub kompleksową dostawę agencyjną.",
+    "q7": "Jakie dokładnie usługi i stosy technologiczne dostarczacie?",
+    "a7": "Nasze kluczowe usługi obejmują inżynierię AI/ML (LLM, RAG, PyTorch, LangChain), Full-Stack Web (React, Next.js, Node.js, Python), natywne aplikacje mobilne i chmurę DevOps.",
+    "q8": "Gdzie znajduje się siedziba FastLaunch i jaki jest Wasz adres?",
+    "a8": "Nasza siedziba mieści się w E-6 Arera Colony, Bhopal, Madhya Pradesh, Indie. Obsługujemy klientów globalnie ze zdalną inżynierią i szybkim wdrażaniem.",
+    "moreAnswers": "Potrzebujesz więcej odpowiedzi?",
+    "reachOut": "Skontaktuj się z nami, a przedstawimy Ci dokładnie, jak pracujemy.",
+    "contact": "Kontakt"
+  },
+  "playgroundTeaser": {
+    "label": "Interaktywne Studio 3D",
+    "title": "Nasz Plac Zabaw Projektowego 3D",
+    "description": "Wejdź do wciągającego, interaktywnego studia projektowego. Kliknij dowolną kartę, aby odkrywać zasoby 3D lub uruchamiać interaktywne aplikacje internetowe w czasie rzeczywistym.",
+    "launchApp": "Uruchom aplikację Web na żywo",
+    "view3d": "Zobacz model 3D na żywo",
+    "launchSandbox": "Uruchom pełną piaskownicę",
+    "sandboxDesc": "Uzyskaj dostęp do pełnego widoku z filtrami kategorii i wskaźnikami technicznymi.",
+    "enterPlayground": "Wejdź do Plac Zabaw 3D",
+    "launchFull": "Uruchom pełną interaktywną piaskownicę 3D"
+  },
+  "teaserModels": {
+    "animated-gradient": {
+      "name": "Interfejs animowanego gradientu",
+      "category": "Aplikacje internetowe",
+      "desc": "Interaktywne studio animowanych gradientów oparte na fizyce. Dostosowuj kolory, prędkości i wektory w czasie rzeczywistym."
+    },
+    "rare-natural": {
+      "name": "Rzadkie elementy naturalne",
+      "category": "Aplikacje internetowe",
+      "desc": "Piękny, organiczny interaktywny landing page prezentujący zaawansowaną fizykę siatki i integracje teorii kolorów."
+    },
+    "element-visualizer": {
+      "name": "Studio wizualizacji elementów",
+      "category": "Aplikacje internetowe",
+      "desc": "Potężny obszar roboczy dla programistów do dynamicznego eksperymentowania z układami CSS, polami cząsteczek i konfiguracjami animacji."
+    },
+    "server": {
+      "name": "Futurystyczny węzeł serwerowy",
+      "category": "Infrastruktura",
+      "desc": "Masywny szafowy węzeł serwerowy z precyzyjnymi portami, przewodami i gniazdami. Reprezentuje solidną infrastrukturę bezserwerową."
+    },
+    "laptop": {
+      "name": "Laptop Pro",
+      "category": "Sprzęt",
+      "desc": "Nowoczesny, ultra-smukły laptop z mechanicznymi klawiszami, solidnym zawiasem i eleganckim gładzikiem."
+    },
+    "keyboard": {
+      "name": "Klawiatura mechaniczna",
+      "category": "Urządzenia wejściowe",
+      "desc": "Klawiatura mechaniczna premium z dotykowymi klawiszami i ergonomicznym kątem nachylenia."
+    },
+    "mouse": {
+      "name": "Mysz bezprzewodowa",
+      "category": "Urządzenia wejściowe",
+      "desc": "Ergonomiczna, nowoczesna mysz bezprzewodowa zaprojektowana pod kątem precyzji i cichego przewijania."
+    },
+    "rubik": {
+      "name": "Kostka Rubika",
+      "category": "Algorytmy",
+      "desc": "Kostka Rubika reprezentująca rozwiązywanie problemów algorytmicznych i modele uczenia przez wzmacnianie."
+    },
+    "coffee": {
+      "name": "Kubek Mrożonej Kawy",
+      "category": "Paliwo Programisty",
+      "desc": "Szklany kubek mrożonej kawy z realistycznymi warstwami i kostkami lodu. Symbolizuje skupienie programisty."
+    },
+    "clock": {
+      "name": "Stylowy Zegar Biurkowy",
+      "category": "Rzemiosło",
+      "desc": "Zegar biurkowy w stylu retro z mechanicznymi przekładniami, prezentujący kunszt wykonania."
+    }
+  },
+  "portfolio": {
+    "headerBadge": "Portfolio wdrożonych projektów",
+    "backToHome": "← Powrót do strony głównej",
+    "title": "Nasze projekty na żywo",
+    "description": "Odkryj wybrane wdrożone platformy, prezentujące nasze zaangażowanie w tworzenie wydajnych, bezpiecznych i pięknych doświadczeń cyfrowych.",
+    "visitLiveSite": "Odwiedź stronę",
+    "clickToView": "Kliknij \"Odwiedź stronę\", aby zobaczyć"
+  },
+  "portfolioProjects": {
+    "maedric": {
+      "desc": "Nowoczesne doświadczenie premium dostosowane do luksusowych usług cyfrowych."
+    },
+    "igra": {
+      "desc": "Kreatywne studio cyfrowe oferujące wciągające doświadczenia 3D i dynamiczne aplikacje internetowe."
+    },
+    "neti": {
+      "desc": "Zaawansowana platforma edukacyjna stworzona z myślą o skalowalności, wydajności i bezproblemowej obsłudze."
+    }
+  },
+  "playgroundPage": {
+    "headerBadge": "Studio Piaskownicy 3D",
+    "premiumAssets": "Zasoby Premium",
+    "backToHome": "← Powrót do strony głównej",
+    "loading": "Ładowanie danych zasobu 3D...",
+    "interactiveFrame": "Ramka interaktywna",
+    "activeNode": "Aktywny węzeł",
+    "liveWebApp": "Aplikacja Web na żywo",
+    "drag": "Przeciągnij",
+    "rotateCamera": "Obróć kamerę",
+    "pinch": "Zsuń palce",
+    "zoomAsset": "Powiększ obiekt",
+    "distribution": "Dystrybucja",
+    "fileSize": "Rozmiar pliku",
+    "structure": "Struktura",
+    "polygonCount": "Liczba polygonów",
+    "complexity": "Złożoność",
+    "texturingMap": "Mapa tekstur",
+    "searchModels": "Szukaj modeli...",
+    "selectAsset": "Wybierz zasób 3D",
+    "noMatch": "Brak pasujących modeli w tej kategorii.",
+    "techSpecs": "Specyfikacja techniczna",
+    "scaleBounds": "Granice skali",
+    "materialMappings": "Mapowanie materiałów",
+    "iframeSandboxMode": "Tryb piaskownicy Iframe",
+    "autoRotation": "Włączona auto-rotacja",
+    "interactiveSandbox": "Interaktywna piaskownica",
+    "yes": "Tak",
+    "designerNotes": "Notatki projektanta",
+    "shareView": "Udostępnij widok",
+    "directLink": "Bezpośredni link automatycznie wybiera ten model.",
+    "copyLink": "Kopiuj link",
+    "copied": "Link skopiowany do schowka:",
+    "all": "Wszystkie"
+  },
+  "booking": {
+    "backToHome": "Powrót do strony głównej"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Polityka Prywatności",
+      "lastUpdated": "Ostatnia aktualizacja: Czerwiec 2026",
+      "p1": "To jest zastępczy tekst Polityki Prywatności. Należy zastąpić go rzeczywistą treścią polityki prywatności.",
+      "p2": "Traktujemy Twoją prywatność poważnie i jesteśmy zobowiązani do ochrony Twoich danych osobowych. Niniejsza polityka opisuje, w jaki sposób zbieramy, używamy i przetwarzamy Twoje dane.",
+      "s1Title": "1. Informacje, które zbieramy",
+      "s1Text": "Możemy zbierać dane osobowe, które dobrowolnie nam przekazujesz, gdy wyrażasz zainteresowanie uzyskaniem informacji o nas lub naszych produktach i usługach.",
+      "s2Title": "2. Jak wykorzystujemy Twoje informacje",
+      "s2Text": "Przetwarzamy Twoje dane osobowe z różnych powodów, w zależności od tego, jak wchodzisz w interakcję z naszymi usługami.",
+      "s2List1": "Aby ułatwić tworzenie konta i uwierzytelnianie.",
+      "s2List2": "Aby odpowiadać na zapytania użytkowników i oferować wsparcie.",
+      "s2List3": "Aby realizować zamówienia, płatności i zwroty.",
+      "s2List4": "Aby oceniać i ulepszać nasze usługi i marketing.",
+      "s3Title": "3. Udostępnianie informacji",
+      "s3Text": "Możemy udostępniać Twoje dane dostawcom zewnętrznym, świadczeniodawcom usług lub wykonawcom.",
+      "s4Title": "4. Bezpieczeństwo danych",
+      "s4Text": "Wdrożyliśmy odpowiednie środki bezpieczeństwa technicznego i organizacyjnego.",
+      "s5Title": "5. Kontakt z nami",
+      "s5Text": "Jeśli masz pytania dotyczące tej informacji, napisz do nas."
+    },
+    "terms": {
+      "title": "Warunki Świadczenia Usług",
+      "lastUpdated": "Ostatnia aktualizacja: Czerwiec 2026",
+      "p1": "To jest zastępczy tekst Warunków Świadczenia Usług.",
+      "p2": "Uzyskując dostęp do naszych usług lub korzystając z nich, zgadzasz się na przestrzeganie niniejszych warunków.",
+      "s1Title": "1. Zgoda na warunki",
+      "s1Text": "Korzystając z naszej strony i usług, zgadzasz się na przestrzeganie Regulaminu.",
+      "s2Title": "2. Prawa własności intelektualnej",
+      "s2Text": "Strona internetowa i jej cała zawartość są własnością Fastlaunch.",
+      "s3Title": "3. Oświadczenia użytkownika",
+      "s3Text": "Korzystając z witryny, oświadczasz i gwarantujesz, że podane informacje są prawdziwe.",
+      "s4Title": "4. Ograniczenie odpowiedzialności",
+      "s4Text": "W żadnym wypadku nie ponosimy odpowiedzialności za jakiekolwiek szkody bezpośrednie lub pośrednie.",
+      "s5Title": "5. Prawo właściwe",
+      "s5Text": "Niniejsze warunki podlegają prawu naszej jurysdykcji.",
+      "s6Title": "6. Kontakt z nami",
+      "s6Text": "Aby rozwiązać reklamację, skontaktuj się z nami pod adresem: "
+    },
+    "cookies": {
+      "title": "Polityka Plików Cookie i Ustawienia",
+      "lastUpdated": "Ostatnia aktualizacja: Czerwiec 2026",
+      "p1": "Niniejsza polityka plików cookie wyjaśnia, jak Fastlaunch używa plików cookie i podobnych technologii.",
+      "s1Title": "Czym są pliki cookie?",
+      "s1Text": "Pliki cookie to małe pliki danych umieszczane na Twoim komputerze lub urządzeniu mobilnym.",
+      "s2Title": "Zarządzaj swoimi preferencjami",
+      "s2Text": "Możesz przeglądać i zmieniać swoje preferencje dotyczące plików cookie poniżej.",
+      "essentialTitle": "Niezbędne pliki cookie",
+      "essentialText": "Te pliki cookie są niezbędne do przeglądania witryny i korzystania z jej funkcji.",
+      "alwaysActive": "Zawsze aktywne",
+      "analyticsTitle": "Analityczne pliki cookie",
+      "analyticsText": "Te pliki cookie zbierają informacje o tym, jak korzystasz z witryny.",
+      "marketingTitle": "Marketingowe pliki cookie",
+      "marketingText": "Te pliki cookie śledzą Twoją aktywność online, aby pomagać w dostarczaniu odpowiednich reklam.",
+      "saveBtn": "Zapisz preferencje",
+      "savedMsg": "Preferencje zapisane!"
+    }
+  },
+  "footer": {
+    "contactUs": "Skontaktuj się z nami",
+    "address": "E-6 Arera Colony, Bhopal, Madhya Pradesh, Indie",
+    "tagline": "Autonomiczne AI i Studio Inżynierii Wysokiej Prędkości • Dostępne na Całym Świecie",
+    "services": "Usługi",
+    "aiSolutions": "Rozwiązania AI",
+    "webDev": "Tworzenie stron internetowych",
+    "mobileApps": "Aplikacje mobilne",
+    "devOps": "Usługi DevOps",
+    "ecommerce": "Usługi E-commerce",
+    "company": "Firma",
+    "aboutUs": "O nas",
+    "ourTeam": "Nasz zespół",
+    "careers": "Kariera",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "blogs": "Blogi",
+    "followUs": "Śledź nas",
+    "rights": "© 2026 Fastlaunch. Wszelkie prawa zastrzeżone.",
+    "privacyPolicy": "Polityka Prywatności",
+    "termsOfService": "Warunki korzystania",
+    "cookieSettings": "Ustawienia plików cookie",
+    "askAI": "Zapytaj AI o podsumowanie Fastlaunch",
+    "promptCopiedTitle": "Prompt skopiowany!",
+    "promptCopiedDesc": "Google Gemini nie obsługuje automatycznych linków z promptami. Skopiowaliśmy prompt do schowka. Wklej go w pole czatu po otwarciu Gemini.",
+    "cancel": "Anuluj",
+    "openGemini": "Otwórz Gemini"
+  },
+  "blogListPage": {
+    "badge": "Wiedza FastLaunch",
+    "heroTitle": "Inżynieria i Analityka Biznesowa",
+    "heroDesc": "Taktyczne poradniki i głębokie analizy dotyczące skalowania D2C, wdrażania autonomicznego AI i rozwiązań white-label.",
+    "searchPlaceholder": "Szukaj blogów lub tematów...",
+    "noResults": "Nie znaleziono artykułów pasujących do zapytania.",
+    "readMore": "Czytaj",
+    "author": "FastLaunch"
+  },
+  "blogPostPage": {
+    "backToBlogs": "Powrót do wszystkich blogów",
+    "share": "Udostępnij",
+    "linkCopied": "Link skopiowany do schowka!",
+    "prevArticle": "Poprzedni artykuł",
+    "nextArticle": "Następny artykuł",
+    "ctaTitle": "Przekształć swój biznes z FastLaunch",
+    "ctaDesc": "Niezależnie od tego, czy chcesz zbudować autonomiczne przedsiębiorstwo AI, wdrożyć technologię white-label czy stworzyć markę D2C — nasz zespół jest gotowy.",
+    "bookCall": "Zarezerwuj rozmowę",
+    "exploreServices": "Odkryj usługi"
+  },
+  "blogsData": {
+    "odopD2c": {
+      "title": "Od dystryktów do drzwi klientów: Jak Fastlaunch przekształca sprzedawców ODOP w potęgi D2C w Indiach",
+      "excerpt": "Łączenie dziedzictwa z technologią cyfrową — jak Fastlaunch przekształca lokalnych rzemieślników w automatyczne marki D2C o wysokiej marży.",
+      "category": "Transformacja D2C",
+      "badgeText": "Silnik ODOP D2C"
+    },
+    "whiteLabel": {
+      "title": "Moc White-Label: Jak Fastlaunch buduje silnik stojący za markami",
+      "excerpt": "Dlaczego czołowe przedsiębiorstwa i nowoczesne startupy wybierają infrastrukturę AI, D2C i social commerce od Fastlaunch.",
+      "category": "Technologia White-Label",
+      "badgeText": "Stos White Label"
+    },
+    "autonomousEnterprise": {
+      "title": "Autonomiczne przedsiębiorstwo: Jak Fastlaunch czyni firmy autonomicznymi w erze AI",
+      "excerpt": "Przestań zarządzać operacjami. Zacznij dowodzić autonomicznym biznesem zasilanym sieciami AI z wieloma agentami.",
+      "category": "Autonomiczne AI",
+      "badgeText": "Rdzeń Autonomicznego AI"
+    },
+    "socialCommerce": {
+      "title": "Od czatów na WhatsApp po pełnoprawne marki: Jak Fastlaunch przekształca sprzedawców Social Commerce w marki D2C",
+      "excerpt": "Zbudowałeś sprzedaż na Instagramie i WhatsApp. Teraz pozwól Fastlaunch zbudować automatyczną, skalowalną markę D2C w 30 dni.",
+      "category": "Social Commerce",
+      "badgeText": "Social do D2C"
+    },
+    "ondcD2c": {
+      "title": "Od sprzedawcy do marki: Jak Fastlaunch pomaga sprzedawcom ONDC i E-Commerce budować własne D2C",
+      "excerpt": "Przestań wynajmować miejsce na platformach i konkurować ceną. Dowiedz się, jak Fastlaunch pomaga budować marki D2C o wysokiej marży.",
+      "category": "Strategia ONDC & D2C",
+      "badgeText": "Silnik ONDC D2C"
+    }
+  },
+  "testimonialsData": {
+    "badge": "Zweryfikowany wpływ na klientów",
+    "title": "Zaufali nam liderzy wzrostu",
+    "description": "Zobacz, jak pomagamy platformom wideo, markom D2C, portalom EdTech i instytutom szkoleniowym szybciej się skalować.",
+    "verifiedCase": "Zweryfikowany przypadek klienta",
+    "solutionBuilt": "Zbudowane rozwiązanie",
+    "productionDeployed": "Wdrożone produkcyjnie",
+    "viewCase": "Zobacz przypadek",
+    "igraStudios": {
+      "role": "Platforma agencji edycji wideo",
+      "badge": "SaaS medialne i przepływy pracy",
+      "quote": "Fastlaunch zbudował naszą kompletną platformę agencji edycji wideo. Klienci bez wysiłku przesyłają pliki, zamawiają edycje i płacą przez PayPal lub Razorpay. Automatyczne rozliczenia uczyniły nasze operacje całkowicie bezobsługowymi!",
+      "metrics": "Płatności i Portal Zasobów"
+    },
+    "maedric": {
+      "role": "D2C Kamieni Szlachetnych i Biżuterii Luksusowej",
+      "badge": "E-Commerce i D2C",
+      "quote": "Fastlaunch przekształcił maedric.com w zachwycającą, luksusową platformę e-commerce. Sprzedaż online wzrosła od pierwszego dnia!",
+      "metrics": "Kompleksowy Sklep D2C"
+    },
+    "netiAcademy": {
+      "role": "Platforma EdTech do egzaminów",
+      "badge": "EdTech i Testy",
+      "quote": "Fastlaunch zbudował Neti Academy w potężną platformę egzaminacyjną. Uczniowie mają łatwy dostęp do testów próbnych bez opóźnień.",
+      "metrics": "Silnik Testów i Kursów"
+    },
+    "eliteEnglish": {
+      "role": "Instytut Językowy i Szkoleniowy",
+      "badge": "Edukacja i Szkolenia",
+      "quote": "Fastlaunch zbudował nasz portal instytutu cyfrowego dla Elite in English. Harmonogramy zajęć i zapisy uczniów działają automatycznie.",
+      "metrics": "Portal Ucznia i Harmonogram"
+    }
+  }
+}

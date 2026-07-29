@@ -122,12 +122,12 @@ function App() {
   useEffect(() => {
     if (location.state?.scrollTo) {
       const id = location.state.scrollTo;
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          element.scrollIntoView({ behavior: 'instant', block: 'start' });
         }
-      }, 100);
+      });
     } else {
       window.scrollTo(0, 0);
     }

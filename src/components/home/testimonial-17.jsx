@@ -113,7 +113,7 @@ export function Testimonial17() {
   };
 
   return (
-    <section id="testimonials" className="relative py-20 lg:py-28 bg-black text-white overflow-hidden border-t border-neutral-900">
+    <section id="testimonials" className="scroll-mt-16 lg:scroll-mt-20 relative py-20 lg:py-28 bg-black text-white overflow-hidden border-t border-neutral-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">

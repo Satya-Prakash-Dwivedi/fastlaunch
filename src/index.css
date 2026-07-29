@@ -129,6 +129,8 @@
 
 @import "tailwindcss";
 
+
+
 @custom-variant alternate (&:is(.alternate *));
 @custom-variant badge-alt (&:is(.badge-alt *));
 @custom-variant btn-dark (&:is(.btn-dark *));

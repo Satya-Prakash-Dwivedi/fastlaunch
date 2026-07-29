@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 export function Layout373() {
   const { t } = useTranslation();
   return (
-    <section id="services" className="px-[5%] py-16 md:py-24 lg:py-28 scheme-7 alternate logo-alt">
+    <section id="services" className="scroll-mt-16 lg:scroll-mt-20 px-[5%] py-16 md:py-24 lg:py-28 scheme-7 alternate logo-alt">
       <div className="container">
         <div className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">

@@ -17,6 +17,13 @@ export function Footer1() {
 
   const handleScrollNav = (e, id) => {
     e.preventDefault();
+    if (window.location.pathname === '/') {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'instant', block: 'start' });
+        return;
+      }
+    }
     navigate('/', { state: { scrollTo: id } });
   };
   return (

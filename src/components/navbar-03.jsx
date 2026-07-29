@@ -35,13 +35,23 @@ export function Navbar3() {
     { code: 'en', name: 'English' },
     { code: 'hi', name: 'Hindi' },
     { code: 'gu', name: 'Gujarati' },
-    { code: 'ja', name: 'Japanese' }
+    { code: 'ja', name: 'Japanese' },
+    { code: 'pl', name: 'Polish' },
+    { code: 'fi', name: 'Finnish' },
+    { code: 'sv', name: 'Swedish' }
   ];
   const activeLang = languages.find(l => l.code === i18n.language) || languages[0];
 
   const handleScrollNav = (e, id) => {
     e.preventDefault();
     if (isMobile) useActive.toggleMobileMenu();
+    if (window.location.pathname === '/') {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'instant', block: 'start' });
+        return;
+      }
+    }
     navigate('/', { state: { scrollTo: id } });
   };
 
@@ -188,7 +198,7 @@ export function Navbar3() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
                   transition={{ duration: 0.15, ease: "easeOut" }}
-                  className="absolute top-full right-0 mt-2 w-40 rounded-xl border border-white/10 bg-black shadow-2xl overflow-hidden z-50 py-2"
+                  className="absolute top-full right-0 mt-2 w-44 max-h-80 overflow-y-auto rounded-xl border border-white/10 bg-black shadow-2xl z-50 py-2"
                 >
                   {languages.map((lang) => (
                     <button

@@ -1,0 +1,407 @@
+{
+  "navbar": {
+    "home": "Hem",
+    "services": "Tjänster",
+    "portfolio": "Portfolio",
+    "testimonials": "Rekommendationer",
+    "playground": "Labb",
+    "blogs": "Bloggar",
+    "getStarted": "Kom igång",
+    "selectLanguage": "Välj språk"
+  },
+  "header84": {
+    "title": "Bygg snabbt. Distribuera överallt. Skala utan gränser.",
+    "description": "Vi levererar intelligenta lösningar som fungerar omedelbart. Från maskininlärningsmodeller till serverlös infrastruktur, allt är redo att kopplas in och prestera.",
+    "startNow": "Starta nu"
+  },
+  "layout373": {
+    "capabilities": "Kapacitet",
+    "title": "Vad vi bygger för dig",
+    "description": "Intelligenta system som tänker, lär sig och anpassar sig efter dina behov.",
+    "aiTitle": "AI- / ML- / RL-lösningar",
+    "aiDesc": "Intelligenta neurala nätverk, prediktiva maskininlärningsmodeller och förstärkningsinlärningssystem designade för att anpassa sig och skala.",
+    "devopsTitle": "DevOps & Automatisering",
+    "devopsDesc": "CI/CD-pipelines, högtillgängliga distributioner och infrastruktur som kod för snabb kodleverans.",
+    "fullstackTitle": "FullStack Webb",
+    "fullstackDesc": "Sammanhängande frontend-gränssnitt och robusta backend-arkitekturer byggda för prestanda och säkerhet.",
+    "mobileTitle": "Mobilappar",
+    "mobileDesc": "Nativa iOS- och Android-applikationer med smidiga animationer och delade backend-komponenter.",
+    "ecommerceTitle": "E-handelsapplikationer",
+    "ecommerceDesc": "Kompletta transaktionsplattformar med Stripe/PayPal-betalningar, anpassade orderflöden och leveransintegrationer i realtid.",
+    "serverlessTitle": "Serverlös hantering",
+    "serverlessDesc": "Helt automatiskt skalerbara, moderna molnmiljöer som endast tar betalt för exekveringstid, vilket minskar molnkostnader.",
+    "listingTitle": "Produkt- / Tjänstelisting",
+    "listingDesc": "Bulk-listing av produkter/tjänster på begäran i din region / plats.",
+    "seoTitle": "SEO / GEO / AEO",
+    "seoDesc": "Optimera din digitala närvaro inom traditionell sökning, geografisk riktning och generativa AI-motorer.",
+    "tagline": "Vi gör företag autonoma med AI.",
+    "explore": "Utforska",
+    "details": "Detaljer"
+  },
+  "layout239": {
+    "method": "Metod",
+    "title": "Hur vi arbetar och vad som spelar roll",
+    "description": "Hastighet utan genvägar. Kvalitet utan förseningar. Allt levereras redo att användas. Vi bygger det du behöver, testar noggrant och överlämnar det fungerande.",
+    "step1Title": "Snabb leverans",
+    "step1Desc": "Kod flyttas från oss till dina servrar på dagar, inte månader. Vi levererar snabba, fullt testade och intelligenta pipelines redo att köras på rekordtid.",
+    "step2Title": "Redo att kopplas in",
+    "step2Desc": "Ingen montering krävs. Din lösning fungerar från första stund den lanserats i din produktionsmiljö.",
+    "step3Title": "Support efter leverans",
+    "step3Desc": "Vi finns kvar efter lanseringen för att se till att allt flyter på smidigt. Kontinuerlig övervakning och snabba uppdateringar garanterar långsiktig framgång.",
+    "getStarted": "Kom igång"
+  },
+  "stats54": {
+    "title": "Siffror som visar vad vi åstadkommit i branschen",
+    "description": "Vi mäter framgång i levererade resultat. Hundratals genomförda projekt. Tusentals timmars tillförlitlig drifttid.",
+    "projects": "Levererade projekt",
+    "uptime": "Serverdrifttid",
+    "loc": "Skrivna kodrader",
+    "api": "Hanterade API-anrop"
+  },
+  "dt": {
+    "label": "Digital Transformation",
+    "title": "Eliminera föråldrad infrastruktur.",
+    "description": "Omvandla dina äldre system till moderna, säkra och AI-förberedda molnmiljöer.",
+    "d2cTitle": "D2C-varumärken",
+    "d2cDesc": "Vi bygger och skalar din sociala e-handel till en D2C-modell.",
+    "startupsTitle": "Startups",
+    "startupsDesc": "Vi stödjer snabb leverans av skräddarsydda lösningar som hjälper startups att lansera snabbt.",
+    "poweringSocialCommerce": "Driver Social E-handel"
+  },
+  "cta31": {
+    "title": "Redo att bygga något?",
+    "description": "Berätta vad du behöver. Vi visar vad som är möjligt och sätter igång.",
+    "button": "Boka ett samtal"
+  },
+  "cta32": {
+    "title": "Håll dig uppdaterad med våra nyheter",
+    "description": "Få det senaste inom AI, DevOps och utvecklingstrender direkt till din inkorg.",
+    "placeholder": "Ange din e-post",
+    "button": "Prenumerera nu",
+    "terms": "Genom att klicka på Prenumerera bekräftar du att du godkänner våra villkor och integritetspolicy."
+  },
+  "testimonial17": {
+    "title": "Kundernas röster",
+    "description": "Vad de säger om att arbeta med oss",
+    "t1Quote": "\"De levererade en maskininlärningspipeline som halverade vår behandlingstid. Inga onödiga möten, inga ursäkter, bara resultat.\"",
+    "t1Role": "CTO, TechVenture Inc",
+    "t2Quote": "\"Vår e-handelsplattform lanserades på tre veckor. Betalningsintegrationen fungerade felfritt från dag ett.\"",
+    "t2Role": "Grundare, Digital Commerce",
+    "t3Quote": "\"De byggde vår mobilapp och backend-infrastruktur samtidigt. Allt integrerades perfekt utan ett enda problem.\"",
+    "t3Role": "Produktchef, StartupHub"
+  },
+  "faq": {
+    "title": "Frågor",
+    "description": "Allt du behöver veta om vår process, tidslinjer och vad som händer efter leverans.",
+    "q1": "Hur snabbt levererar ni?",
+    "a1": "De flesta projekt levereras inom några dagar till veckor beroende på omfattning. Vi flyttar kod från utveckling till produktion utan vanliga förseningar.",
+    "q2": "Vad händer efter lansering?",
+    "a2": "Vi försvinner inte när din lösning går live. Support efter leverans ser till att allt flyter på smidigt och hanterar eventuella problem.",
+    "q3": "Hanterar ni betalningsintegrationer?",
+    "a3": "Ja. Vi bygger kompletta e-handelslösningar med betalningshantering, orderhantering och säkra kassaflöden.",
+    "q4": "Kan ni bygga mobilapp och backend samtidigt?",
+    "a4": "Det är exakt vad vi gör. Mobilappar och backend-infrastruktur byggs parallellt för att passa ihop perfekt utan integrationsförseningar.",
+    "q5": "Vad sägs om serverlös infrastruktur?",
+    "a5": "Vi hanterar helt serverlösa tjänster så att du slipper hantera servrar. Allt skalar automatiskt och kostnaderna förblir förutsägbara.",
+    "q6": "Kan jag anlita FastLaunch-utvecklare som frilansande AI- och webbingenjörer?",
+    "a6": "Ja! FastLaunch fungerar som ett elitfrilanskollektiv och en fullservice-teknikbyrå.",
+    "q7": "Exakt vilka tjänster och teknikstackar tillhandahåller ni?",
+    "a7": "Våra kärntjänster inkluderar AI/ML-teknik (LLM, RAG, PyTorch), Full-Stack Web (React, Next.js, Node.js, Python), mobilappar och DevOps-moln.",
+    "q8": "Var ligger FastLaunch och vad är er adress?",
+    "a8": "Vårt huvudkontor ligger i Bhopal, Madhya Pradesh, Indien. Vi betjänar kunder globalt via distansarbete.",
+    "moreAnswers": "Behöver du fler svar?",
+    "reachOut": "Hör av dig så berättar vi exakt hur vi arbetar.",
+    "contact": "Kontakt"
+  },
+  "playgroundTeaser": {
+    "label": "Interaktiv 3D-studio",
+    "title": "Vår 3D-designstudio",
+    "description": "Kliv in i en interaktiv designstudio. Klicka på valfritt kort för att utforska 3D-modeller eller köra interaktiva webbapplikationer i realtid.",
+    "launchApp": "Starta live webbapp",
+    "view3d": "Visa 3D-modell live",
+    "launchSandbox": "Starta hela sandlådan",
+    "sandboxDesc": "Få tillgång til hela vyporten med kategorifilter och tekniska mätvärden.",
+    "enterPlayground": "Gå till 3D-labbet",
+    "launchFull": "Starta interaktiv 3D-sandlåda"
+  },
+  "teaserModels": {
+    "animated-gradient": {
+      "name": "Animerat gradient-gränssnitt",
+      "category": "Webbapplikationer",
+      "desc": "En interaktiv studio för animerade gradienter. Anpassa färger, hastigheter och flödesvektorer i realtid."
+    },
+    "rare-natural": {
+      "name": "Sällsynta naturellelement",
+      "category": "Webbapplikationer",
+      "desc": "En fantastisk organisk landningssida som visar avancerad rutnätsfysik och färgteori-integrationer."
+    },
+    "element-visualizer": {
+      "name": "Element visualiseringsstudio",
+      "category": "Webbapplikationer",
+      "desc": "En kraftfull utvecklaryta för att experimentera med CSS-layouter, partikelfält och animeringskonfigurationer."
+    },
+    "server": {
+      "name": "Futuristisk servernod",
+      "category": "Infrastruktur",
+      "desc": "En massiv serverracknod med hög precision på portar, kablar och kortplatser. Representerar robust serverlös infrastruktur."
+    },
+    "laptop": {
+      "name": "Laptop Pro",
+      "category": "Hårdvara",
+      "desc": "En modern, ultrasmal bärbar dator med mekaniska tangentgränser och elegant pekplatta."
+    },
+    "keyboard": {
+      "name": "Mekaniskt tangentbord",
+      "category": "Inmatningsenheter",
+      "desc": "Ett premium mekaniskt tangentbord med taktila tangenttoppar och ergonomisk vinkel."
+    },
+    "mouse": {
+      "name": "Trådlös mus",
+      "category": "Inmatningsenheter",
+      "desc": "En strömlinjeformad, ergonomisk trådlös mus konstruerad för precision och tyst rullning."
+    },
+    "rubik": {
+      "name": "Rubiks kub",
+      "category": "Algoritmer",
+      "desc": "En Rubiks kub som representerar algoritmisk problemlösning och modeller för förstärkningsinlärning."
+    },
+    "coffee": {
+      "name": "Is-latte mugg",
+      "category": "Utvecklarbränsle",
+      "desc": "En glasmugg med is-latte, realistiska kaffelager och isbitar. Representerar utvecklarfokus."
+    },
+    "clock": {
+      "name": "Retro skrivbordsklocka",
+      "category": "Hantverk",
+      "desc": "En mekanisk skrivbordsklocka i retrostil som visar mekaniskt hantverk."
+    }
+  },
+  "portfolio": {
+    "headerBadge": "Portfolio med lanserade projekt",
+    "backToHome": "← Tillbaka till startsidan",
+    "title": "Våra live-projekt",
+    "description": "Utforska ett urval av våra lanserade plattformar som visar vårt engagemang för högpresterande, säkra och vackra digitala upplevelser.",
+    "visitLiveSite": "Besök sajten",
+    "clickToView": "Klicka på \"Besök sajten\" för att visa"
+  },
+  "portfolioProjects": {
+    "maedric": {
+      "desc": "En modern premiumupplevelse skräddarsydd för exklusiva digitala tjänster."
+    },
+    "igra": {
+      "desc": "Kreativ digital studio med uppslukande 3D- och dynamiska webbupplevelser."
+    },
+    "neti": {
+      "desc": "En avancerad utbildningsplattform byggd för skala, prestanda och smidig användarupplevelse."
+    }
+  },
+  "playgroundPage": {
+    "headerBadge": "3D Design Sandlådestudio",
+    "premiumAssets": "Premiumtillgångar",
+    "backToHome": "← Tillbaka till startsidan",
+    "loading": "Laddar 3D-data...",
+    "interactiveFrame": "Interaktiv ram",
+    "activeNode": "Aktiv nod",
+    "liveWebApp": "Live webbapp aktiv",
+    "drag": "Dra",
+    "rotateCamera": "Rotera kamera",
+    "pinch": "Nyp",
+    "zoomAsset": "Zooma tillgång",
+    "distribution": "Distribution",
+    "fileSize": "Filstorlek",
+    "structure": "Struktur",
+    "polygonCount": "Antal polygoner",
+    "complexity": "Komplexitet",
+    "texturingMap": "Texturkarta",
+    "searchModels": "Sök modeller...",
+    "selectAsset": "Välj 3D-modell",
+    "noMatch": "Inga matchande modeller hittades i denna kategori.",
+    "techSpecs": "Tekniska specifikationer",
+    "scaleBounds": "Standard skalgränser",
+    "materialMappings": "Materialmappningar",
+    "iframeSandboxMode": "Iframe sandlådeläge",
+    "autoRotation": "Automatisk rotation aktiverad",
+    "interactiveSandbox": "Interaktiv sandlåda",
+    "yes": "Ja",
+    "designerNotes": "Designer-anteckningar",
+    "shareView": "Dela denna vy",
+    "directLink": "Direktlänk förväljer denna exakta modell automatiskt.",
+    "copyLink": "Kopiera länk",
+    "copied": "Direktlänk kopierad till urklipp:",
+    "all": "Alla"
+  },
+  "booking": {
+    "backToHome": "Tillbaka till startsidan"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Integritetspolicy",
+      "lastUpdated": "Senast uppdaterad: juni 2026",
+      "p1": "Detta är en platshållare för integritetspolicyn.",
+      "p2": "Vi tar din integritet på allvar och är fast beslutna att skydda dina personuppgifter.",
+      "s1Title": "1. Information vi samlar in",
+      "s1Text": "Vi kan samla in personuppgifter som du frivilligt lämnar till oss.",
+      "s2Title": "2. Hur vi använder din information",
+      "s2Text": "Vi behandlar dina personuppgifter av flera skäl beroende på hur du interagerar med våra tjänster.",
+      "s2List1": "För att underlätta skapande av konto och autentisering.",
+      "s2List2": "För att svara på användarförfrågningar och erbjuda support.",
+      "s2List3": "För att uppfylla och hantera dina beställningar och betalningar.",
+      "s2List4": "För att utvärdera och förbättra våra tjänster och marknadsföring.",
+      "s3Title": "3. Delning av din information",
+      "s3Text": "Vi kan dela dina uppgifter med tredjepartsleverantörer och entreprenörer.",
+      "s4Title": "4. Datasäkerhet",
+      "s4Text": "Vi har implementerat lämpliga tekniska och organisatoriska säkerhetsåtgärder.",
+      "s5Title": "5. Kontakta oss",
+      "s5Text": "Om du har frågor om detta meddelande, vänligen maila oss."
+    },
+    "terms": {
+      "title": "Användarvillkor",
+      "lastUpdated": "Senast uppdaterad: juni 2026",
+      "p1": "Detta är en platshållare för användarvillkoren.",
+      "p2": "Genom att använda våra tjänster samtycker du till att vara bunden av dessa villkor.",
+      "s1Title": "1. Godkännande av villkor",
+      "s1Text": "Genom att använda vår webbplats godkänner du dessa användarvillkor.",
+      "s2Title": "2. Immaterialrättigheter",
+      "s2Text": "Webbplatsen och hela dess innehåll ägs av Fastlaunch.",
+      "s3Title": "3. Användarintyg",
+      "s3Text": "Genom att använda webbplatsen intygar du att all information du skickar är sann.",
+      "s4Title": "4. Ansvarsbegränsning",
+      "s4Text": "Under inga omständigheter kommer vi att vara ansvariga för några direkta eller indirekta skador.",
+      "s5Title": "5. Tillämplig lag",
+      "s5Text": "Dessa villkor styrs av och tolkas i enlighet med lagarna i vår jurisdiktion.",
+      "s6Title": "6. Kontakta oss",
+      "s6Text": "För att lösa ett klagomål angående webbplatsen, vänligen kontakta oss på: "
+    },
+    "cookies": {
+      "title": "Cookiepolicy & inställningar",
+      "lastUpdated": "Senast uppdaterad: juni 2026",
+      "p1": "Denna cookiepolicy förklarar hur Fastlaunch använder cookies och liknande tekniker.",
+      "s1Title": "Vad är cookies?",
+      "s1Text": "Cookies är små datafiler som placeras på din dator eller mobila enhet.",
+      "s2Title": "Hantera dina inställningar",
+      "s2Text": "Du kan granska och ändra dina cookieinställningar nedan.",
+      "essentialTitle": "Strikt nödvändiga cookies",
+      "essentialText": "Dessa cookies är nödvändiga för att du ska kunna surfa på webbplatsen och använda dess funktioner.",
+      "alwaysActive": "Alltid aktiv",
+      "analyticsTitle": "Analys- och prestandacookies",
+      "analyticsText": "Dessa cookies samlar in information om hur du använder en webbplats.",
+      "marketingTitle": "Marknadsförings- och riktade cookies",
+      "marketingText": "Dessa cookies spårar din onlineaktivitet för att hjälpa annonsörer att leverera mer relevant reklam.",
+      "saveBtn": "Spara inställningar",
+      "savedMsg": "Inställningar sparade!"
+    }
+  },
+  "footer": {
+    "contactUs": "Kontakta oss",
+    "address": "E-6 Arera Colony, Bhopal, Madhya Pradesh, Indien",
+    "tagline": "Autonom AI & Höghastighetsingenjörsstudio • Tillgänglig över hela världen",
+    "services": "Tjänster",
+    "aiSolutions": "AI-lösningar",
+    "webDev": "Webbutveckling",
+    "mobileApps": "Mobilappar",
+    "devOps": "DevOps-tjänster",
+    "ecommerce": "E-handel",
+    "company": "Företag",
+    "aboutUs": "Om oss",
+    "ourTeam": "Vårt team",
+    "careers": "Karriär",
+    "contact": "Kontakt",
+    "blog": "Blogg",
+    "blogs": "Bloggar",
+    "followUs": "Följ oss",
+    "rights": "© 2026 Fastlaunch. Alla rättigheter förbehållna.",
+    "privacyPolicy": "Integritetspolicy",
+    "termsOfService": "Användarvillkor",
+    "cookieSettings": "Cookieinställningar",
+    "askAI": "Be AI om en sammanfattning av Fastlaunch",
+    "promptCopiedTitle": "Prompt kopierad!",
+    "promptCopiedDesc": "Google Gemini stödjer inte automatiska promptlänkar. Vi har kopierat prompten till ditt urklipp. Klistra in den i chattrutan när Gemini öppnas.",
+    "cancel": "Avbryt",
+    "openGemini": "Öppna Gemini"
+  },
+  "blogListPage": {
+    "badge": "FastLaunch-insikter",
+    "heroTitle": "Teknik & Affärsintelligens",
+    "heroDesc": "Taktiska guider och djupdykningar om D2C-skalning, autonom AI och white-label-teknik.",
+    "searchPlaceholder": "Sök bloggar eller ämnen...",
+    "noResults": "Inga artiklar hittades som matchar din sökning.",
+    "readMore": "Läs mer",
+    "author": "FastLaunch"
+  },
+  "blogPostPage": {
+    "backToBlogs": "Tillbaka till alla bloggar",
+    "share": "Dela",
+    "linkCopied": "Länk kopierad till urklipp!",
+    "prevArticle": "Föregående artikel",
+    "nextArticle": "Nästa artikel",
+    "ctaTitle": "Omvandla ditt företag med FastLaunch",
+    "ctaDesc": "Oavsett om du vill bygga ett autonomt AI-företag, lansera white-label-teknik eller skapa ett D2C-varumärke — vårt team är redo.",
+    "bookCall": "Boka ett samtal",
+    "exploreServices": "Utforska tjänster"
+  },
+  "blogsData": {
+    "odopD2c": {
+      "title": "Från distrikt till dörrpost: Hur Fastlaunch förvandlar Indiens ODOP-säljare till D2C-kraftpaket",
+      "excerpt": "Att förena kulturarv med digital teknik – hur Fastlaunch förvandlar lokala hantverkare till automatiska D2C-varumärken med hög marginal.",
+      "category": "D2C-transformation",
+      "badgeText": "ODOP D2C-motor"
+    },
+    "whiteLabel": {
+      "title": "White-Label-kraft: Hur Fastlaunch bygger motorn bakom varumärkena",
+      "excerpt": "Varför ledande företag och moderna startups väljer Fastlaunchs AI-, D2C- och sociala e-handelsinfrastruktur.",
+      "category": "White-Label-teknik",
+      "badgeText": "White Label-stack"
+    },
+    "autonomousEnterprise": {
+      "title": "Det autonoma företaget: Hur Fastlaunch gör företag autonoma i AI-tidsåldern",
+      "excerpt": "Sluta hantera verksamheten. Börja styra ett autonomt företag som drivs av multi-agent AI-nätverk.",
+      "category": "Autonom AI",
+      "badgeText": "Autonom AI-kärna"
+    },
+    "socialCommerce": {
+      "title": "Från WhatsApp-chattar till fullfjädrade varumärken: Hur Fastlaunch förvandlar säljare till D2C-kraftpaket",
+      "excerpt": "Du byggde försäljningen på Instagram och WhatsApp. Låt nu Fastlaunch bygga ett automatiskt D2C-varumärke på 30 dagar.",
+      "category": "Social e-handel",
+      "badgeText": "Socialt till D2C"
+    },
+    "ondcD2c": {
+      "title": "Från säljare till varumärke: Hur Fastlaunch hjälper ONDC-säljare att bygga sin egen D2C",
+      "excerpt": "Sluta hyra plats på plattformar och priskonkurrera. Lär dig hur Fastlaunch hjälper säljare att bygga D2C-varumärken med hög marginal.",
+      "category": "ONDC & D2C-strategi",
+      "badgeText": "ONDC D2C-motor"
+    }
+  },
+  "testimonialsData": {
+    "badge": "Verifierad kundpåverkan",
+    "title": "Betrodd av tillväxtledare",
+    "description": "Se hur vi hjälper videoplattformar, D2C-varumärken, EdTech-portaler och utbildningsinstitut att skala snabbare.",
+    "verifiedCase": "Verifierat kundfall",
+    "solutionBuilt": "Byggd lösning",
+    "productionDeployed": "Lanserad i produktion",
+    "viewCase": "Visa fall",
+    "igraStudios": {
+      "role": "Plattform för redigeringsbyrå",
+      "badge": "Media SaaS & Arbetsflöden",
+      "quote": "Fastlaunch byggde vår kompletta plattform för videoredigeringsbyrå. Kunder laddar upp filer och betalar via PayPal eller Razorpay enkelt. Det automatiska systemet gjorde vår verksamhet helt fri från manuellt arbete!",
+      "metrics": "Dubbla betalningar & Materialportal"
+    },
+    "maedric": {
+      "role": "D2C Ädelstenar & Lyxsmycken",
+      "badge": "E-handel & D2C",
+      "quote": "Fastlaunch utvecklade maedric.com till en fantastisk lyxig e-handelsplattform. Vår onlineförsäljning ökade från dag ett!",
+      "metrics": "Nyckelfärdig D2C-butik"
+    },
+    "netiAcademy": {
+      "role": "EdTech-plattform för provförberedelser",
+      "badge": "EdTech & Prov",
+      "quote": "Fastlaunch byggde Neti Academy till en kraftfull provplattform. Studenter får enkelt tillgång till övningsprov utan fördröjning.",
+      "metrics": "Prov- & Kursmotor"
+    },
+    "eliteEnglish": {
+      "role": "Språk- och utbildningsinstitut",
+      "badge": "Utbildning & Kurser",
+      "quote": "Fastlaunch byggde vår digitala institutportal för Elite in English. Schemahantering och studentinskrivning körs automatiskt.",
+      "metrics": "Studentportal & Schemaläggning"
+    }
+  }
+}

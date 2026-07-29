@@ -1,0 +1,407 @@
+{
+  "navbar": {
+    "home": "Koti",
+    "services": "Palvelut",
+    "portfolio": "Portfolio",
+    "testimonials": "Suositukset",
+    "playground": "Kokeilualue",
+    "blogs": "Blogit",
+    "getStarted": "Aloita",
+    "selectLanguage": "Valitse kieli"
+  },
+  "header84": {
+    "title": "Rakenna nopeasti. Julkaise kaikkialla. Skalaudu ilman rajoja.",
+    "description": "Toimitamme älykkäitä ratkaisuja, jotka toimivat välittömästi. Koneoppimismalleista palvelimettomaan infrastruktuuriin, kaikki on valmiina käyttöön ja toimimaan.",
+    "startNow": "Aloita nyt"
+  },
+  "layout373": {
+    "capabilities": "Suorituskyky",
+    "title": "Mitä rakennamme sinulle",
+    "description": "Älykkäät järjestelmät, jotka ajattelevat, oppivat ja mukautuvat tarpeisiisi.",
+    "aiTitle": "AI / ML / RL -ratkaisut",
+    "aiDesc": "Älykkäät neuroverkot, ennustavat koneoppimismallit ja vahvistusoppimisjärjestelmät, jotka on suunniteltu mukautumaan ja skaalautumaan.",
+    "devopsTitle": "DevOps ja Automaatio",
+    "devopsDesc": "CI/CD-putket, korkean saatavuuden julkaisut ja infrastruktuuri koodina koodin nopeaan toimitukseen.",
+    "fullstackTitle": "FullStack Web",
+    "fullstackDesc": "Yhtenäiset käyttöliittymät ja vankat taustajärjestelmät, jotka on rakennettu suorituskykyä ja turvallisuutta varten.",
+    "mobileTitle": "Mobiilisovellukset",
+    "mobileDesc": "Natiivit iOS- ja Android-sovellukset sujuvilla animaatioilla ja jaetuilla taustakomponenteilla.",
+    "ecommerceTitle": "Verkkokauppasovellukset",
+    "ecommerceDesc": "Täydelliset transaktioalustat Stripe/PayPal-maksuilla, mukautetuilla tilausprosesseilla ja reaaliaikaisilla toimitusintegraatioilla.",
+    "serverlessTitle": "Palvelimeton hallinta",
+    "serverlessDesc": "Täysin automaattisesti skaalautuvat pilviympäristöt, jotka veloittavat vain tarkasta suoritusajasta vähentäen pilvikustannuksia.",
+    "listingTitle": "Tuote- / Palveluluettelo",
+    "listingDesc": "Tuotteiden ja palveluiden joukkoluettelointi tarpeen mukaan alueellasi / sijainnissasi.",
+    "seoTitle": "SEO / GEO / AEO",
+    "seoDesc": "Optimoi digitaalinen läsnäolosi perinteisessä hakukoneessa, maantieteellisessä kohdentamisessa ja generatiivisissa tekoälymoottoreissa.",
+    "tagline": "Teemme liiketoiminnasta autonomista tekoälyn avulla.",
+    "explore": "Tutustu",
+    "details": "Tiedot"
+  },
+  "layout239": {
+    "method": "Menetelmä",
+    "title": "Miten työskentelemme ja mikä on tärkeää",
+    "description": "Nopeutta ilman oikoteitä. Laatua ilman viiveitä. Kaikki saapuu käyttövalmiina. Rakennamme mitä tarvitset, testaamme sen huolellisesti ja luovutamme toimivana.",
+    "step1Title": "Nopea toimitus",
+    "step1Desc": "Koodi siirtyy käsistämme palvelimillesi päivissä, ei kuukausissa. Toimitamme nopeita, täysin testattuja ja älykkäitä järjestelmiä ennätysajassa.",
+    "step2Title": "Valmis liitettäväksi",
+    "step2Desc": "Ei vaadi kokoamista. Ratkaisusi toimii heti julkaisuhetkellä. Kaikki on suunniteltu integroitumaan saumattomasti tuotantoympäristöösi.",
+    "step3Title": "Toimituksen jälkeinen tuki",
+    "step3Desc": "Pysymme rinnallasi julkaisun jälkeen varmistaaksemme sujuvan toiminnan. Jatkuva valvonta ja nopeat päivitykset takaavat pitkäaikaisen menestyksen.",
+    "getStarted": "Aloita"
+  },
+  "stats54": {
+    "title": "Luvut, jotka näyttävät saavutuksemme alalla",
+    "description": "Mittaamme menestystä toimitetuilla tuloksilla. Satoja toteutettuja projekteja. Tuhansia tunteja luotettavaa toiminta-aikaa.",
+    "projects": "Toteutetut projektit",
+    "uptime": "Palvelimen käyttöaste",
+    "loc": "Kirjoitetut koodirivit",
+    "api": "Käsitellyt API-pyynnöt"
+  },
+  "dt": {
+    "label": "Digitaalinen Transformaatio",
+    "title": "Eliminoi vanhentunut infrastruktuuri.",
+    "description": "Muuta vanhat ja inaktiiviset järjestelmäsi kaikkien aikojen moderneimmiksi, turvallisiksi ja tekoälynatiiveiksi pilviympäristöiksi.",
+    "d2cTitle": "D2C-brändit",
+    "d2cDesc": "Rakennamme ja skaalaamme sosiaalisen kaupankäynnin liiketoimintaasi D2C-malliksi.",
+    "startupsTitle": "Startups",
+    "startupsDesc": "Tuemme nopeaa räätälöityjen ratkaisujen toimitusta, mikä auttaa lanseeraamaan startupit nopeasti halutulle alueelle.",
+    "poweringSocialCommerce": "Sosiaalisen kaupankäynnin voimanlähde"
+  },
+  "cta31": {
+    "title": "Valmis rakentamaan jotain?",
+    "description": "Kerro meille mitä tarvitset. Näytämme mikä on mahdollista ja ryhdymme toimeen.",
+    "button": "Varaa puhelu"
+  },
+  "cta32": {
+    "title": "Pysy ajan tasalla päivityksistämme",
+    "description": "Hanki uusimmat uutiset tekoälystä, DevOpsista ja kehitystrendeistä suoraan sähköpostiisi.",
+    "placeholder": "Syötä sähköpostisi",
+    "button": "Tilaa nyt",
+    "terms": "Napsauttamalla Tilaa vahvistat hyväksyväsi käyttöehdot ja tietosuojakäytännön."
+  },
+  "testimonial17": {
+    "title": "Asiakkaiden ääni",
+    "description": "Mitä mieltä he ovat työskentelystä kanssamme",
+    "t1Quote": "\"He toimittivat koneoppimisputken, joka puolitti käsittelyaikamme. Ei turhia kokouksia, ei tekosyitä, vain tuloksia.\"",
+    "t1Role": "CTO, TechVenture Inc",
+    "t2Quote": "\"Verkkokauppa-alustamme julkaistiin kolmessa viikossa. Maksukortti-integraatio toimi moitteettomasti ensimmäisestä päivästä lähtien.\"",
+    "t2Role": "Perustaja, Digital Commerce",
+    "t3Quote": "\"He rakensivat mobiilisovelluksemme ja taustajärjestelmämme samanaikaisesti. Kaikki integroitui täydellisesti ilman ongelmia.\"",
+    "t3Role": "Tuotepäällikkö, StartupHub"
+  },
+  "faq": {
+    "title": "Kysymykset",
+    "description": "Kaikki mitä sinun tulee tietää prosessistamme, aikatauluistamme ja toimituksen jälkeisestä ajasta.",
+    "q1": "Kuinka nopeasti toimitatte projektit?",
+    "a1": "Useimmat projektit toimitetaan päivien tai viikkojen kuluessa laajuudesta riippuen. Siirrämme koodin kehityksestä tuotantoon ilman tavanomaisia viiveitä.",
+    "q2": "Mitä tapahtuu julkaisun jälkeen?",
+    "a2": "Emme katoa kun ratkaisusi tulee käyttöön. Toimituksen jälkeinen tuki pitää kaiken toiminnassa ja hoitaa mahdolliset ongelmat.",
+    "q3": "Hoidatteko maksujärjestelmien integraation?",
+    "a3": "Kyllä. Rakennamme täydellisiä verkkokaupparatkaisuja maksutapojen käsittelyllä, tilaustenhallinnalla ja turvallisella kassalla.",
+    "q4": "Voitteko rakentaa mobiilisovelluksen ja taustajärjestelmän samanaikaisesti?",
+    "a4": "Juuri sitä teemme. Mobiilisovellukset ja taustainfrastruktuuri rakennetaan samanaikaisesti, jotta ne sopivat täydellisesti yhteen.",
+    "q5": "Entä palvelimeton infrastruktuuri?",
+    "a5": "Hallitsemme täysin palvelimettomia palveluita, joten sinun ei tarvitse hallita palvelimia. Kaikki skaalautuu automaattisesti.",
+    "q6": "Voinko palkata FastLaunch-kehittäjiä AI- ja web-freelancereina?",
+    "a6": "Kyllä! FastLaunch toimii huippuluokan freelancer-kollektiivina ja täyden palvelun teknologia-toimistona.",
+    "q7": "Mitä palveluita ja teknologioita tarjoatte?",
+    "a7": "Ydinpalveluihimme kuuluvat AI/ML-insinöörintyö (LLM, RAG, PyTorch), Full-Stack Web (React, Next.js, Node.js, Python), mobiilisovellukset ja DevOps-pilvi.",
+    "q8": "Missä FastLaunch sijaitsee ja mikä on osoitteenne?",
+    "a8": "Pääkonttorimme sijaitsee osoitteessa E-6 Arera Colony, Bhopal, Madhya Pradesh, Intia. Palvelemme asiakkaita maailmanlaajuisesti etänä.",
+    "moreAnswers": "Tarvitsetko lisää vastauksia?",
+    "reachOut": "Ota yhteyttä ja käymme läpi tarkalleen kuinka työskentelemme.",
+    "contact": "Ota yhteyttä"
+  },
+  "playgroundTeaser": {
+    "label": "Interaktiivinen 3D-studio",
+    "title": "Meidän 3D-suunnittelun kokeilualue",
+    "description": "Astu interaktiiviseen suunnittelustudioon. Napsauta mitä tahansa korttia tutkiaksesi 3D-mallejamme tai suorittaaksesi interaktiivisia verkkosovelluksia reaaliajassa.",
+    "launchApp": "Käynnistä verkkosovellus",
+    "view3d": "Katso 3D-malli",
+    "launchSandbox": "Käynnistä koko hiekkalaatikko",
+    "sandboxDesc": "Pääse käsiksi koko näkymään kategoria-suodattimien ja teknisten mittarien avulla.",
+    "enterPlayground": "Astu 3D-kokeilualueelle",
+    "launchFull": "Käynnistä interaktiivinen 3D-hiekkalaatikko"
+  },
+  "teaserModels": {
+    "animated-gradient": {
+      "name": "Animoitu liukuväri -käyttöliittymä",
+      "category": "Verkkosovellukset",
+      "desc": "Interaktiivinen, fysiikkaan perustuva animoidun liukuvärin studio. Mukauta värejä, nopeuksia ja virtausvektoreita reaaliajassa."
+    },
+    "rare-natural": {
+      "name": "Harvinaiset luonnonelementit",
+      "category": "Verkkosovellukset",
+      "desc": "Upea orgaaninen laskeutumissivu, joka esittelee edistynyttä ruudukofysiikkaa ja väriteorian integraatioita."
+    },
+    "element-visualizer": {
+      "name": "Elementtien visualisointistudio",
+      "category": "Verkkosovellukset",
+      "desc": "Tehokas kehittäjäalusta CSS-asettelujen, hiukkaskenttien ja animaatiokonfiguraatioiden kokeilemiseen."
+    },
+    "server": {
+      "name": "Futuristinen palvelinsolmu",
+      "category": "Infrastruktuuri",
+      "desc": "Massiivinen palvelinkehikkosolmu tarkalla liitäntä-, johto- ja paikkamuotoilulla. Edustaa vankkaa palvelimetonta infrastruktuuria."
+    },
+    "laptop": {
+      "name": "Laptop Pro",
+      "category": "Laitteisto",
+      "desc": "Moderni, erittäin ohut kannettava tietokone mekaanisilla näppäimillä ja tyylikkäällä kosketuslevyllä."
+    },
+    "keyboard": {
+      "name": "Mekaaninen näppäimistö",
+      "category": "Syöte-laitteet",
+      "desc": "Laadukas mekaaninen näppäimistö taktiilisilla näppäinhatuilla ja ergonomisella muotoilulla."
+    },
+    "mouse": {
+      "name": "Langaton hiiri",
+      "category": "Syöte-laitteet",
+      "desc": "Ergonominen langaton hiiri, joka on suunniteltu tarkkuuteen ja hiljaiseen vierityspalautteeseen."
+    },
+    "rubik": {
+      "name": "Rubikin kuutio",
+      "category": "Algoritmit",
+      "desc": "Täydellinen Rubikin kuutio edustamaan algoritmista ongelmanratkaisua ja vahvistusoppimisen malleja."
+    },
+    "coffee": {
+      "name": "Jäälatte-kuppi",
+      "category": "Kehittäjän polttoaine",
+      "desc": "Lasi jäälattea realistisilla kahvikerroksilla ja jääpaloilla. Edustaa kehittäjän keskittymistä."
+    },
+    "clock": {
+      "name": "Retropöytäkello",
+      "category": "Käsityötaito",
+      "desc": "Upea mekaaninen pöytäkello retrotyylillä, joka esittelee mekaanista käsityötaitoa."
+    }
+  },
+  "portfolio": {
+    "headerBadge": "Julkaistujen projektien portfolio",
+    "backToHome": "← Takaisin kotisivulle",
+    "title": "Aktiiviset projektimme",
+    "description": "Tutustu valikoimaan julkaistuja alustojamme, jotka osoittavat sitoutumisemme suorituskykyisiin, turvallisiin ja kauniisiin digitaalisiin kokemuksiin.",
+    "visitLiveSite": "Vieraile sivustolla",
+    "clickToView": "Napsauta \"Vieraile sivustolla\" katsoaksesi"
+  },
+  "portfolioProjects": {
+    "maedric": {
+      "desc": "Moderni premium-kokemus räätälöitynä korkeatasoisille digitaalisille palveluille."
+    },
+    "igra": {
+      "desc": "Luova digitaalinen studio, jossa on mukaansatempaavia 3D- ja verkkokokemuksia."
+    },
+    "neti": {
+      "desc": "Edistyksellinen koulutusalusta, joka on rakennettu skaalautuvuutta ja suorituskykyä varten."
+    }
+  },
+  "playgroundPage": {
+    "headerBadge": "3D-suunnittelun hiekkalaatikostudio",
+    "premiumAssets": "Premium-resurssit",
+    "backToHome": "← Takaisin kotisivulle",
+    "loading": "Ladataan 3D-tietoja...",
+    "interactiveFrame": "Interaktiivinen kehys",
+    "activeNode": "Aktiivinen solmu",
+    "liveWebApp": "Aktiivinen verkkosovellus",
+    "drag": "Vedä",
+    "rotateCamera": "Käännä kameraa",
+    "pinch": "Nipistä",
+    "zoomAsset": "Zoomaa kohdetta",
+    "distribution": "Jakelu",
+    "fileSize": "Tiedostokoko",
+    "structure": "Rakenne",
+    "polygonCount": "Polygonien määrä",
+    "complexity": "Monimutkaisuus",
+    "texturingMap": "Tekstuurikartta",
+    "searchModels": "Etsi malleja...",
+    "selectAsset": "Valitse 3D-malli",
+    "noMatch": "Tästä kategoriasta ei löytynyt sopivia malleja.",
+    "techSpecs": "Tekniset tiedot",
+    "scaleBounds": "Standardimitan rajat",
+    "materialMappings": "Materiaalikartoitus",
+    "iframeSandboxMode": "Iframe-hiekkalaatikkotila",
+    "autoRotation": "Automaattinen pyöritys päällä",
+    "interactiveSandbox": "Interaktiivinen hiekkalaatikko",
+    "yes": "Kyllä",
+    "designerNotes": "Suunnittelijan muistiinpanot",
+    "shareView": "Jaa tämä näkymä",
+    "directLink": "Suora linkki valitsee tämän mallin automaattisesti.",
+    "copyLink": "Kopioi linkki",
+    "copied": "Suora linkki kopioitu leikepöydälle:",
+    "all": "Kaikki"
+  },
+  "booking": {
+    "backToHome": "Takaisin kotisivulle"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Tietosuojakäytäntö",
+      "lastUpdated": "Viimeksi päivitetty: kesäkuu 2026",
+      "p1": "Tämä on tietosuojakäytännön malliteksti.",
+      "p2": "Otamme tietosuojasi vakavasti ja olemme sitoutuneet suojaamaan henkilötietojasi.",
+      "s1Title": "1. Keräämämme tiedot",
+      "s1Text": "Voimme kerätä henkilötietoja, jotka annat meille vapaaehtoisesti.",
+      "s2Title": "2. Miten käytämme tietojasi",
+      "s2Text": "Käsittelemme henkilötietojasi useista syistä riippuen siitä, miten käytät palveluitamme.",
+      "s2List1": "Tilin luomisen ja tunnistautumisen helpottamiseksi.",
+      "s2List2": "Käyttäjien kyselyihin vastaamiseksi ja tuen tarjoamiseksi.",
+      "s2List3": "Tilausten, maksujen ja palautusten käsittelemiseksi.",
+      "s2List4": "Palveluidemme ja markkinointimme arvioimiseksi ja parantamiseksi.",
+      "s3Title": "3. Tietojen jakaminen",
+      "s3Text": "Voimme jakaa tietojasi kolmannen osapuolen palveluntarjoajien kanssa.",
+      "s4Title": "4. Tietoturva",
+      "s4Text": "Olemme ottaneet käyttöön asianmukaiset tekniset ja organisatoriset turvatoimet.",
+      "s5Title": "5. Ota yhteyttä",
+      "s5Text": "Jos sinulla on kysyttävää tästä ilmoituksesta, lähetä meille sähköpostia."
+    },
+    "terms": {
+      "title": "Käyttöehdot",
+      "lastUpdated": "Viimeksi päivitetty: kesäkuu 2026",
+      "p1": "Tämä on käyttöehtojen malliteksti.",
+      "p2": "Käyttämällä palveluitamme sitoudut noudattamaan näitä ehtoja.",
+      "s1Title": "1. Ehtojen hyväksyminen",
+      "s1Text": "Käyttämällä verkkosivustoamme hyväksyt nämä käyttöehdot.",
+      "s2Title": "2. Immateriaalioikeudet",
+      "s2Text": "Verkkosivusto ja sen koko sisältö ovat Fastlaunchin omaisuutta.",
+      "s3Title": "3. Käyttäjän vakuutukset",
+      "s3Text": "Sivustoa käyttämällä vakuutat, että kaikki antamasi tiedot ovat oikeita.",
+      "s4Title": "4. Vastuunrajoitus",
+      "s4Text": "Emme ole vastuussa mistään suorista tai epäsuorista vahingoista.",
+      "s5Title": "5. Sovellettava laki",
+      "s5Text": "Näihin ehtoihin sovelletaan toimivaltaisen alueemme lainsäädäntöä.",
+      "s6Title": "6. Ota yhteyttä",
+      "s6Text": "Jos haluat selvittää valituksen sivustoon liittyen, ota yhteyttä osoitteeseen: "
+    },
+    "cookies": {
+      "title": "Evästekäytäntö ja asetukset",
+      "lastUpdated": "Viimeksi päivitetty: kesäkuu 2026",
+      "p1": "Tämä evästekäytäntö selittää kuinka Fastlaunch käyttää evästeitä ja vastaavia teknologioita.",
+      "s1Title": "Mitä evästeet ovat?",
+      "s1Text": "Evästeet ovat pieniä datatiedostoja, jotka tallennetaan tietokoneellesi tai mobiililaitteellesi.",
+      "s2Title": "Hallitse asetuksiasi",
+      "s2Text": "Voit tarkastella ja muuttaa evästeasetuksiasi alla.",
+      "essentialTitle": "Ehdottoman välttämättömät evästeet",
+      "essentialText": "Nämä evästeet ovat välttämättömiä sivuston selaamiseksi ja sen ominaisuuksien käyttämiseksi.",
+      "alwaysActive": "Aina aktiivinen",
+      "analyticsTitle": "Analyysi- ja suorituskykyevästeet",
+      "analyticsText": "Nämä evästeet keräävät tietoa siitä, miten käytät verkkosivustoa.",
+      "marketingTitle": "Markkinointi- ja kohdistusevästeet",
+      "marketingText": "Nämä evästeet seuraavat verkkotoimintaasi oleellisempien mainosten näyttämiseksi.",
+      "saveBtn": "Tallenna asetukset",
+      "savedMsg": "Asetukset tallennettu!"
+    }
+  },
+  "footer": {
+    "contactUs": "Ota yhteyttä",
+    "address": "E-6 Arera Colony, Bhopal, Madhya Pradesh, Intia",
+    "tagline": "Autonominen tekoäly & Nopsan insinöörityön studio • Saatavilla maailmanlaajuisesti",
+    "services": "Palvelut",
+    "aiSolutions": "AI-ratkaisut",
+    "webDev": "Verkkokehitys",
+    "mobileApps": "Mobiilisovellukset",
+    "devOps": "DevOps-palvelut",
+    "ecommerce": "Verkkokauppa",
+    "company": "Yritys",
+    "aboutUs": "Meistä",
+    "ourTeam": "Tiimimme",
+    "careers": "Urat",
+    "contact": "Yhteystiedot",
+    "blog": "Blogi",
+    "blogs": "Blogit",
+    "followUs": "Seuraa meitä",
+    "rights": "© 2026 Fastlaunch. Kaikki oikeudet pidätetään.",
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "termsOfService": "Käyttöehdot",
+    "cookieSettings": "Evästeasetukset",
+    "askAI": "Pyydä tekoälyltä yhteenveto Fastlaunchista",
+    "promptCopiedTitle": "Kehote kopioitu!",
+    "promptCopiedDesc": "Google Gemini ei tue automaattisia kehitelinkkejä. Kopioimme kehotteen leikepöydälle. Liitä se chat-ruutuun, kun Gemini avautuu.",
+    "cancel": "Peruuta",
+    "openGemini": "Avaa Gemini"
+  },
+  "blogListPage": {
+    "badge": "FastLaunch-näkemykset",
+    "heroTitle": "Insinöörityö & Liiketoiminta-äly",
+    "heroDesc": "Taktiset oppaat D2C-skaalaukseen, autonomisen AI:n käyttöönottoon ja white-label-teknologioihin.",
+    "searchPlaceholder": "Etsi blogeja tai aiheita...",
+    "noResults": "Hakuasi vastaavia artikkeleita ei löytynyt.",
+    "readMore": "Lue lisää",
+    "author": "FastLaunch"
+  },
+  "blogPostPage": {
+    "backToBlogs": "Takaisin kaikkiin blogeihin",
+    "share": "Jaa",
+    "linkCopied": "Linkki kopioitu leikepöydälle!",
+    "prevArticle": "Edellinen artikkeli",
+    "nextArticle": "Seuraava artikkeli",
+    "ctaTitle": "Uudista liiketoimintasi FastLaunchin avulla",
+    "ctaDesc": "Haluatpa rakentaa autonomisen tekoälyyrityksen, julkaista white-label-teknologiaa tai luoda D2C-brändin — tiimimme on valmis.",
+    "bookCall": "Varaa puhelu",
+    "exploreServices": "Tutustu palveluihin"
+  },
+  "blogsData": {
+    "odopD2c": {
+      "title": "Piirikunnista kotiovelle: Kuinka Fastlaunch muuttaa Intian ODOP-myyjät D2C-voimapesiksi",
+      "excerpt": "Perinnön yhdistäminen digitaalisuuteen – kuinka Fastlaunch muuttaa paikalliset käsityöläiset automaattisiksi D2C-brändeiksi.",
+      "category": "D2C-transformaatio",
+      "badgeText": "ODOP D2C -moottori"
+    },
+    "whiteLabel": {
+      "title": "White-Label-voima: Kuinka Fastlaunch rakentaa moottorin brändien taakse",
+      "excerpt": "Miksi huippuyritykset ja nykyaikaiset startupit valitsevat Fastlaunchin AI-, D2C- ja sosiaalisen kaupankäynnin infrastruktuurin.",
+      "category": "White-Label-tekniikka",
+      "badgeText": "White Label -pinos"
+    },
+    "autonomousEnterprise": {
+      "title": "Autonominen yritys: Kuinka Fastlaunch tekee yrityksistä autonomisia AI-aikakaudella",
+      "excerpt": "Lopeta toimintojen hallinta. Ala johtaa autonomista liiketoimintaa, jota pyörittävät moni-agenttiset tekoälyverkot.",
+      "category": "Autonominen AI",
+      "badgeText": "Autonomisen AI:n ydin"
+    },
+    "socialCommerce": {
+      "title": "WhatsApp-chateista täysivaltaisiksi brändeiksi: Kuinka Fastlaunch muuttaa myyjät D2C-voimaloiksi",
+      "excerpt": "Rrakensit myynnin Instagramissa ja WhatsAppissa. Anna nyt Fastlaunchin rakentaa automaattinen D2C-brändi 30 päivässä.",
+      "category": "Sosiaalinen kaupankäynti",
+      "badgeText": "Sosiaalisesta D2C:ksi"
+    },
+    "ondcD2c": {
+      "title": "Myyjästä brändiksi: Kuinka Fastlaunch auttaa ONDC-myyjiä rakentamaan oman D2C-liiketoiminnan",
+      "excerpt": "Lopeta tilan vuokraaminen alustoilla ja hintakilpailu. Opi kuinka Fastlaunch auttaa myyjiä rakentamaan korkean katteen D2C-brändejä.",
+      "category": "ONDC & D2C -strategia",
+      "badgeText": "ONDC D2C -moottori"
+    }
+  },
+  "testimonialsData": {
+    "badge": "Vahvistettu asiakasvaikutus",
+    "title": "Kasvujohtajien luottama",
+    "description": "Katso kuinka autamme videoalustoja, D2C-brändejä, EdTech-portaaleja ja valmennusinstituutteja skaalautumaan nopeammin.",
+    "verifiedCase": "Vahvistettu asiakastapaus",
+    "solutionBuilt": "Rakennettu ratkaisu",
+    "productionDeployed": "Julkaistu tuotantoon",
+    "viewCase": "Katso tapaus",
+    "igraStudios": {
+      "role": "Videoeditointitoimiston alusta",
+      "badge": "Media SaaS & Työvuo",
+      "quote": "Fastlaunch rakensi täydellisen videoeditointitoimistomme alustan. Asiakkaat lataavat tiedostoja ja maksavat PayPalilla tai Razorpaylla vaivattomasti. Automaattinen järjestelmä teki toiminnastamme täysin kädetöntä!",
+      "metrics": "Kaksoismaksut & Materiaalipalvelu"
+    },
+    "maedric": {
+      "role": "Jalokivien ja ylellisyyskorujen D2C",
+      "badge": "Verkkokauppa & D2C",
+      "quote": "Fastlaunch suunnitteli maedric.comista upean ylellisen verkkokauppa-alustan. Verkkomyyntimme kasvoi ensimmäisestä päivästä lähtien!",
+      "metrics": "Täydellinen D2C-kauppa"
+    },
+    "netiAcademy": {
+      "role": "Pääsykoevalmennuksen EdTech-alusta",
+      "badge": "EdTech & Kokeet",
+      "quote": "Fastlaunch teki Neti Academysta tehokkaan koealustan. Opiskelijat pääsevät harjoituskokeisiin ja kursseihin ilman viivettä.",
+      "metrics": "Koe- ja kurssimoottori"
+    },
+    "eliteEnglish": {
+      "role": "Kieli- ja valmennusinstituutti",
+      "badge": "Valmennus & Koulutus",
+      "quote": "Fastlaunch rakensi digitaalisen insituuttiportaalimme Elite in English -valmennukselle. Aikataulutus ja opiskelijoiden ilmoittautuminen toimivat automaattisesti.",
+      "metrics": "Opiskelijaportaali & Aikataulutus"
+    }
+  }
+}

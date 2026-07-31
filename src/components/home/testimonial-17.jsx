@@ -117,10 +117,6 @@ export function Testimonial17() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900 text-neutral-300 text-[10px] font-semibold uppercase tracking-wider">
-            <Sparkles className="w-3 h-3 text-white" />
-            {t("testimonialsData.badge", "Verified Client Impact")}
-          </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
             {t("testimonialsData.title", "Trusted by Growth Leaders")}
           </h2>

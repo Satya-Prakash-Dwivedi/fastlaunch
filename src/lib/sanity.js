@@ -74,13 +74,24 @@ export function normalizeSanityPost(post) {
   };
 }
 
+let cachedSanityPosts = null;
+
+export function getCachedSanityPosts() {
+  return cachedSanityPosts;
+}
+
 /**
  * Fetch all published posts from Sanity CMS (GROQ query)
  * GROQ: *[_type == "post"] | order(publishedAt desc)
  */
 export async function getSanityPosts() {
+  if (cachedSanityPosts && cachedSanityPosts.length > 0) {
+    return cachedSanityPosts;
+  }
+
   if (!sanityClient) {
     console.info('Sanity Project ID not set. Falling back to static blogsData.');
+    cachedSanityPosts = blogsData;
     return blogsData;
   }
 
@@ -101,12 +112,16 @@ export async function getSanityPosts() {
     const sanityPosts = await sanityClient.fetch(query);
 
     if (!sanityPosts || sanityPosts.length === 0) {
+      cachedSanityPosts = blogsData;
       return blogsData;
     }
 
-    return sanityPosts.map(normalizeSanityPost);
+    const normalized = sanityPosts.map(normalizeSanityPost);
+    cachedSanityPosts = normalized;
+    return normalized;
   } catch (error) {
     console.warn('Error fetching from Sanity API, falling back to static blogsData:', error);
+    cachedSanityPosts = blogsData;
     return blogsData;
   }
 }

@@ -2,21 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { blogsData } from '@/data/blogsData';
-import { getSanityPosts } from '@/lib/sanity';
+import { getSanityPosts, getCachedSanityPosts } from '@/lib/sanity';
 import { SEO } from '@/components/seo';
 import { ArrowRight, Search, Calendar, Clock } from 'lucide-react';
 
 export function BlogListPage() {
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
-  const [blogs, setBlogs] = useState(blogsData);
+  const [blogs, setBlogs] = useState(() => getCachedSanityPosts() || []);
+  const [loading, setLoading] = useState(() => !getCachedSanityPosts());
 
   useEffect(() => {
     getSanityPosts().then((posts) => {
-      if (posts && posts.length > 0) {
+      if (posts) {
         setBlogs(posts);
       }
+      setLoading(false);
     });
   }, []);
 
@@ -54,9 +55,25 @@ export function BlogListPage() {
         </div>
       </section>
 
-      {/* Slightly Narrower & Taller Card Grid */}
+      {/* Card Grid Section */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pt-2">
-        {filteredBlogs.length === 0 ? (
+        {loading ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map((n) => (
+              <div key={n} className="rounded-2xl bg-neutral-950/90 border border-neutral-900 overflow-hidden animate-pulse flex flex-col">
+                <div className="w-full aspect-[16/10] bg-neutral-900" />
+                <div className="p-4 space-y-3 flex-1 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <div className="w-24 h-3 bg-neutral-900 rounded" />
+                    <div className="w-full h-5 bg-neutral-900 rounded" />
+                    <div className="w-4/5 h-4 bg-neutral-900/60 rounded" />
+                  </div>
+                  <div className="w-full h-8 bg-neutral-900/40 rounded mt-4" />
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : filteredBlogs.length === 0 ? (
           <div className="text-center py-14 text-neutral-400">
             <p className="text-xs">{t('blogListPage.noResults', 'No articles found matching your query.')}</p>
           </div>

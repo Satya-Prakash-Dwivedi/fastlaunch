@@ -37,7 +37,7 @@ export function Cta32() {
         </div>
         <div className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto aspect-video overflow-hidden rounded-image">
           <img
-            src="/assets/workspace.jpg"
+            src="/assets/workspace.webp"
             alt="Abstract view of modern software architecture"
             className="h-full w-full object-cover rounded-image"
             loading="lazy"

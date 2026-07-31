@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star, Quote, CheckCircle2, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 
@@ -140,21 +140,14 @@ export function Testimonial17() {
                 {/* Left Side Quote */}
                 <div className="space-y-4 flex-1">
                   <div className="flex items-center justify-between">
-                    {/* Stars */}
-                    <div className="flex items-center gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-white text-white" />
-                      ))}
-                    </div>
                     <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-neutral-300 bg-neutral-900 border border-neutral-800 px-2.5 py-0.5 rounded-full">
                       <CheckCircle2 className="w-3 h-3 text-white" /> {t("testimonialsData.verifiedCase", "Verified Client Case")}
                     </span>
                   </div>
 
-                  <div className="relative">
-                    <Quote className="absolute -top-3 -left-4 w-10 h-10 text-white/5 pointer-events-none" />
-                    <p className="text-base sm:text-lg lg:text-xl font-medium text-white leading-relaxed italic relative z-10">
-                      "{testimonials[activeIndex].quote}"
+                  <div>
+                    <p className="text-base sm:text-lg lg:text-xl font-medium text-white leading-relaxed relative z-10">
+                      {testimonials[activeIndex].quote}
                     </p>
                   </div>
 
@@ -237,18 +230,13 @@ export function Testimonial17() {
                   <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-300">
                     {item.badge}
                   </span>
-                  <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 fill-white text-white" />
-                    ))}
-                  </div>
                 </div>
 
                 <h3 className="text-xs font-bold text-white group-hover:text-neutral-300 transition-colors">
                   {item.client}
                 </h3>
-                <p className="text-[10px] text-neutral-400 line-clamp-2 mt-1 italic">
-                  "{item.quote}"
+                <p className="text-[10px] text-neutral-400 line-clamp-2 mt-1">
+                  {item.quote}
                 </p>
 
                 <div className="mt-3 pt-2 border-t border-neutral-900 flex items-center justify-between text-[10px]">

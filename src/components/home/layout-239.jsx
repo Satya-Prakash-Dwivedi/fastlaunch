@@ -57,7 +57,7 @@ export function Layout239() {
               </div>
               <div className="order-1 md:order-2">
                 <img
-                  src="/assets/software-engineers.jpg"
+                  src="/assets/software-engineers.webp"
                   alt="Software engineers collaborating at modern desk"
                   className="aspect-video w-full rounded-image object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
                   loading="lazy"
@@ -70,7 +70,7 @@ export function Layout239() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center w-full pt-12 md:pt-16 border-t border-scheme-border/10">
               <div className="order-1 md:order-1">
                 <img
-                  src="/assets/ux-collaboration.jpg"
+                  src="/assets/ux-collaboration.webp"
                   alt="UI/UX design team collaboration"
                   className="aspect-video w-full rounded-image object-cover shadow-md hover:shadow-lg transition-shadow duration-300"
                   loading="lazy"

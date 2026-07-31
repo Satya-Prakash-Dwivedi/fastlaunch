@@ -27,7 +27,7 @@ export function Stats54() {
             </Card>
             <div className="w-full">
               <img
-                src="/assets/data-classification.png"
+                src="/assets/data-classification.webp"
                 alt="Data classification charts cover"
                 className="aspect-[3/2] size-full rounded-image object-cover shadow-sm"
                 loading="lazy"

@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { PortableText } from '@portabletext/react';
 import { blogsData } from '@/data/blogsData';
-import { getSanityPosts, urlFor } from '@/lib/sanity';
+import { getSanityPosts, getCachedSanityPosts, urlFor } from '@/lib/sanity';
 import { SEO } from '@/components/seo';
 import { ArrowLeft, Calendar, Clock, Share2, Sparkles, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -28,7 +28,7 @@ const portableTextComponents = {
     h2: ({ children }) => <h3 className="text-base sm:text-lg font-bold text-white mt-8 mb-3 flex items-center gap-2.5 pl-4 sm:pl-6"><span className="w-1.5 h-1.5 rounded-full bg-white shrink-0" />{children}</h3>,
     h3: ({ children }) => <h4 className="text-sm sm:text-base font-semibold text-neutral-200 mt-6 mb-2 pl-8 sm:pl-10">{children}</h4>,
     normal: ({ children }) => <p className="text-neutral-200 leading-relaxed font-normal text-sm sm:text-base mb-5 pl-4 sm:pl-6">{children}</p>,
-    blockquote: ({ children }) => <blockquote className="my-8 ml-4 sm:ml-6 px-6 py-4 rounded-2xl bg-neutral-950 border border-neutral-800 text-white italic font-serif text-sm sm:text-base leading-relaxed shadow-lg">{children}</blockquote>,
+    blockquote: ({ children }) => <blockquote className="my-8 ml-4 sm:ml-6 px-6 py-4 rounded-2xl bg-neutral-950 border border-neutral-800 text-white font-medium text-sm sm:text-base leading-relaxed shadow-lg">{children}</blockquote>,
   },
   list: {
     bullet: ({ children }) => <ul className="space-y-2.5 my-4 pl-8 sm:pl-12">{children}</ul>,
@@ -49,8 +49,16 @@ export function BlogPostPage() {
   const { t, i18n } = useTranslation();
   const { slug } = useParams();
 
-  const [blog, setBlog] = useState(() => blogsData.find((b) => b.slug === slug));
-  const [allBlogs, setAllBlogs] = useState(blogsData);
+  const [blog, setBlog] = useState(() => {
+    const cached = getCachedSanityPosts();
+    if (cached) {
+      const found = cached.find((b) => b.slug === slug);
+      if (found) return found;
+    }
+    return blogsData.find((b) => b.slug === slug);
+  });
+  const [allBlogs, setAllBlogs] = useState(() => getCachedSanityPosts() || blogsData);
+  const [loading, setLoading] = useState(() => !blog);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -63,8 +71,18 @@ export function BlogPostPage() {
           setBlog(found);
         }
       }
+      setLoading(false);
     });
   }, [slug]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 text-center">
+        <div className="w-10 h-10 border-2 border-white border-t-transparent rounded-full animate-spin mb-4" />
+        <p className="text-neutral-400 text-xs font-medium">Loading article...</p>
+      </div>
+    );
+  }
 
   if (!blog) {
     return (
@@ -251,7 +269,7 @@ export function BlogPostPage() {
                   </li>
                 ),
                 blockquote: ({ children }) => (
-                  <blockquote className="my-8 ml-4 sm:ml-6 px-6 py-4 rounded-2xl bg-neutral-950 border border-neutral-800 text-white italic font-serif text-sm sm:text-base leading-relaxed shadow-lg">
+                  <blockquote className="my-8 ml-4 sm:ml-6 px-6 py-4 rounded-2xl bg-neutral-950 border border-neutral-800 text-white font-medium text-sm sm:text-base leading-relaxed shadow-lg">
                     {children}
                   </blockquote>
                 ),

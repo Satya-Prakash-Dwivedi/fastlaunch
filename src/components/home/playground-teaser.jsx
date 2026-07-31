@@ -102,7 +102,7 @@ export function PlaygroundTeaser() {
   return (
     <section id="playground" className="px-[5%] py-16 md:py-24 lg:py-28 scheme-7 alternate logo-alt border-t border-scheme-border/10">
       <div className="container">
-        
+
         {/* Header Block */}
         <div className="mb-12 text-center md:mb-18 lg:mb-20">
           <div className="mx-auto w-full max-w-2xl">
@@ -173,7 +173,7 @@ export function PlaygroundTeaser() {
                   {t('playgroundTeaser.sandboxDesc', 'Access the full sandbox viewport with category filters and model technical metrics.')}
                 </p>
               </div>
-              
+
               <Button
                 asChild
                 variant="alternate"

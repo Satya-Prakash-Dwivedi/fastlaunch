@@ -12,7 +12,6 @@ import { PlaygroundPage } from './components/playground/playground-page';
 import { PortfolioPage } from './components/portfolio/portfolio-page';
 import { Testimonial17 } from './components/home/testimonial-17';
 import { Stats54 } from './components/home/stats-54';
-import { Cta31 } from './components/home/cta-31';
 import { Cta32 } from './components/home/cta-32';
 import { Faq4 } from './components/home/faq-04';
 import { Footer1 } from './components/footer-01';
@@ -110,7 +109,6 @@ const Home = () => (
     <PlaygroundTeaser />
     <Testimonial17 />
     <Stats54 />
-    <Cta31 />
     <Cta32 />
     <Faq4 />
   </>

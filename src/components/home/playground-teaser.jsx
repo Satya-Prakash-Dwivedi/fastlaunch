@@ -190,13 +190,14 @@ export function PlaygroundTeaser() {
         {/* Action Button: "More" when collapsed, "Launch Full Sandbox" when expanded */}
         <div className="flex justify-center">
           {!showMore ? (
-            <button
+            <Button
               onClick={() => setShowMore(true)}
-              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-neutral-900/90 hover:bg-neutral-800 border border-neutral-800 hover:border-neutral-600 text-xs sm:text-sm font-semibold text-neutral-300 hover:text-white transition-all duration-200 shadow-md hover:shadow-lg backdrop-blur-md cursor-pointer"
+              variant="alternate"
+              className="px-6 py-2.5 text-sm font-bold shadow-md hover:scale-[1.02] flex items-center gap-2 cursor-pointer"
             >
               <span>{t('playgroundTeaser.more', 'More')}</span>
-              <ChevronDown className="w-4 h-4 text-neutral-400 group-hover:text-white group-hover:translate-y-0.5 transition-transform duration-200" />
-            </button>
+              <ChevronDown className="w-4 h-4" />
+            </Button>
           ) : (
             <Button
               asChild

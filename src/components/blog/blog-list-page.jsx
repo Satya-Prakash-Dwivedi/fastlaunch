@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { blogsData } from '@/data/blogsData';
 import { getSanityPosts } from '@/lib/sanity';
 import { SEO } from '@/components/seo';
-import { ArrowRight, Search, Calendar, Clock, Sparkles } from 'lucide-react';
+import { ArrowRight, Search, Calendar, Clock } from 'lucide-react';
 
 export function BlogListPage() {
   const { t } = useTranslation();
@@ -40,41 +40,17 @@ export function BlogListPage() {
         description="Read the latest articles on building autonomous enterprises, transforming ODOP sellers into D2C powerhouses, white-label tech stacks, and social commerce."
       />
 
-      {/* Hero Header Section */}
-      <section className="relative pt-16 pb-8 px-4 sm:px-6 max-w-4xl mx-auto text-center overflow-hidden">
-        {/* Ambient background glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-gradient-to-tr from-cyan-600/20 via-blue-500/15 to-violet-600/20 blur-[90px] rounded-full pointer-events-none" />
-
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35 }}
-          className="relative z-10 space-y-2.5"
-        >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-[10px] font-semibold uppercase tracking-wider">
-            <Sparkles className="w-3 h-3" />
-            {t('blogListPage.badge', 'FastLaunch Insights')}
-          </div>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
-            {t('blogListPage.heroTitle', 'Engineering & Business Intelligence')}
-          </h1>
-          <p className="max-w-md mx-auto text-xs text-neutral-300 font-normal">
-            {t('blogListPage.heroDesc', 'Tactical playbooks and deep dives on scaling D2C, deploying autonomous AI, and white-label tech stacks.')}
-          </p>
-        </motion.div>
-
-        {/* Search Control */}
-        <div className="mt-6 max-w-md mx-auto flex items-center gap-2">
-          <div className="relative w-full">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-neutral-400" />
-            <input
-              type="text"
-              placeholder={t('blogListPage.searchPlaceholder', 'Search blogs or topics...')}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 bg-neutral-900/90 border border-neutral-800 rounded-xl text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-cyan-400 transition-colors shadow-inner"
-            />
-          </div>
+      {/* Search Control Section */}
+      <section className="pt-10 pb-4 px-4 sm:px-6 max-w-md mx-auto">
+        <div className="relative w-full">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-neutral-400" />
+          <input
+            type="text"
+            placeholder={t('blogListPage.searchPlaceholder', 'Search blogs or topics...')}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-9 pr-3 py-2 bg-neutral-900/90 border border-neutral-800 rounded-xl text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-cyan-400 transition-colors shadow-inner"
+          />
         </div>
       </section>
 

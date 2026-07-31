@@ -21,14 +21,15 @@ export function BlogListPage() {
   }, []);
 
   const filteredBlogs = blogs.filter((blog) => {
-    const title = blog.title;
-    const excerpt = blog.excerpt;
-    const category = blog.category;
+    const title = blog.title || '';
+    const excerpt = blog.excerpt || '';
+    const category = blog.category || '';
+    const q = searchQuery.toLowerCase();
 
     return (
-      title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      category.toLowerCase().includes(searchQuery.toLowerCase())
+      title.toLowerCase().includes(q) ||
+      excerpt.toLowerCase().includes(q) ||
+      category.toLowerCase().includes(q)
     );
   });
 

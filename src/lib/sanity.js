@@ -33,10 +33,11 @@ export function urlFor(source) {
  */
 export function normalizeSanityPost(post) {
   const coverImageUrl = post.mainImage ? urlFor(post.mainImage) : null;
+  const slugStr = typeof post.slug === 'object' ? post.slug?.current : (post.slug || post._id);
 
   // Match local blogsData image by slug if Sanity image is empty
   const matchingLocal = blogsData.find(
-    (b) => b.slug === post.slug || b.translationKey === post.slug
+    (b) => b.slug === slugStr || b.translationKey === slugStr
   );
 
   const finalImage =
@@ -58,7 +59,7 @@ export function normalizeSanityPost(post) {
 
   return {
     id: post._id,
-    slug: post.slug,
+    slug: slugStr,
     title: post.title || 'Untitled Post',
     excerpt: post.excerpt || 'Read the latest article on Fastlaunch.',
     category: post.category || 'Engineering',

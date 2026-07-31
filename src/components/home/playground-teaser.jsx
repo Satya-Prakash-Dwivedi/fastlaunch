@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 
 const TEASER_MODELS = [
   {
@@ -94,6 +95,10 @@ const TEASER_MODELS = [
 
 export function PlaygroundTeaser() {
   const { t } = useTranslation();
+  const [showMore, setShowMore] = useState(false);
+
+  const visibleModels = showMore ? TEASER_MODELS : TEASER_MODELS.slice(0, 3);
+
   return (
     <section id="playground" className="px-[5%] py-16 md:py-24 lg:py-28 scheme-7 alternate logo-alt border-t border-scheme-border/10">
       <div className="container">
@@ -114,8 +119,8 @@ export function PlaygroundTeaser() {
         </div>
 
         {/* Teaser Assets Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch mb-12 md:mb-16">
-          {TEASER_MODELS.map((model) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 items-stretch mb-12 md:mb-16">
+          {visibleModels.map((model) => (
             <a
               key={model.id}
               href={`#/playground?id=${model.id}`}
@@ -154,44 +159,57 @@ export function PlaygroundTeaser() {
             </a>
           ))}
 
-          {/* Call To Action Box (Sits as the 8th grid item to balance the 7 models!) */}
-          <div className="flex flex-col justify-between p-6 rounded-card border border-dashed border-scheme-border/40 bg-neutral-950/20 text-center items-center justify-center min-h-[300px]">
-            <div className="space-y-4">
-              <div className="size-14 rounded-full bg-scheme-accent/10 border border-scheme-accent/20 flex items-center justify-center text-2xl mx-auto">
-                🚀
+          {/* Call To Action Box (Only shown when expanded) */}
+          {showMore && (
+            <div className="flex flex-col justify-between p-6 rounded-card border border-dashed border-scheme-border/40 bg-neutral-950/20 text-center items-center justify-center min-h-[300px]">
+              <div className="space-y-4">
+                <div className="size-14 rounded-full bg-scheme-accent/10 border border-scheme-accent/20 flex items-center justify-center text-2xl mx-auto">
+                  🚀
+                </div>
+                <h4 className="text-regular font-bold text-white">
+                  {t('playgroundTeaser.launchSandbox', 'Launch Full Design Sandbox')}
+                </h4>
+                <p className="text-small text-white/50 max-w-[200px] mx-auto">
+                  {t('playgroundTeaser.sandboxDesc', 'Access the full sandbox viewport with category filters and model technical metrics.')}
+                </p>
               </div>
-              <h4 className="text-regular font-bold text-white">
-                {t('playgroundTeaser.launchSandbox', 'Launch Full Design Sandbox')}
-              </h4>
-              <p className="text-small text-white/50 max-w-[200px] mx-auto">
-                {t('playgroundTeaser.sandboxDesc', 'Access the full sandbox viewport with category filters and model technical metrics.')}
-              </p>
+              
+              <Button
+                asChild
+                variant="alternate"
+                className="mt-6 w-full text-xs py-2.5 font-bold hover:scale-[1.02]"
+              >
+                <Link to="/playground">
+                  {t('playgroundTeaser.enterPlayground', 'Enter 3D Playground')}
+                </Link>
+              </Button>
             </div>
-            
+          )}
+        </div>
+
+        {/* Action Button: "More" when collapsed, "Launch Full Sandbox" when expanded */}
+        <div className="flex justify-center">
+          {!showMore ? (
+            <Button
+              onClick={() => setShowMore(true)}
+              variant="alternate"
+              className="px-8 py-3.5 text-base font-bold shadow-lg hover:scale-[1.02] flex items-center gap-2 cursor-pointer"
+            >
+              {t('playgroundTeaser.more', 'More')}
+              <ChevronDown className="w-5 h-5" />
+            </Button>
+          ) : (
             <Button
               asChild
               variant="alternate"
-              className="mt-6 w-full text-xs py-2.5 font-bold hover:scale-[1.02]"
+              className="px-8 py-3.5 text-base font-bold shadow-lg hover:scale-[1.02] flex items-center gap-3"
             >
               <Link to="/playground">
-                {t('playgroundTeaser.enterPlayground', 'Enter 3D Playground')}
+                {t('playgroundTeaser.launchFull', 'Launch Full 3D Interactive Sandbox')}
+                <span className="text-xl">➔</span>
               </Link>
             </Button>
-          </div>
-        </div>
-
-        {/* Large Centered CTA Button */}
-        <div className="flex justify-center">
-          <Button
-            asChild
-            variant="alternate"
-            className="px-8 py-3.5 text-base font-bold shadow-lg hover:scale-[1.02] flex items-center gap-3"
-          >
-            <Link to="/playground">
-              {t('playgroundTeaser.launchFull', 'Launch Full 3D Interactive Sandbox')}
-              <span className="text-xl">➔</span>
-            </Link>
-          </Button>
+          )}
         </div>
 
       </div>

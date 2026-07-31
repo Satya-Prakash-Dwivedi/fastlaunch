@@ -17,12 +17,14 @@ export const sanityClient = projectId
 const builder = sanityClient ? imageUrlBuilder(sanityClient) : null;
 
 /**
- * Builds optimized Sanity CDN image URL
+ * Builds optimized Sanity CDN image URL with width scaling and quality compression
  */
-export function urlFor(source) {
+export function urlFor(source, width = 800, quality = 80) {
   if (!builder || !source) return null;
   try {
-    return builder.image(source).auto('format').url();
+    let img = builder.image(source).auto('format').quality(quality);
+    if (width) img = img.width(width);
+    return img.url();
   } catch (err) {
     return null;
   }
@@ -32,7 +34,7 @@ export function urlFor(source) {
  * Normalizes a Sanity post document into the Fastlaunch Blog object format
  */
 export function normalizeSanityPost(post) {
-  const coverImageUrl = post.mainImage ? urlFor(post.mainImage) : null;
+  const coverImageUrl = post.mainImage ? urlFor(post.mainImage, 800, 80) : null;
   const slugStr = typeof post.slug === 'object' ? post.slug?.current : (post.slug || post._id);
 
   // Match local blogsData image by slug if Sanity image is empty
@@ -43,7 +45,7 @@ export function normalizeSanityPost(post) {
   const finalImage =
     coverImageUrl ||
     matchingLocal?.image ||
-    'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80';
+    'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=75';
 
   const formattedDate = post.publishedAt
     ? new Date(post.publishedAt).toLocaleDateString('en-US', {
